@@ -15,20 +15,33 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
     </script>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     
 </head>
 <body>
-    <nav>
-        <ul>
-            {% if user.is_authenticated %}
-            <li><a href="{% url 'account_logout' %}">logout</a>
-            {% else %}
-            <li><a href="{% url 'account_signup' %}">signup</a>
-            <li><a href="{% url 'account_login' %}">login</a>
-            {% endif %}
-        </ul>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="conatiner-fluid">
+            <div class="row">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'index' %}">Home</a>
+                    </li>
+                    {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'account_login' %}">Login</a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
     </nav>
-
     <main>
         {% block content %}
         <!-- Content goes in here-->
