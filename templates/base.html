@@ -18,6 +18,23 @@
     
 </head>
 <body>
+    <nav>
+        <ul>
+            {% if user.is_authenticated %}
+            <li><a href="{% url 'account_logout' %}">logout</a>
+            {% else %}
+            <li><a href="{% url 'account_signup' %}">signup</a>
+            <li><a href="{% url 'account_login' %}">login</a>
+            {% endif %}
+        </ul>
+    </nav>
+
+    <main>
+        {% block content %}
+        <!-- Content goes in here-->
+        {% endblock content %}
+    </main>
+
     <footer>
         
     </footer>
