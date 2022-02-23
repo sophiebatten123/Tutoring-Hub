@@ -1,7 +1,20 @@
-body {
-    background-color: #D3D3D3;
-}
-
 .center {
     text-align: center;
+}
+
+.border {
+    border: solid 2px black;
+}
+
+.footer {
+    background-color: blue;
+}
+
+.footer li {
+    display: inline;
+    padding: 10px;
+}
+
+.footer li i {
+    color: grey;
 }
