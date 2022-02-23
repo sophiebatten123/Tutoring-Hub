@@ -6,22 +6,34 @@
 <div class="conatiner-fluid">
     <div class="row center">
         <h1>Profile Picture</h1>
-        <div class="center">
-        <p>Hello {% user_display user %}</p>
-        <button id="btn">Create Profile Page</button>
+    </div>
+    <div class="row">
+        <div class="col-5">
+        </div>
+        <div class="col-4">
+        </div>
+        <div class="col-3">
+        </div>
     </div>
 </div>
-<div class="container-fluid" id="make-profile">
+<div class="container-fluid">
     <div class="row">
-        <div class="col-2"></div>
-        <div class="col-8">
+        <div class="col-4 user-image">
+            <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" alt="User Image">
+        </div>
+        <div class="col-6" id="create-btn-div">
+            <button class="btn btn-signup btn-lg" id="create-btn">Create Profile Page</button>
+        </div>
+        <div class="col-6" id="make-profile">
             <form method="post">
                 {{ make_profile | crispy}}
                 {% csrf_token %}
                 <button type="submit" class="btn btn-signup btn-lg">Submit</button>
             </form>
         </div>
-        <div class="col-2"></div>
+        <div class="col-2">
+            <button class="btn btn-signup btn-lg" id="exit-btn"><i class="fa-solid fa-circle-xmark"></i></button>
+        </div>
     </div>
 </div>
 
