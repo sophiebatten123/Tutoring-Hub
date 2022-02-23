@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load account %}
+{% load crispy_forms_tags %}
 {% block content %}
 
 <div class="conatiner-fluid">
@@ -7,8 +8,20 @@
         <h1>Profile Picture</h1>
         <div class="center">
         <p>Hello {% user_display user %}</p>
-        <button>Create Profile Page</button>
+        <button id="btn">Create Profile Page</button>
+    </div>
+</div>
+<div class="container-fluid" id="make-profile">
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8">
+            <form method="post">
+                {{ make_profile | crispy}}
+                {% csrf_token %}
+                <button type="submit" class="btn btn-signup btn-lg">Submit</button>
+            </form>
         </div>
+        <div class="col-2"></div>
     </div>
 </div>
 
