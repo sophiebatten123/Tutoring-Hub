@@ -1,14 +1,12 @@
 {% extends "base.html" %}
-
+{% load account %}
 {% block content %}
 
 <div class="conatiner-fluid">
     <div class="row center">
         <h1>Profile Picture</h1>
         <div class="center">
-        {% load account %}
-
-        {% user_display user %}
+        <p>Hello {% user_display user %}</p>
         </div>
     </div>
 </div>
