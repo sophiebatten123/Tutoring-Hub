@@ -6,6 +6,22 @@
     border: solid 2px black;
 }
 
+#create-btn-div {
+    display: flex;
+    justify-content: center;
+}
+
+.user-image img {
+    height: 300px;
+    width: 300px;
+    border-radius: 50%; 
+}
+
+.user-image {
+    display: flex;
+    justify-content: center;
+}
+
 .footer {
     background-color: 	#ffffba;
 }
