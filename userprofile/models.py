@@ -18,6 +18,7 @@ ACCOUNT_TYPE = (
 
 STATUS = ((0, "Draft"), (1, "Published"))
 
+
 class Profile(models.Model):
     full_name = models.CharField(max_length=100, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
