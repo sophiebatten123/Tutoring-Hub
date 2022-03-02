@@ -3,38 +3,56 @@
 {% load crispy_forms_tags %}
 {% block content %}
 
-<div class="conatiner-fluid">
-    <div class="row center">
-        <h1>Profile Picture</h1>
-    </div>
-    <div class="row">
-        <div class="col-5">
-        </div>
-        <div class="col-4">
-        </div>
-        <div class="col-3">
-        </div>
+<div class="container-fluid center-block">
+    <div class="row profile">
+        {% if profile.full_name %}
+            <div class="col-3">
+                <div class="row">
+                    <div class="col-12 user-image">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                </div>
+                <div class="row user-info">
+                    <h4>Year Group:</h4>
+                    <h4>Current grade:</h4>
+                    <h4>Predicted grade:</h4>
+                </div>
+            </div>
+            <div class="col-9 about-text">
+                <div class="row center">
+                    <h1>{{ profile.full_name }}</h1>
+                </div>
+                <div class="row about-spacer">
+                    <h3>About Me!</h3>
+                    <p>{{ profile.about_me }}</p>
+                </div>
+                <div class="edit-button">
+                    <button class="btn btn-signup btn-lg" id="edit-btn">Edit Profile Page</button>
+                </div>
+            </div>
+        {% else %}
+            <div class="col-3 user-image">
+                <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="col-9" id="create-btn-div">
+                <button class="btn btn-signup btn-lg btn-color-blue" id="create-btn">Create Profile Page</button>
+            </div>
+            <div class="col-8" id="make-profile">
+                <form method="post">
+                    {{ form | crispy}}
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-signup btn-lg">Submit</button>
+                </form>
+            </div>
+            <div class="col-1" id="exit-hide">
+                <button class="btn btn-signup btn-lg" id="exit-btn"><i class="fa-solid fa-circle-xmark"></i></button>
+            </div>
+        {% endif %}
     </div>
 </div>
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-4 user-image">
-            <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" alt="User Image">
-        </div>
-        <div class="col-6" id="create-btn-div">
-            <button class="btn btn-signup btn-lg" id="create-btn">Create Profile Page</button>
-        </div>
-        <h1>Welcome {{ profile.user.username }}</h1>
-        <div class="col-6" id="make-profile">
-            <form method="post">
-                {{ make_profile_form | crispy}}
-                {% csrf_token %}
-                <button type="submit" class="btn btn-signup btn-lg">Submit</button>
-            </form>
-        </div>
-        <div class="col-2">
-            <button class="btn btn-signup btn-lg" id="exit-btn"><i class="fa-solid fa-circle-xmark"></i></button>
-        </div>
+<div class="container-fluid center-block">
+    <div class="row upcoming-bookings">
+        <h2>Upcoming Bookings</h2>
     </div>
 </div>
 

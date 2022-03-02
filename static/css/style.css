@@ -11,9 +11,32 @@
 .border {
     border: solid 2px black;
 }
+.profile {
+    width: 100%;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #dacfcf;
+}
 
-.tutor-text {
-    padding: 0 15 spx;
+.center-block {
+    display: flex;
+    justify-content: center;
+}
+
+.about-text {
+    line-height: 2em;
+}
+
+.about-spacer {
+    margin-top: 20px;
+}
+
+.user-info {
+    margin-top: 50px;
+}
+
+.user-info h4 {
+    padding: 5px;
 }
 
 #create-btn-div {
@@ -21,15 +44,35 @@
     justify-content: center;
 }
 
-.user-image img {
-    height: 300px;
-    width: 300px;
-    border-radius: 50%; 
+.user-image i {
+    color: grey;
+    margin-top: 75px;
 }
 
 .user-image {
     display: flex;
     justify-content: center;
+    font-size: 150px;
+}
+
+.upcoming-bookings {
+    margin-top: 20px;
+    background-color: aliceblue;
+}
+.bookings-area {
+    width: 100%;
+}
+
+#exit-hide {
+    height: 75px;
+}
+
+.edit-button {
+    text-align: right;
+}
+
+.btn-color-blue {
+    background-color: aliceblue;
 }
 
 .footer {
