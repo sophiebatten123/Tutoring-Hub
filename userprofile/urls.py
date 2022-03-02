@@ -1,6 +1,9 @@
+'''
+Importing the relevant packages.
+'''
 from django.urls import path
-from .views import profile
+from . import views
 
 urlpatterns = [
-    path('', profile, name="profile"),
+    path('', views.profile, name='profile'),
 ]

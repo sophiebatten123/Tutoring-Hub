@@ -1,32 +1,33 @@
-from django.shortcuts import render, get_object_or_404
-from .forms import MakeProfile
-from .models import Profile
+'''
+Importing the relevant packages.
+'''
+from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.shortcuts import render, get_object_or_404
+from .forms import MakeProfileForm
+from .models import UserProfile
 
 
 @login_required
 def profile(request):
-
-    profile = get_object_or_404(Profile, author=request.author)
+    ''' This will render the profile template '''
+    profile = get_object_or_404(UserProfile, user=request.user)
 
     if request.method == 'POST':
-        # create a new instance of the user profile form using post data
-        form = MakeProfile(request.POST, instance=profile)
-        # checks that the form is valid
+        form = MakeProfileForm(request.POST, instance=profile)
         if form.is_valid():
-            # valid = save and send a success message
             form.save()
-            messages.success(request, 'Profile updated sucessfully')
+            messages.success(request, 'Profile updated')
         else:
-            messages.error(request, 'Update failed. Please ensure the form is valid.')
-    else:
-        form = Profile(instance=profile)
+            messages.error(request, ('Update failed. Ensure your data is valid'))
 
-    return render(
-        request,
-        'userprofile/profile.html',
-        {
-            'profile': profile,
-            'form': MakeProfile(),
-        },
-    )
+    else:
+        form = MakeProfileForm(instance=profile)
+
+    template = 'userprofile/profile.html'
+    context = {
+        'form': form,
+        'on_profile_page': True
+    }
+   
+    return render(request, template, context)

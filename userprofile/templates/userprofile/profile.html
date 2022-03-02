@@ -24,9 +24,10 @@
         <div class="col-6" id="create-btn-div">
             <button class="btn btn-signup btn-lg" id="create-btn">Create Profile Page</button>
         </div>
+        <h1>Welcome {{ profile.user.username }}</h1>
         <div class="col-6" id="make-profile">
             <form method="post">
-                {{ make_profile | crispy}}
+                {{ make_profile_form | crispy}}
                 {% csrf_token %}
                 <button type="submit" class="btn btn-signup btn-lg">Submit</button>
             </form>

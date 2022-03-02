@@ -1,5 +1,10 @@
-from django.db import models
+'''
+Importing the relevant packages.
+'''
 from django.contrib.auth.models import User
+from django.db.models.signals import post_save
+from django.dispatch import receiver
+from django.db import models
 from cloudinary.models import CloudinaryField
 
 YEAR_GROUPS = (
@@ -19,17 +24,39 @@ ACCOUNT_TYPE = (
 STATUS = ((0, "Draft"), (1, "Published"))
 
 
-class Profile(models.Model):
-    full_name = models.CharField(max_length=100, unique=True)
+class UserProfile(models.Model):
+    '''
+    Creates the user profile information for students & tutors.
+    Some of this information will be displayed upon their
+    profile pages.
+    '''
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    full_name = models.CharField(max_length=100)
     slug = models.SlugField(max_length=200, unique=True)
-    author = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name="profile_page"
-    )
     year_group = models.CharField(max_length=13, choices=YEAR_GROUPS, default='year_7')
     about_me = models.TextField()
     featured_image = CloudinaryField('image', default='placeholder')
     account_type = models.CharField(max_length=7, choices=ACCOUNT_TYPE, default='student')
     status = models.IntegerField(choices=STATUS, default=0)
 
-    def _str_(self):
-        return self.full_name
+    def save(self, *args, **kwargs):
+        '''
+        Override the original save method
+        '''
+        if not self.slug:
+            self.slug = self.user.username
+        super().save(*args, **kwargs)
+
+    def __str__(self):
+        return self.user.username
+
+  
+@receiver(post_save, sender=User)
+def create_or_update_user_profile(sender, instance, created, **kwargs):
+    '''
+    Create or update the user profile
+    '''
+    if created:
+        UserProfile.objects.create(user=instance)
+    # Existing users save the information
+    instance.userprofile.save()

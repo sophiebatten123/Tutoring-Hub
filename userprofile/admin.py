@@ -1,9 +1,9 @@
 from django.contrib import admin
-from .models import Profile
+from .models import UserProfile
 from django_summernote.admin import SummernoteModelAdmin
 
 
-@admin.register(Profile)
+@admin.register(UserProfile)
 class PostAdmin(SummernoteModelAdmin):
 
     list_display = ('full_name', 'slug', 'year_group', 'account_type')
