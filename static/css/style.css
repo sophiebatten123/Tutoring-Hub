@@ -77,6 +77,31 @@
     width: 100%;
 }
 
+.booking-button {
+    float: right;
+    padding-right: 50px;
+}
+
+.booking-button button {
+    background-color: orange;
+}
+
+table, th, td {
+    border: 1px solid;
+}
+
+.booking-table {
+    font-size: 20px;
+    padding-top: 50px;
+    width: 100%;
+    margin: 0;
+}
+
+.confirm-booking {
+    margin-top: 25px;
+    background-color: #258d8c12;
+}
+
 #exit-hide {
     height: 75px;
 }
