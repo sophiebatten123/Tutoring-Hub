@@ -8,12 +8,9 @@ from django.db import models
 from cloudinary.models import CloudinaryField
 
 YEAR_GROUPS = (
-    ('year_7', 'Year 7'),
-    ('year_8', 'Year 8'),
-    ('year_9', 'Year 9'),
-    ('year_10', 'Year 10'),
-    ('year_11', 'Year 11'),
-    ('tutor_account', ''),
+    ('9', 'Year 9'),
+    ('10', 'Year 10'),
+    ('11', 'Year 11'),
 )
 
 ACCOUNT_TYPE = (
@@ -21,8 +18,17 @@ ACCOUNT_TYPE = (
     ('tutor', 'Tutor'),
 )
 
-STATUS = ((0, "Draft"), (1, "Published"))
-
+GRADES = (
+    ('1', 'Grade 1'),
+    ('2', 'Grade 2'),
+    ('3', 'Grade 3'),
+    ('4', 'Grade 4'),
+    ('5', 'Grade 5'),
+    ('6', 'Grade 6'),
+    ('7', 'Grade 7'),
+    ('8', 'Grade 8'),
+    ('9', 'Grade 9'),
+)
 
 class UserProfile(models.Model):
     '''
@@ -32,12 +38,15 @@ class UserProfile(models.Model):
     '''
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     full_name = models.CharField(max_length=100)
-    slug = models.SlugField(max_length=200, unique=True)
-    year_group = models.CharField(max_length=13, choices=YEAR_GROUPS, default='year_7')
+    first_name = models.CharField(max_length=100, null=True)
+    surname = models.CharField(max_length=100, null=True)
+    year_group = models.CharField(max_length=13, choices=YEAR_GROUPS, default='9')
+    current_grade = models.CharField(max_length=6, choices=GRADES, default='1', null=True)
+    predicted_grade = models.CharField(max_length=6, choices=GRADES, default='1', null=True)
     about_me = models.TextField()
-    featured_image = CloudinaryField('image', default='placeholder')
     account_type = models.CharField(max_length=7, choices=ACCOUNT_TYPE, default='student')
-    status = models.IntegerField(choices=STATUS, default=0)
+    slug = models.SlugField(max_length=200, unique=True)
+    featured_image = CloudinaryField('image', default='placeholder')
 
     def save(self, *args, **kwargs):
         '''
