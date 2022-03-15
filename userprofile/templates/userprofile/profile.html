@@ -8,38 +8,33 @@
         {% if profile.first_name %}
             <div class="col-3">
                 <div class="row">
-                    <div class="col-12 user-image">
-                        <i class="fa-solid fa-user"></i>
-                    </div>
+                    <div class="col-12 user-image"><img src="../../static/images/user.png" alt="cartoon image of a person"></div>
                 </div>
                 <div class="row">
-                    <div class="col-12 center year-group">
-                        <p>Year {{ profile.year_group }}</p>
+                    <div class="col-12 user-info">
+                        <h1>{{ profile.first_name }} {{ profile.surname }}</h1>
+                        <p>Year {{ profile.year_group }} Student</p>
                     </div>
                 </div>
                 <div class="row center-block">
-                    <div class="col-10 user-info center">
-                        <p>Current grade: Grade {{ profile.current_grade }}</p>
-                        <p>Predicted grade: Grade {{ profile.predicted_grade }}</p>
+                    <div class="col-10">
+                        <button class="btn btn-signup btn-lg user-btns" id="proile-btn">Profile Page</button>
+                        <button class="btn btn-signup btn-lg user-btns" id="upcoming-lessons-btn">Upcoming Lessons</button>
+                        <button class="btn btn-signup btn-lg user-btns" id="previous-lessons-btn">Previous Lessons</button>
+                        <button class="btn btn-signup btn-lg user-btns" id="edit-btn">Edit Profile</button>
                     </div>
                 </div>
             </div>
             <div class="col-9 about-text">
-                <div class="row">
-                    <h1>{{ profile.first_name }} {{ profile.surname }}</h1>
-                </div>
                 <div class="row about-spacer">
                     <h3>About Me!</h3>
                     <p>{{ profile.about_me }}</p>
-                </div>
-                <div class="edit-button">
-                    <button class="btn btn-signup btn-lg" id="edit-btn">Edit Profile Page</button>
+                    <p>Current grade: Grade {{ profile.current_grade }}</p>
+                    <p>Predicted grade: Grade {{ profile.predicted_grade }}</p>
                 </div>
             </div>
         {% else %}
-            <div class="col-3 user-image">
-                <i class="fa-solid fa-user"></i>
-            </div>
+            <div class="col-3 user-image"><img src="../../static/images/user.png" alt="cartoon image of a person"></div>
             <div class="col-9" id="create-btn-div">
                 <button class="btn btn-signup btn-lg btn-color-blue" id="create-btn">Create Profile Page</button>
             </div>
@@ -54,11 +49,6 @@
                 <button class="btn btn-signup btn-lg" id="exit-btn"><i class="fa-solid fa-circle-xmark"></i></button>
             </div>
         {% endif %}
-    </div>
-</div>
-<div class="container-fluid center-block">
-    <div class="row upcoming-bookings">
-        <h2>Upcoming Bookings</h2>
     </div>
 </div>
 
