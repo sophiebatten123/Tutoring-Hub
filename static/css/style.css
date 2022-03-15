@@ -15,7 +15,6 @@
     width: 100%;
     margin-top: 20px;
     padding: 20px;
-    background-color: #dacfcf;
 }
 
 .center-block {
@@ -33,6 +32,11 @@
 
 .user-info {
     margin-top: 50px;
+    background-color: aliceblue;
+}
+
+.year-group {
+    margin-top: 20px;
 }
 
 .user-info h4 {
@@ -73,10 +77,6 @@
 
 .btn-color-blue {
     background-color: aliceblue;
-}
-
-.footer {
-    background-color: 	#dacfcf;
 }
 
 .footer li {
