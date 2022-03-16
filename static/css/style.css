@@ -105,7 +105,7 @@ table, th, td {
 
 .booking-table {
     font-size: 20px;
-    padding-top: 50px;
+    padding-top: 20px;
     width: 100%;
     margin: 0;
 }
@@ -113,6 +113,10 @@ table, th, td {
 .confirm-booking {
     margin-top: 25px;
     background-color: #258d8c12;
+}
+
+.exit-booking-button {
+    text-align: right;
 }
 
 #exit-btn{
