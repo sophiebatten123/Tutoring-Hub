@@ -78,6 +78,37 @@ html, body {
     padding-top: 20px;
 }
 
+/* ................................................ Signup and register page */
+
+.sign-up {
+    height: 500px;
+    width: 30%;
+    margin: auto;
+    background-color: #258d8c17;
+    padding-top: 50px;
+    padding-left: 50px;
+    text-align: left;
+    font-size: 20px;
+}
+
+.register-buttons {
+    border: solid 2px black;
+    width: 30%;
+    margin: auto;
+    background-color: #fec173;
+    color: black;
+    font-size: 20px;
+}
+
+.register-links {
+    color: #258d8c;
+    text-decoration: none;
+}
+
+.sign-up a:hover {
+    color: #fec173;
+}
+
 /* ............................................... Student profile page styling */
 
 .profile {
