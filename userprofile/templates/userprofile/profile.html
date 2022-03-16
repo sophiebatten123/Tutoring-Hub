@@ -1,7 +1,9 @@
 {% extends "base.html" %}
+{% load static %}
 {% load account %}
 {% load crispy_forms_tags %}
 {% block content %}
+
 
 <div class="container-fluid center-block">
     <div class="row profile">
@@ -18,14 +20,14 @@
                 </div>
                 <div class="row center-block">
                     <div class="col-10">
-                        <button class="btn btn-signup btn-lg user-btns" id="proile-btn">Profile Page</button>
+                        <button class="btn btn-signup btn-lg user-btns" id="profile-btn">Profile Page</button>
                         <button class="btn btn-signup btn-lg user-btns" id="upcoming-lessons-btn">Upcoming Lessons</button>
                         <button class="btn btn-signup btn-lg user-btns" id="previous-lessons-btn">Previous Lessons</button>
                         <button class="btn btn-signup btn-lg user-btns" id="edit-btn">Edit Profile</button>
                     </div>
                 </div>
             </div>
-            <div class="col-9 about-text">
+            <div class="col-9 about-text" id="about-me">
                 <div class="row about-spacer">
                     <h3>About Me!</h3>
                     <p>{{ profile.about_me }}</p>
@@ -33,23 +35,83 @@
                     <p>Predicted grade: Grade {{ profile.predicted_grade }}</p>
                 </div>
             </div>
-        {% else %}
-            <div class="col-3 user-image"><img src="../../static/images/user.png" alt="cartoon image of a person"></div>
-            <div class="col-9" id="create-btn-div">
-                <button class="btn btn-signup btn-lg btn-color-blue" id="create-btn">Create Profile Page</button>
+            <div class="col-9" id="upcoming-lessons">
+                <div class="row">
+                    <h3>Your upcoming lessons are:</h3>
+                </div>
             </div>
-            <div class="col-8" id="make-profile">
+            <div class="col-9" id="previous-lessons">
+                <div class="row">
+                    <h3>Your previous lessons are:</h3>
+                </div>
+            </div>
+            <div class="col-9" id="make-profile">
+                <div class="row exit-profile">
+                    <button class="btn btn-signup btn-lg" id="exit-btn"><i class="fa-solid fa-circle-xmark"></i></button>
+                </div>
+                <div class="row">
+                    <form method="post">
+                        {{ form | crispy}}
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-signup btn-lg">Submit</button>
+                    </form>
+                </div>
+            </div>
+        {% else %}
+        <div class="col-3">
+            <div class="row">
+                <div class="col-12 user-image"><img src="../../static/images/user.png" alt="cartoon image of a person"></div>
+            </div>
+            <div class="row center-block">
+                <div class="col-10">
+                    <button class="btn btn-signup btn-lg user-btns hidden" id="profile-btn">Profile Page</button>
+                    <button class="btn btn-signup btn-lg user-btns hidden" id="upcoming-lessons-btn">Upcoming Lessons</button>
+                    <button class="btn btn-signup btn-lg user-btns hidden" id="previous-lessons-btn">Previous Lessons</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-9 about-text" id="about-me">
+            <div class="row about-spacer">
+                <h2>Weclome!</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis efficitur velit nec nunc imperdiet, sit
+                    amet eleifend lorem iaculis. Donec convallis condimentum lectus ut interdum. Nam facilisis, ante at
+                    dapibus gravida, risus dolor mollis enim, nec dignissim nibh neque non ipsum. Duis venenatis, orci
+                    vitae porta ultrices, sapien diam varius lorem, et pulvinar orci elit ut dolor. Aliquam erat
+                    volutpat. Nam suscipit mauris et mauris imperdiet euismod. Pellentesque habitant morbi tristique
+                    senectus et netus et malesuada fames ac turpis egestas. Ut quis risus ligula. Nulla facilisi. Sed
+                    laoreet urna nisl, tristique pharetra urna egestas eu. In quis arcu egestas, pellentesque dui eget,
+                    molestie tortor.</p>
+                <button class="btn btn-signup btn-lg user-btns btn-color" id="edit-btn">Create Profile</button>
+            </div>
+        </div>
+        <div class="col-9" id="upcoming-lessons">
+            <div class="row">
+                <h3>Your upcoming lessons are:</h3>
+            </div>
+        </div>
+        <div class="col-9" id="previous-lessons">
+            <div class="row">
+                <h3>Your previous lessons are:</h3>
+            </div>
+        </div>
+        <div class="col-9" id="make-profile">
+            <div class="row exit-profile">
+                <button class="btn btn-signup btn-lg" id="exit-btn"><i class="fa-solid fa-circle-xmark"></i></button>
+            </div>
+            <div class="row">
                 <form method="post">
                     {{ form | crispy}}
                     {% csrf_token %}
                     <button type="submit" class="btn btn-signup btn-lg">Submit</button>
                 </form>
             </div>
-            <div class="col-1" id="exit-hide">
-                <button class="btn btn-signup btn-lg" id="exit-btn"><i class="fa-solid fa-circle-xmark"></i></button>
-            </div>
+        </div>
         {% endif %}
     </div>
 </div>
 
+{% endblock %}
+
+{% block postloadjs %}
+<script src="{% static 'js/profile.js' %}"></script>
 {% endblock %}

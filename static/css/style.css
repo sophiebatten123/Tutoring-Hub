@@ -6,6 +6,10 @@
     background-color: #258d8c;
 }
 
+.navbar-light .navbar-nav .nav-link {
+    color: white;
+}
+
 .header-image {
     height: 450px
 }
@@ -77,8 +81,42 @@
     width: 100%;
 }
 
-#exit-hide {
-    height: 75px;
+.booking-button {
+    float: right;
+    padding-right: 50px;
+}
+
+.booking-button button {
+    background-color: orange;
+}
+
+.btn-color {
+    width: 180px;
+    background-color: orange;
+}
+
+.hidden {
+    display: none;
+}
+
+table, th, td {
+    border: 1px solid;
+}
+
+.booking-table {
+    font-size: 20px;
+    padding-top: 50px;
+    width: 100%;
+    margin: 0;
+}
+
+.confirm-booking {
+    margin-top: 25px;
+    background-color: #258d8c12;
+}
+
+#exit-btn{
+    text-align: right;
 }
 
 .edit-button {
@@ -99,5 +137,5 @@
 }
 
 .footer li i {
-    color: grey;
+    color: white;
 }
