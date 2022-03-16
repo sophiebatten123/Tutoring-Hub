@@ -7,29 +7,28 @@
 <div class="conatiner-fluid">
     <div class="row">
         <div class="col-6 header-text center">
-            <h2>Online Education</h2>
+            <h2>Helping pupils turn dreams into reality</h2>
+            <p>Our tutors provide world class STEM eduction to pupils across the globe.</p>
+            <a class="nav-link homepage-buttons" href="{% url 'account_signup' %}">Register today</a>
         </div>
         <div class="col-6 header-image">
             <img src="../../static/images/header1.jpg" alt="cartoon classroom">
         </div>
     </div>
-    <div class="row center">
-        <h2>Welcome!</h2>
-    </div>
-    <div class="row center border">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et risus enim. Pellentesque habitant morbi
-            tristique senectus et netus et malesuada fames ac turpis egestas. Quisque suscipit, elit in pretium maximus,
-            ligula urna sagittis metus, vel blandit tortor ipsum a turpis. Nulla purus nunc, cursus nec congue vel,
-            ornare id massa. Donec eleifend viverra metus sed dignissim. Morbi euismod massa sed luctus suscipit.
-            Vestibulum condimentum turpis a hendrerit auctor. Phasellus congue turpis sit amet lacus volutpat bibendum.
-            Phasellus id placerat ligula.</p>
+</div>
+
+<!--About us section with a possible slider element-->
+
+<div class="container-fluid">
+    <div class="row placeholder center">
+        <h3>Placeholder</h3>
     </div>
 </div>
 
 <!--Our Tutors Section-->
 
 <div class="container-fluid">
-    <div class="row center">
+    <div class="row center tutors-heading">
         <h2>Our Tutors</h2>
     </div>
     <div class="row">
@@ -41,11 +40,12 @@
             </div>    
             <div class="row tutor-text">
                 <h3>Barry Hyman</h3>
+                <p><i>Mathematics Tutor</i></p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et risus enim. Pellentesque habitant morbi
                     tristique senectus et netus et malesuada fames ac turpis egestas. Quisque suscipit, elit in pretium maximus,
                     ligula urna sagittis metus, vel blandit tortor ipsum a turpis. Nulla purus nunc, cursus nec congue vel,
                     ornare id massa.</p>
-                <a class="nav-link" href="{% url 'tutor_one' %}">Book Lesson</a>
+                <a class="nav-link book-btn homepage-buttons" href="{% url 'tutor_one' %}">Book Lesson</a>
             </div>
         </div>
         <div class="col-4 center">
@@ -56,11 +56,12 @@
             </div>    
             <div class="row tutor-text">
                 <h3>Jennifer Roberts</h3>
+                <p><i>Science Tutor</i></p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et risus enim. Pellentesque habitant morbi
                     tristique senectus et netus et malesuada fames ac turpis egestas. Quisque suscipit, elit in pretium maximus,
                     ligula urna sagittis metus, vel blandit tortor ipsum a turpis. Nulla purus nunc, cursus nec congue vel,
                     ornare id massa.</p>
-                <a class="nav-link" href="{% url 'tutor_two' %}">Book Lesson</a>
+                <a class="nav-link book-btn homepage-buttons" href="{% url 'tutor_two' %}">Book Lesson</a>
             </div>
         </div>
         <div class="col-4 center">
@@ -71,11 +72,12 @@
             </div>    
             <div class="row tutor-text">
                 <h3>Mark Macintosh</h3>
+                <p><i>English Tutor</i></p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et risus enim. Pellentesque habitant morbi
                     tristique senectus et netus et malesuada fames ac turpis egestas. Quisque suscipit, elit in pretium maximus,
                     ligula urna sagittis metus, vel blandit tortor ipsum a turpis. Nulla purus nunc, cursus nec congue vel,
                     ornare id massa.</p>
-                    <a class="nav-link" href="{% url 'tutor_three' %}">Book Lesson</a>
+                    <a class="nav-link book-btn homepage-buttons" href="{% url 'tutor_three' %}">Book Lesson</a>
             </div>
         </div>
     </div>
