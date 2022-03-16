@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block content %}
 
@@ -91,4 +92,8 @@
     </div>
 </div>
 
+{% endblock %}
+
+{% block postloadjs %}
+<script src="{% static 'js/tutor.js' %}"></script>
 {% endblock %}
