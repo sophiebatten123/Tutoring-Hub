@@ -1,17 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Hubballi&display=swap');
+
+/* ............................................... Main website styling */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    font-family: 'Hubballi', cursive;
+}
+
 .center {
     text-align: center;
 }
 
 .navbar {
     background-color: #258d8c;
+    padding-left: 50px;
 }
 
 .navbar-light .navbar-nav .nav-link {
     color: white;
 }
 
+.border {
+    border: solid 2px black;
+}
+
+.center-block {
+    display: flex;
+    justify-content: center;
+}
+
+.user-btns {
+    width: 100%;
+    text-align: left;
+}
+
+.hidden {
+    display: none;
+}
+
+.placeholder {
+    height: 250px;
+    background-color: #258d8c17;
+    border: solid 2px #258d8c;
+    padding: 0;
+}
+
+.placeholder h3 {
+    padding-top: 115px;
+}
+
+/* ............................................... Home page styling */
+
 .header-image {
     height: 450px
+}
+
+.header-text {
+    padding-top: 200px;
+}
+
+.homepage-buttons {
+    border: solid 2px black;
+    width: 60%;
+    margin: auto;
+    background-color: #fec173;
+    color: black;
+    font-size: 20px;
 }
 
 .header-image img {
@@ -20,18 +74,16 @@
     object-fit: contain;
 }
 
-.border {
-    border: solid 2px black;
+.tutors-heading {
+    padding-top: 20px;
 }
+
+/* ............................................... Student profile page styling */
+
 .profile {
     width: 100%;
     margin-top: 20px;
     padding: 20px;
-}
-
-.center-block {
-    display: flex;
-    justify-content: center;
 }
 
 .about-text {
@@ -56,16 +108,6 @@
     margin-top: 20px;
 }
 
-.user-btns {
-    width: 100%;
-    text-align: left;
-}
-
-#create-btn-div {
-    display: flex;
-    justify-content: center;
-}
-
 .user-image {
     display: flex;
     justify-content: center;
@@ -77,6 +119,12 @@
     background-color: aliceblue;
 }
 
+#exit-btn{
+    text-align: right;
+}
+
+/* ............................................... Tutor profile page styling */
+
 .bookings-area {
     width: 100%;
 }
@@ -86,17 +134,18 @@
     padding-right: 50px;
 }
 
-.booking-button button {
-    background-color: orange;
+.tutorpage-buttons {
+    border: solid 2px black;
+    width: 100%;
+    margin: auto;
+    background-color: #fec173;
+    color: black;
+    font-size: 20px;
 }
 
 .btn-color {
     width: 180px;
     background-color: orange;
-}
-
-.hidden {
-    display: none;
 }
 
 table, th, td {
@@ -119,17 +168,11 @@ table, th, td {
     text-align: right;
 }
 
-#exit-btn{
-    text-align: right;
-}
-
 .edit-button {
     text-align: right;
 }
 
-.btn-color-blue {
-    background-color: aliceblue;
-}
+/* ............................................... Footer styling */
 
 .footer {
     background-color: #258d8c;
