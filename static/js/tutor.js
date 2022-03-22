@@ -34,4 +34,16 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("tutor-profile").style.display="block";
         document.getElementById("bookings-button").style.display="block";
     }
+
 })
+
+function selectTime(){
+    var time = document.getElementsByClassName("time-slot")
+    for (var i=0; i < time.length; i++) {
+        time[i].style.backgroundColor = "white"
+        time[i].addEventListener("click", function(event) {
+            squareClicked = event.target;
+            squareClicked.style.backgroundColor = "green"
+        })
+    }
+}

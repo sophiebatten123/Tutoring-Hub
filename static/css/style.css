@@ -203,6 +203,11 @@ table, th, td {
 .edit-button {
     text-align: right;
 }
+/* ............................................... Bookings Sections */
+
+.time-slot:hover {
+    cursor: pointer;
+}
 
 /* ............................................... Footer styling */
 

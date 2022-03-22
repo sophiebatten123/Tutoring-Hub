@@ -77,32 +77,32 @@
                         <th>Friday</th>
                     </tr>
                     <tr>
-                        <td>3.30 - 4.30 pm</td>
-                        <td>3.30 - 4.30 pm</td>
-                        <td>3.30 - 4.30 pm</td>
-                        <td>3.30 - 4.30 pm</td>
-                        <td>3.30 - 4.30 pm</td>
+                        <td class="time-slot" onclick="selectTime()">3.30 - 4.30 pm</td>
+                        <td class="time-slot" onclick="selectTime()">3.30 - 4.30 pm</td>
+                        <td class="time-slot" onclick="selectTime()">3.30 - 4.30 pm</td>
+                        <td class="time-slot" onclick="selectTime()">3.30 - 4.30 pm</td>
+                        <td class="time-slot" onclick="selectTime()">3.30 - 4.30 pm</td>
                     </tr>
                     <tr>
-                        <td>4.30 - 5.30 pm</td>
-                        <td>4.30 - 5.30 pm</td>
-                        <td>4.30 - 5.30 pm</td>
-                        <td>4.30 - 5.30 pm</td>
-                        <td>4.30 - 5.30 pm</td>
+                        <td class="time-slot" onclick="selectTime()">4.30 - 5.30 pm</td>
+                        <td class="time-slot" onclick="selectTime()">4.30 - 5.30 pm</td>
+                        <td class="time-slot" onclick="selectTime()">4.30 - 5.30 pm</td>
+                        <td class="time-slot" onclick="selectTime()"> 4.30 - 5.30 pm</td>
+                        <td class="time-slot" onclick="selectTime()">4.30 - 5.30 pm</td>
                     </tr>
                     <tr>
-                        <td>5.30 - 6.30 pm</td>
-                        <td>5.30 - 6.30 pm</td>
-                        <td>5.30 - 6.30 pm</td>
-                        <td>5.30 - 6.30 pm</td>
-                        <td>5.30 - 6.30 pm</td>
+                        <td class="time-slot" onclick="selectTime()">5.30 - 6.30 pm</td>
+                        <td class="time-slot" onclick="selectTime()">5.30 - 6.30 pm</td>
+                        <td class="time-slot" onclick="selectTime()">5.30 - 6.30 pm</td>
+                        <td class="time-slot" onclick="selectTime()">5.30 - 6.30 pm</td>
+                        <td class="time-slot" onclick="selectTime()">5.30 - 6.30 pm</td>
                     </tr>
                     <tr>
-                        <td>6.30 - 7.30 pm</td>
-                        <td>6.30 - 7.30 pm</td>
-                        <td>6.30 - 7.30 pm</td>
-                        <td>6.30 - 7.30 pm</td>
-                        <td>6.30 - 7.30 pm</td>
+                        <td class="time-slot" onclick="selectTime()">6.30 - 7.30 pm</td>
+                        <td class="time-slot" onclick="selectTime()">6.30 - 7.30 pm</td>
+                        <td class="time-slot" onclick="selectTime()">6.30 - 7.30 pm</td>
+                        <td class="time-slot" onclick="selectTime()">6.30 - 7.30 pm</td>
+                        <td class="time-slot" onclick="selectTime()">6.30 - 7.30 pm</td>
                     </tr>
                 </table>
             </div>
@@ -122,6 +122,15 @@
             </div>
         </div>
     </div>
+</div>
+
+<div class="row">
+    <form action="/tutors/sophieform/" method="post">
+        {% csrf_token %}
+        <label for="day">Choose the day: </label>
+        <input id="day" type="date" name="day">
+        <input type="submit" value="OK">
+    </form>
 </div>
 
 {% endblock %}
