@@ -180,7 +180,7 @@ html, body {
     background-color: orange;
 }
 
-table, th, td {
+th, td {
     border: 1px solid;
 }
 
@@ -207,6 +207,14 @@ table, th, td {
 
 .time-slot:hover {
     cursor: pointer;
+}
+
+.hidden-mon {
+    display: none;
+}
+
+.table {
+    padding: 10px 100px;
 }
 
 /* ............................................... Footer styling */
