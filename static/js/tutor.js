@@ -37,13 +37,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
 })
 
+function selectDate(){
+    var date = document.getElementsByClassName("day-slot");
+    var confirmDay = document.getElementById("confirm-date");
+
+    for (var i=0; i < date.length; i++) {
+        date[i].style.backgroundColor = "white";
+        date[i].addEventListener("click", function(event) {
+            squareClicked = event.target;
+            squareClicked.style.backgroundColor = "green";
+            confirmDay.innerHTML = squareClicked.innerHTML
+        })
+    }
+}
+
 function selectTime(){
-    var time = document.getElementsByClassName("time-slot")
+    var time = document.getElementsByClassName("time-slot");
+    var confirmTime = document.getElementById("confirm-time");
+
     for (var i=0; i < time.length; i++) {
-        time[i].style.backgroundColor = "white"
+        time[i].style.backgroundColor = "white";
         time[i].addEventListener("click", function(event) {
             squareClicked = event.target;
-            squareClicked.style.backgroundColor = "green"
+            squareClicked.style.backgroundColor = "green";
+            confirmTime.innerHTML = squareClicked.innerHTML
         })
     }
 }
