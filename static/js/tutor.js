@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("qualifications-btn").addEventListener("click", openQualifications);
     document.getElementById("qualifications").style.display="none";
     document.getElementById("exit-booking").addEventListener("click", closeBooking);
+    document.getElementById("confirm-btn").addEventListener("click", confirmBooking)
     
     function openBooking() {
         document.getElementById("bookings").style.display="block";
@@ -41,7 +42,7 @@ function selectDate(){
     var date = document.getElementsByClassName("day-slot");
     var confirmDay = document.getElementById("confirm-date");
 
-    for (var i=0; i < date.length; i++) {
+    for (i=0; i < date.length; i++) {
         date[i].style.backgroundColor = "white";
         date[i].addEventListener("click", function(event) {
             squareClicked = event.target;
@@ -62,5 +63,17 @@ function selectTime(){
             squareClicked.style.backgroundColor = "green";
             confirmTime.innerHTML = squareClicked.innerHTML
         })
+    }
+}
+
+function confirmBooking(event){
+    var confirmDate = document.getElementById("confirm-date");
+    var confirmTime = document.getElementById("confirm-time");
+
+    if (confirmDate.innerHTML === '' || confirmTime.innerHTML === '') {
+        alert("Please select a date and time");
+    } else {
+        console.log(confirmDate.innerHTML);
+        console.log(confirmTime.innerHTML);
     }
 }

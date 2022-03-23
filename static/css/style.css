@@ -205,16 +205,24 @@ th, td {
 }
 /* ............................................... Bookings Sections */
 
-.time-slot:hover {
-    cursor: pointer;
-}
-
 .hidden-mon {
     display: none;
 }
 
 .table {
     padding: 10px 100px;
+}
+
+.table:hover {
+    cursor: pointer;
+}
+
+#left {
+    float: left;
+}
+
+#right {
+    float: right;
 }
 
 /* ............................................... Footer styling */

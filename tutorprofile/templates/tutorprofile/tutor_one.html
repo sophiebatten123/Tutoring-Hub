@@ -72,25 +72,31 @@
                     <h3>Select a date:</h3>
                     <table class="center">
                         <tr>
-                            <th class="day-slot table" onclick="selectDate()">Monday</th>
+                            <th class="day-slot table" onclick="selectDate()">Monday 28th March</th>
                         </tr>
                         <tr>
-                            <th class="day-slot table" onclick="selectDate()">Tuesday</th>
+                            <th class="day-slot table" onclick="selectDate()">Tuesday 29th March</th>
                         </tr>
                         <tr>
-                            <th class="day-slot table" onclick="selectDate()">Wednesday</th>
+                            <th class="day-slot table" onclick="selectDate()">Wednesday 30th March</th>
                         </tr>
                         <tr>
-                            <th class="day-slot table" onclick="selectDate()">Thursday</th>
+                            <th class="day-slot table" onclick="selectDate()">Thursday 31st March</th>
                         </tr>
                         <tr>
-                            <th class="day-slot table" onclick="selectDate()">Friday</th>
+                            <th class="day-slot table" onclick="selectDate()">Friday 1st April</th>
+                        </tr>
+                        <tr>
+                            <th class="table"><i class="fa-solid fa-arrow-left" id="left"></i><i class="fa-solid fa-arrow-right" id="right"></i></th>
                         </tr>
                     </table>
                 </div>
                 <div class="col-4">
                     <h3>Select a time:</h3>
                     <table class="center">
+                        <tr>
+                            <td class="time-slot table" onclick="selectTime()">2.30 - 3.30 pm</td>
+                        </tr>
                         <tr>
                             <td class="time-slot table" onclick="selectTime()">3.30 - 4.30 pm</td>
                         </tr>
@@ -108,7 +114,7 @@
                         </tr>
                     </table>
                 </div>
-                <div class="col-4 confirm-booking">
+                <div class="col-4 confirm-booking" id="confirm">
                     <h3>Confirm your booking:</h3>
                     <p>Date: <span id="confirm-date"></span></p>
                     <p>Time: <span id="confirm-time"></span></p>
@@ -126,6 +132,8 @@
         {% csrf_token %}
         <label for="day">Choose the day: </label>
         <input id="day" type="date" name="day">
+        <label for="time">Choose the time: </label>
+        <input id="time" type="time" name="time">
         <input type="submit" value="OK">
     </form>
 </div>
