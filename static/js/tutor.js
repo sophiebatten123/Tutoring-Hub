@@ -84,9 +84,14 @@ function selectTime(){
 }
 
 function confirmBooking(){
+    
     var confirmDate = document.getElementById("confirm-date");
     var confirmTime = document.getElementById("confirm-time");
 
+    /* Upon click of the confirm booking button the users selection of date and time are recognised.
+    If the user has not selected a date or time an error message will be displayed on the screen.
+    If the user has selected a date and time this will be booked and the data will be sent to thier database.*/
+    
     if (confirmDate.innerHTML === '' || confirmTime.innerHTML === '') {
         alert("Please select a date and time");
     } else {
@@ -94,32 +99,33 @@ function confirmBooking(){
         console.log(confirmTime.innerHTML);
         var date = confirmDate.innerHTML;
         var time = confirmTime.innerHTML;
-    }
 
-    fetch("confirm_booking/", {
-        method: "POST",
-        headers: {
-            'X-CSRFToken': getCookie('csrftoken'),
-            'X-Requested-With': 'XMLHttpRequest',
-            'Content-Type': 'application/json; charset=UTF-8',
-            'Accept': 'application/json'
-        },
-        body: JSON.stringify({
-            date: date,
-            time: time
+        // Date and time variables are sent to the users database via the fetch function.
+        fetch("confirm_booking/", {
+            method: "POST",
+            headers: {
+                'X-CSRFToken': getCookie('csrftoken'),
+                'X-Requested-With': 'XMLHttpRequest',
+                'Content-Type': 'application/json; charset=UTF-8',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+                date: date,
+                time: time
+            })
         })
-    })
-    .then(response => {
-        if(!response.ok) {
-            console.log(response);
-            throw Error("Error");
-        }
-        return response.json();
-    })
-    .then(data => {
-        console.log(data);
-    })
-    .catch(error => {
-        console.log(error);
-    });
+        .then(response => {
+            if(!response.ok) {
+                console.log(response);
+                throw Error("Error");
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log(data);
+        })
+        .catch(error => {
+            console.log(error);
+        });
+    }
 }
