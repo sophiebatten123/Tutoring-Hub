@@ -127,17 +127,6 @@
     </div>
 </div>
 
-<div class="row">
-    <form action="/tutors/sophieform/" method="post">
-        {% csrf_token %}
-        <label for="day">Choose the day: </label>
-        <input id="day" type="date" name="day">
-        <label for="time">Choose the time: </label>
-        <input id="time" type="time" name="time">
-        <input type="submit" value="OK">
-    </form>
-</div>
-
 {% endblock %}
 
 {% block postloadjs %}

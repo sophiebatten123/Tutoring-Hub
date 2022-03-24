@@ -1,3 +1,20 @@
+function getCookie(name) {
+    let cookieValue = null;
+    if (document.cookie && document.cookie !== '') {
+        const cookies = document.cookie.split(';');
+        for (let i = 0; i < cookies.length; i++) {
+            const cookie = cookies[i].trim();
+            // Does this cookie string begin with the name we want?
+            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+            }
+        }
+    }
+    return cookieValue;
+}
+const csrftoken = getCookie('csrftoken');
+
 document.addEventListener("DOMContentLoaded", () => {
     
     document.getElementById("booking-btn").addEventListener("click", openBooking);
@@ -66,7 +83,7 @@ function selectTime(){
     }
 }
 
-function confirmBooking(event){
+function confirmBooking(){
     var confirmDate = document.getElementById("confirm-date");
     var confirmTime = document.getElementById("confirm-time");
 
@@ -75,5 +92,34 @@ function confirmBooking(event){
     } else {
         console.log(confirmDate.innerHTML);
         console.log(confirmTime.innerHTML);
+        var date = confirmDate.innerHTML;
+        var time = confirmTime.innerHTML;
     }
+
+    fetch("confirm_booking/", {
+        method: "POST",
+        headers: {
+            'X-CSRFToken': getCookie('csrftoken'),
+            'X-Requested-With': 'XMLHttpRequest',
+            'Content-Type': 'application/json; charset=UTF-8',
+            'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+            date: date,
+            time: time
+        })
+    })
+    .then(response => {
+        if(!response.ok) {
+            console.log(response);
+            throw Error("Error");
+        }
+        return response.json();
+    })
+    .then(data => {
+        console.log(data);
+    })
+    .catch(error => {
+        console.log(error);
+    });
 }
