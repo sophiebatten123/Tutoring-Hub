@@ -17,6 +17,6 @@ def tutor_three(request):
     return render(request, 'tutorprofile/tutor_three.html')
 
 
-def sophieform(request):
-    print (request.POST)
+def confirm_booking(request):
+    print(request.POST["date"])
     return HttpResponse("hello world")
