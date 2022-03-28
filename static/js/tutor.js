@@ -97,12 +97,11 @@ function confirmBooking(){
     if (confirmDate.innerHTML === '' || confirmTime.innerHTML === '') {
         alert("Please select a date and time");
     } else {
-        console.log(confirmDate.innerHTML);
-        console.log(confirmTime.innerHTML);
         var date = confirmDate.innerHTML;
         var time = confirmTime.innerHTML;
         var tutor = tutorName.innerHTML;
         var subject = subjectName.innerHTML;
+
 
         // Date and time variables are sent to the users database via the fetch function.
         fetch("confirm_booking/", {

@@ -14,4 +14,4 @@ class MakeProfileForm(forms.ModelForm):
         Featured fields in the sign up.
         '''
         model = UserProfile
-        fields = ('full_name', 'year_group', 'current_grade', 'predicted_grade', 'about_me',)
+        fields = ('full_name', 'year_group', 'email', 'current_grade', 'predicted_grade', 'about_me',)
