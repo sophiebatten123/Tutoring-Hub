@@ -49,6 +49,17 @@ html, body {
     padding-top: 115px;
 }
 
+.table-space {
+    margin-top: 10px;
+    width: 30%;
+}
+
+.bold {
+    background-color: #fec173;
+    font-weight: bold;
+    font-size: 20px;
+}
+
 /* ............................................... Home page styling */
 
 .header-image {

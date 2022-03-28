@@ -1,11 +1,11 @@
 '''
 Importing the relevant packages.
 '''
-from django.http import HttpResponse
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 from .models import Booking
-from userprofile.models import UserProfile
+from django.http import JsonResponse
+
 import json
 
 
@@ -45,12 +45,23 @@ def confirm_booking(request):
         request_body = json.loads(request.body)
         date = request_body['date']
         time = request_body['time']
+        tutor = request_body['tutor']
+        subject = request_body['subject']
+
         booking.date = date
         booking.time = time
-        
-        instance = booking.save()
-        instance.student = request.user
-        instance.save()
+        booking.tutor = tutor
+        booking.subject = subject
+        booking.student = request.user
+        booking.save()
 
-    print(request.POST[date, time])
-    return HttpResponse('hello')
+        bookings = Booking.objects.all().values()
+
+        template_name = "userprofile/profile.html"
+
+        args = {
+            "bookings": list(bookings),
+        }
+        return JsonResponse(args)
+
+    return render(request, template_name, args)

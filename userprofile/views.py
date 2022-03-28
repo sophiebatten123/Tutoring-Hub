@@ -6,6 +6,7 @@ from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, get_object_or_404
 from .models import UserProfile
 from .forms import MakeProfileForm
+from tutorprofile.models import Booking
 
 
 @login_required
@@ -28,6 +29,7 @@ def profile(request):
     template = 'userprofile/profile.html'
     context = {
         'profile': user_profile,
+        'bookings': Booking.objects.filter(student=request.user),
         'form': form,
         'on_profile_page': True
     }
