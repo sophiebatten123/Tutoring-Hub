@@ -2,9 +2,10 @@
 Imports the relevant packages
 '''
 from django.db import models
-from userprofile.models import UserProfile
+from django.contrib.auth.models import User
 
 # Create your models here.
+
 
 class Booking(models.Model):
     '''
@@ -12,4 +13,9 @@ class Booking(models.Model):
     '''
     date = models.CharField(max_length=50)
     time = models.CharField(max_length=50)
-    student = models.ForeignKey(UserProfile, default=None, on_delete=models.CASCADE)
+    tutor = models.CharField(max_length=50, null=True, blank=True)
+    subject = models.CharField(max_length=50, null=True, blank=True)
+    student = models.ForeignKey(User, default=None, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return f"{self.student} booked a lesson on {self.date} at {self.time}"

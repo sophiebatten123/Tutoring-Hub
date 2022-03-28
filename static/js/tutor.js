@@ -87,6 +87,8 @@ function confirmBooking(){
     
     var confirmDate = document.getElementById("confirm-date");
     var confirmTime = document.getElementById("confirm-time");
+    var tutorName = document.getElementById("tutor-name");
+    var subjectName = document.getElementById("subject");
 
     /* Upon click of the confirm booking button the users selection of date and time are recognised.
     If the user has not selected a date or time an error message will be displayed on the screen.
@@ -99,6 +101,8 @@ function confirmBooking(){
         console.log(confirmTime.innerHTML);
         var date = confirmDate.innerHTML;
         var time = confirmTime.innerHTML;
+        var tutor = tutorName.innerHTML;
+        var subject = subjectName.innerHTML;
 
         // Date and time variables are sent to the users database via the fetch function.
         fetch("confirm_booking/", {
@@ -111,7 +115,9 @@ function confirmBooking(){
             },
             body: JSON.stringify({
                 date: date,
-                time: time
+                time: time,
+                tutor: tutor,
+                subject: subject
             })
         })
         .then(response => {
@@ -122,7 +128,7 @@ function confirmBooking(){
             return response.json();
         })
         .then(data => {
-            console.log(data);
+            window.location.href = "/profile";
         })
         .catch(error => {
             console.log(error);

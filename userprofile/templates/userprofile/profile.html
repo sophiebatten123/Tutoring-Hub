@@ -7,14 +7,14 @@
 
 <div class="container-fluid center-block">
     <div class="row profile">
-        {% if profile.first_name %}
+        {% if profile.full_name %}
             <div class="col-3">
                 <div class="row">
                     <div class="col-12 user-image"><img src="../../static/images/user.png" alt="cartoon image of a person"></div>
                 </div>
                 <div class="row">
                     <div class="col-12 user-info">
-                        <h1>{{ profile.first_name }} {{ profile.surname }}</h1>
+                        <h1>{{ profile.full_name }}</h1>
                         <p>Year {{ profile.year_group }} Student</p>
                     </div>
                 </div>
@@ -38,6 +38,24 @@
             <div class="col-9" id="upcoming-lessons">
                 <div class="row">
                     <h3>Your upcoming lessons are:</h3>
+                    {% for booking in bookings %}
+                    <div class="col-12">
+                        <table class="table-space">
+                            <tr>
+                                <td class="bold">{{ booking.tutor }}</td>
+                            </tr>
+                            <tr>
+                                <td>{{ booking.subject }}</td>
+                            </tr>
+                            <tr>
+                                <td>{{ booking.date }}</td>
+                            </tr>
+                            <tr>
+                                <td>{{ booking.time }}</td>
+                            </tr>
+                        </table>
+                    </div>
+                    {% endfor %}
                 </div>
             </div>
             <div class="col-9" id="previous-lessons">
@@ -72,7 +90,7 @@
         </div>
         <div class="col-9 about-text" id="about-me">
             <div class="row about-spacer">
-                <h2>Weclome!</h2>
+                <h2>Weclome {{ request.user }}! </h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis efficitur velit nec nunc imperdiet, sit
                     amet eleifend lorem iaculis. Donec convallis condimentum lectus ut interdum. Nam facilisis, ante at
                     dapibus gravida, risus dolor mollis enim, nec dignissim nibh neque non ipsum. Duis venenatis, orci
