@@ -4,6 +4,8 @@ Importing the relevant packages.
 from django.http import HttpResponse
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
+from .models import Booking
+from userprofile.models import UserProfile
 import json
 
 
@@ -37,9 +39,18 @@ def confirm_booking(request):
     '''
 
     if request.method == 'POST':
+
+        booking = Booking()
+
         request_body = json.loads(request.body)
         date = request_body['date']
         time = request_body['time']
+        booking.date = date
+        booking.time = time
+        
+        instance = booking.save()
+        instance.student = request.user
+        instance.save()
 
     print(request.POST[date, time])
     return HttpResponse('hello')

@@ -10,6 +10,6 @@ class Booking(models.Model):
     '''
     Booking model
     '''
-    date = models.DateField()
-    time = models.TimeField()
-    student = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
+    date = models.CharField(max_length=50)
+    time = models.CharField(max_length=50)
+    student = models.ForeignKey(UserProfile, default=None, on_delete=models.CASCADE)
