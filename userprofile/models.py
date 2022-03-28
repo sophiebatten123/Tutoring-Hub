@@ -41,6 +41,7 @@ class UserProfile(models.Model):
     first_name = models.CharField(max_length=100, null=True)
     surname = models.CharField(max_length=100, null=True)
     year_group = models.CharField(max_length=13, choices=YEAR_GROUPS, default='9')
+    email = models.EmailField(max_length=254, null=True, blank=True)
     current_grade = models.CharField(max_length=6, choices=GRADES, default='1', null=True)
     predicted_grade = models.CharField(max_length=6, choices=GRADES, default='1', null=True)
     about_me = models.TextField()
