@@ -1,3 +1,20 @@
+function getCookie(name) {
+    let cookieValue = null;
+    if (document.cookie && document.cookie !== '') {
+        const cookies = document.cookie.split(';');
+        for (let i = 0; i < cookies.length; i++) {
+            const cookie = cookies[i].trim();
+            // Does this cookie string begin with the name we want?
+            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+            }
+        }
+    }
+    return cookieValue;
+}
+const csrftoken = getCookie('csrftoken');
+
 document.addEventListener("DOMContentLoaded", () => { 
 
     document.getElementById("upcoming-lessons").style.display="none";
@@ -15,6 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("previous-lessons").style.display="none";
         document.getElementById("about-me").style.display="none";
         document.getElementById("make-profile").style.display="none";
+        document.getElementById("about-subject").style.display="none";
     }
 
     function previousLessons() {
@@ -22,6 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("upcoming-lessons").style.display="none";
         document.getElementById("about-me").style.display="none";
         document.getElementById("make-profile").style.display="none";
+        document.getElementById("about-subject").style.display="none";
     }
 
     function profilePage() {
@@ -29,6 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("previous-lessons").style.display="none";
         document.getElementById("upcoming-lessons").style.display="none";
         document.getElementById("make-profile").style.display="none";
+        document.getElementById("about-subject").style.display="block";
     }
 
     function editProfile() {
@@ -36,11 +56,24 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("about-me").style.display="none";
         document.getElementById("previous-lessons").style.display="none";
         document.getElementById("upcoming-lessons").style.display="none";
+        document.getElementById("about-subject").style.display="none";
     }
 
     function closeProfile() {
         document.getElementById("make-profile").style.display="none";
         document.getElementById("about-me").style.display="block";
     }
-
 })
+
+function deleteBooking() {
+    fetch('delete_booking/', {
+        method: 'DELETE',
+        headers: {
+            'X-CSRFToken': getCookie('csrftoken'),
+        }
+    })
+    .then(res => res.text())
+    .then(res => console.log(res))
+
+    alert("are you sure you want to delete this booking?")
+}

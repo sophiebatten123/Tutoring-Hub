@@ -51,7 +51,11 @@ html, body {
 
 .table-space {
     margin-top: 10px;
-    width: 30%;
+    width: 50%;
+}
+
+.table-space td {
+    padding: 10px;
 }
 
 .bold {
@@ -127,6 +131,7 @@ html, body {
     width: 100%;
     margin-top: 20px;
     padding: 20px;
+    height: 810px;
 }
 
 .about-text {
@@ -164,6 +169,30 @@ html, body {
 
 #exit-btn{
     text-align: right;
+}
+
+.subjects {
+    margin: 20px 0;
+    height: 200px;
+    background-color: #ebf5f5;
+}
+
+.subjects i {
+    font-size: 15px;
+}
+
+.profile-tutor-buttons {
+    border: solid 2px black;
+    height: 50px;
+    margin-top: 40px;
+    background-color: #fec173;
+    color: black;
+    font-size: 20px;
+    text-align: center;
+}
+
+.grade-text {
+    padding-top: 20px;
 }
 
 /* ............................................... Tutor profile page styling */
@@ -238,6 +267,28 @@ th, td {
 
 #time-slots {
     opacity: 0;
+}
+
+.btn-delete {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    background-color: #d85153;
+    border: 2px solid black;
+    color: white;
+    float: right;
+}
+
+.btn-complete {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    background-color: #258d8c;
+    border: 2px solid black;
+    color: white;
+    float: left;
+}
+
+.type {
+    float: right;
 }
 
 /* ............................................... Footer styling */
