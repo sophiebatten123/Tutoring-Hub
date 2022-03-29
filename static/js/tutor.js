@@ -1,3 +1,5 @@
+window.onload = dateGenerator()
+
 function getCookie(name) {
     let cookieValue = null;
     if (document.cookie && document.cookie !== '') {
@@ -133,4 +135,60 @@ function confirmBooking(){
             console.log(error);
         });
     }
+}
+
+function dateGenerator() {
+    var day_one = document.getElementById("day-one");
+    var day_two = document.getElementById("day-two");
+    var day_three = document.getElementById("day-three");
+    var day_four = document.getElementById("day-four");
+    var day_five = document.getElementById("day-five");
+
+    // Gets the next 7 week days
+    var currentDate = new Date();
+    var secondDay = new Date(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate() + 1);
+    var thirdDay = new Date(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate() + 2);
+    var fourthDay = new Date(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate() + 3);
+    var fifthDay = new Date(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate() + 4);
+    var sixthDay = new Date(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate() + 5);
+
+    // Uses naming notation to get them written in long form
+    var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    var daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+    var secondDate = secondDay.getDate();
+    var secondMonth = secondDay.getMonth();
+
+    var thirdDate = thirdDay.getDate();
+    var thirdMonth = thirdDay.getMonth();
+
+    var fourthDate = fourthDay.getDate();
+    var fourthMonth = fourthDay.getMonth();
+
+    var fifthDate = fifthDay.getDate();
+    var fifthMonth = fifthDay.getMonth();
+
+    var sixthDate = sixthDay.getDate();
+    var sixthMonth = sixthDay.getMonth();
+
+    // Denotes the new days of the week
+    var secondDateTrial = secondDate + " " + monthNames[secondMonth];
+    var thirdDateTrial = thirdDate + " " + monthNames[thirdMonth];
+    var fourthDateTrial = fourthDate + " " + monthNames[fourthMonth];
+    var fifthDateTrial = fifthDate + " " + monthNames[fifthMonth];
+    var sixthDateTrial = sixthDate + " " + monthNames[sixthMonth];
+
+    
+    secondDateWithDayOfWeek = daysOfWeek[secondDay.getDay()] + " " + secondDateTrial;
+    thirdDateWithDayOfWeek = daysOfWeek[thirdDay.getDay()] + " " + thirdDateTrial;
+    fourthDateWithDayOfWeek = daysOfWeek[fourthDay.getDay()] + " " + fourthDateTrial;
+    fifthDateWithDayOfWeek = daysOfWeek[fifthDay.getDay()] + " " + fifthDateTrial;
+    sixthDateWithDayOfWeek = daysOfWeek[sixthDay.getDay()] + " " + sixthDateTrial;
+
+    day_one.innerHTML = secondDateWithDayOfWeek;
+    day_two.innerHTML = thirdDateWithDayOfWeek;
+    day_three.innerHTML = fourthDateWithDayOfWeek;
+    day_four.innerHTML = fifthDateWithDayOfWeek;
+    day_five.innerHTML = sixthDateWithDayOfWeek;
+
 }
