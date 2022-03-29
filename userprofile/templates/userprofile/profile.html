@@ -27,12 +27,53 @@
                     </div>
                 </div>
             </div>
-            <div class="col-9 about-text" id="about-me">
+            <div class="col-5 about-text" id="about-me">
                 <div class="row about-spacer">
                     <h3>About Me!</h3>
                     <p>{{ profile.about_me }}</p>
                     <p>Current grade: Grade {{ profile.current_grade }}</p>
                     <p>Predicted grade: Grade {{ profile.predicted_grade }}</p>
+                </div>
+            </div>
+            <div class="col-4" id="about-subject">
+                <div class="row subjects" id="science">
+                    <div class="col-8">
+                        <h3>Science <i class="fa-solid fa-flask"></i></h3>
+                        <p><i class="fa-solid fa-question"></i></p>
+                        <p><i class="fa-solid fa-question"></i></p>
+                        <p><i class="fa-solid fa-question"></i></p>
+                    </div>
+                    <div class="col-4 grade-text">
+                        <p>Current grade: Grade {{ profile.current_grade }}</p>
+                        <p>Predicted grade: Grade {{ profile.predicted_grade }}</p>
+                        <a class="nav-link book-btn profile-tutor-buttons" href="{% url 'tutor_two' %}">Book Lesson</a>
+                    </div>
+                </div>
+                <div class="row subjects" id="maths">
+                    <div class="col-8">
+                        <h3>Maths <i class="fa-solid fa-calculator"></i></h3>
+                        <p><i class="fa-solid fa-question"></i></p>
+                        <p><i class="fa-solid fa-question"></i></p>
+                        <p><i class="fa-solid fa-question"></i></p>
+                    </div>
+                    <div class="col-4 grade-text">
+                        <p>Current grade: Grade {{ profile.current_grade }}</p>
+                        <p>Predicted grade: Grade {{ profile.predicted_grade }}</p>
+                        <a class="nav-link book-btn profile-tutor-buttons" href="{% url 'tutor_one' %}">Book Lesson</a>
+                    </div>
+                </div>
+                <div class="row subjects" id="english">  
+                    <div class="col-8">
+                        <h3>English <i class="fa-solid fa-pen"></i></h3>
+                        <p><i class="fa-solid fa-question"></i></p>
+                        <p><i class="fa-solid fa-question"></i></p>
+                        <p><i class="fa-solid fa-question"></i></p>
+                    </div>
+                    <div class="col-4 grade-text">
+                        <p>Current grade: Grade {{ profile.current_grade }}</p>
+                        <p>Predicted grade: Grade {{ profile.predicted_grade }}</p>
+                        <a class="nav-link book-btn profile-tutor-buttons" href="{% url 'tutor_three' %}">Book Lesson</a>
+                    </div>
                 </div>
             </div>
             <div class="col-9" id="upcoming-lessons">
@@ -42,16 +83,22 @@
                     <div class="col-12">
                         <table class="table-space">
                             <tr>
-                                <td class="bold">{{ booking.tutor }}</td>
+                                <td class="bold">{{ booking.id }} {{ booking.subject }} Lesson <span class="type">Online</span></td>
                             </tr>
                             <tr>
-                                <td>{{ booking.subject }}</td>
+                                <td>{{ booking.tutor }}</td>
                             </tr>
                             <tr>
                                 <td>{{ booking.date }}</td>
                             </tr>
                             <tr>
                                 <td>{{ booking.time }}</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button class="btn btn-complete btn-lg">Rate Lesson</button>
+                                    <button class="btn btn-delete btn-lg" onclick="deleteBooking()">Cancel</button>
+                                </td>
                             </tr>
                         </table>
                     </div>

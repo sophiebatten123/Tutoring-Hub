@@ -8,7 +8,6 @@ from .models import UserProfile
 from .forms import MakeProfileForm
 from tutorprofile.models import Booking
 
-
 @login_required
 def profile(request):
     ''' This will render the profile template '''
@@ -35,3 +34,18 @@ def profile(request):
     }
 
     return render(request, template, context)
+
+
+def delete_booking(request):
+    '''
+    This will delete the users booking
+    '''
+
+    Booking.objects.filter(booking.id).delete()
+
+    context = {
+        'profile_delete': 'Your profile is deleted',
+    }
+
+    print('deleted')
+    return render(request, 'userprofile/profile.html', context)
