@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("qualifications-btn").addEventListener("click", openQualifications);
     document.getElementById("qualifications").style.display="none";
     document.getElementById("exit-booking").addEventListener("click", closeBooking);
-    document.getElementById("confirm-btn").addEventListener("click", confirmBooking)
+    document.getElementById("confirm-btn").addEventListener("click", confirmBooking);
     
     function openBooking() {
         document.getElementById("bookings").style.display="block";
@@ -54,12 +54,15 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("tutor-profile").style.display="block";
         document.getElementById("bookings-button").style.display="block";
     }
-
 })
 
 function selectDate(){
     var date = document.getElementsByClassName("day-slot");
     var confirmDay = document.getElementById("confirm-date");
+    var confirmTime = document.getElementById("confirm-time");
+
+    //Resets the innerhtml of the booking for time when a new date is selected.
+    confirmTime.innerHTML = ''
 
     for (i=0; i < date.length; i++) {
         date[i].style.backgroundColor = "white";
@@ -69,9 +72,11 @@ function selectDate(){
             confirmDay.innerHTML = squareClicked.innerHTML
         })
     }
+    selectTime()
 }
 
 function selectTime(){
+    document.getElementById("time-slots").style.opacity = "100%"
     var time = document.getElementsByClassName("time-slot");
     var confirmTime = document.getElementById("confirm-time");
 
