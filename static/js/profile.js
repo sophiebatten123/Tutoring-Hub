@@ -72,8 +72,9 @@ function deleteBooking() {
             'X-CSRFToken': getCookie('csrftoken'),
         }
     })
-    .then(res => res.text())
-    .then(res => console.log(res))
+    .then(data => {
+        window.location.href = "/profile";
+    })
 
     alert("are you sure you want to delete this booking?")
 }

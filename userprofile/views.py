@@ -40,8 +40,8 @@ def delete_booking(request):
     '''
     This will delete the users booking
     '''
-
-    Booking.objects.filter(booking.id).delete()
+    student_name = request.user
+    Booking.objects.filter(student=student_name).delete()
 
     context = {
         'profile_delete': 'Your profile is deleted',
