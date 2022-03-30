@@ -53,6 +53,9 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("bookings").style.display="none";
         document.getElementById("tutor-profile").style.display="block";
         document.getElementById("bookings-button").style.display="block";
+        document.getElementById("confirm-date").innerHTML = '';
+        document.getElementById("confirm-time").innerHTML = '';
+        clearBooking();
     }
 
     selectDate()
@@ -67,14 +70,12 @@ function selectDate(){
     confirmTime.innerHTML = ''
 
     for (i=0; i < date.length; i++) {
+        date[i].style.backgroundColor = "white";
         date[i].addEventListener("click", function(event) {
             squareClicked = event.target;
             squareClicked.style.backgroundColor = "green";
             confirmDay.innerHTML = squareClicked.innerHTML
         })
-        for (j=0; j < date.length; j++) {
-            date[j].style.backgroundColor = "white";
-        }
         selectTime()
     }
 }
@@ -100,6 +101,7 @@ function confirmBooking(){
     var confirmTime = document.getElementById("confirm-time");
     var tutorName = document.getElementById("tutor-name");
     var subjectName = document.getElementById("subject");
+    var time = document.getElementsByClassName("time-slot")
 
     /* Upon click of the confirm booking button the users selection of date and time are recognised.
     If the user has not selected a date or time an error message will be displayed on the screen.
@@ -129,13 +131,6 @@ function confirmBooking(){
                 tutor: tutor,
                 subject: subject
             })
-        })
-        .then(response => {
-            if(!response.ok) {
-                console.log(response);
-                throw Error("Error");
-            }
-            return response.json();
         })
         .then(data => {
             window.location.href = "/profile";
@@ -199,4 +194,17 @@ function dateGenerator() {
     day_four.innerHTML = fifthDateWithDayOfWeek;
     day_five.innerHTML = sixthDateWithDayOfWeek;
 
+}
+
+function clearBooking() {
+    var date = document.getElementsByClassName("day-slot");
+    var time = document.getElementsByClassName("time-slot");
+
+    for (var i=0; i < date.length; i++) {
+        date[i].style.backgroundColor = "white";
+    }
+
+    for (var i=0; i < time.length; i++) {
+        time[i].style.backgroundColor = "white";
+    }
 }
