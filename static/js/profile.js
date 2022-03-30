@@ -24,8 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("profile-btn").addEventListener("click", profilePage);
     document.getElementById("edit-btn").addEventListener("click", editProfile);
     document.getElementById("make-profile").style.display="none";
-    document.getElementById("exit-btn").addEventListener("click", closeProfile)
-
+    document.getElementById("exit-btn").addEventListener("click", closeProfile);
 
     function upcomingLessons() {
         document.getElementById("upcoming-lessons").style.display="block";
@@ -65,20 +64,33 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     updateBookings()
+    deleteBooking()
 })
 
 function deleteBooking() {
-    fetch('delete_booking/', {
-        method: 'DELETE',
-        headers: {
-            'X-CSRFToken': getCookie('csrftoken'),
-        }
-    })
-    .then(data => {
-        window.location.href = "/profile";
-    })
+    delete_btn = document.getElementsByClassName("btn-delete")
 
-    alert("are you sure you want to delete this booking?")
+    for (i=0; i < delete_btn.length; i++) {
+        delete_btn[i].style.backgroundColor = "red";
+        delete_btn[i].addEventListener("click", function(event) {
+            squareClicked = event.target;
+            squareClicked.style.backgroundColor = "green";
+            id = squareClicked.value;
+
+            fetch('delete_booking/', {
+                method: 'DELETE',
+                headers: {
+                    'X-CSRFToken': getCookie('csrftoken'),
+                },
+                body: JSON.stringify({
+                    id: id,
+                })
+            })
+            .then(data => {
+                window.location.href = "/profile";
+            })
+        })
+    }
 }
 
 function updateBookings() {
