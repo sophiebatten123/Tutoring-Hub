@@ -30,6 +30,11 @@ GRADES = (
     ('9', 'Grade 9'),
 )
 
+SCIENCE = (
+    ('cell-biology', 'Cell Biology'),
+    ('infection-response', 'Infection and Response'),
+)
+
 class UserProfile(models.Model):
     '''
     Creates the user profile information for students & tutors.
@@ -45,6 +50,7 @@ class UserProfile(models.Model):
     current_grade = models.CharField(max_length=6, choices=GRADES, default='1', null=True)
     predicted_grade = models.CharField(max_length=6, choices=GRADES, default='1', null=True)
     about_me = models.TextField()
+    science = models.CharField(max_length=40, choices=SCIENCE, default='cell-biology')
     account_type = models.CharField(max_length=7, choices=ACCOUNT_TYPE, default='student')
     slug = models.SlugField(max_length=200, unique=True)
     featured_image = CloudinaryField('image', default='placeholder')
