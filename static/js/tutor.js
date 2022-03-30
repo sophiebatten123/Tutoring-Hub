@@ -183,12 +183,11 @@ function dateGenerator() {
     var fifthDateTrial = fifthDate + " " + monthNames[fifthMonth];
     var sixthDateTrial = sixthDate + " " + monthNames[sixthMonth];
 
-    
     secondDateWithDayOfWeek = daysOfWeek[secondDay.getDay()] + " " + secondDateTrial;
     thirdDateWithDayOfWeek = daysOfWeek[thirdDay.getDay()] + " " + thirdDateTrial;
     fourthDateWithDayOfWeek = daysOfWeek[fourthDay.getDay()] + " " + fourthDateTrial;
     fifthDateWithDayOfWeek = daysOfWeek[fifthDay.getDay()] + " " + fifthDateTrial;
-    sixthDateWithDayOfWeek = daysOfWeek[sixthDay.getDay()] + " " + sixthDateTrial;
+    sixthDateWithDayOfWeek = daysOfWeek[sixthDay.getDay()] + " " + sixthDateTrial;  
 
     day_one.innerHTML = secondDateWithDayOfWeek;
     day_two.innerHTML = thirdDateWithDayOfWeek;
