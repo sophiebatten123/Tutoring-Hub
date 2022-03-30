@@ -54,6 +54,8 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("tutor-profile").style.display="block";
         document.getElementById("bookings-button").style.display="block";
     }
+
+    selectDate()
 })
 
 function selectDate(){
@@ -65,14 +67,16 @@ function selectDate(){
     confirmTime.innerHTML = ''
 
     for (i=0; i < date.length; i++) {
-        date[i].style.backgroundColor = "white";
         date[i].addEventListener("click", function(event) {
             squareClicked = event.target;
             squareClicked.style.backgroundColor = "green";
             confirmDay.innerHTML = squareClicked.innerHTML
         })
+        for (j=0; j < date.length; j++) {
+            date[j].style.backgroundColor = "white";
+        }
+        selectTime()
     }
-    selectTime()
 }
 
 function selectTime(){

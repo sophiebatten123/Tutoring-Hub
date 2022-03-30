@@ -1,18 +1,4 @@
-function getCookie(name) {
-    let cookieValue = null;
-    if (document.cookie && document.cookie !== '') {
-        const cookies = document.cookie.split(';');
-        for (let i = 0; i < cookies.length; i++) {
-            const cookie = cookies[i].trim();
-            // Does this cookie string begin with the name we want?
-            if (cookie.substring(0, name.length + 1) === (name + '=')) {
-                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-                break;
-            }
-        }
-    }
-    return cookieValue;
-}
+//Constant variables
 const csrftoken = getCookie('csrftoken');
 
 document.addEventListener("DOMContentLoaded", () => { 
@@ -67,6 +53,22 @@ document.addEventListener("DOMContentLoaded", () => {
     deleteBooking()
 })
 
+function getCookie(name) {
+    let cookieValue = null;
+    if (document.cookie && document.cookie !== '') {
+        const cookies = document.cookie.split(';');
+        for (let i = 0; i < cookies.length; i++) {
+            const cookie = cookies[i].trim();
+            // Does this cookie string begin with the name we want?
+            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+            }
+        }
+    }
+    return cookieValue;
+}
+
 function deleteBooking() {
     delete_btn = document.getElementsByClassName("btn-delete")
 
@@ -103,12 +105,12 @@ function updateBookings() {
     var secondDateTrial = secondDate + " " + monthNames[secondMonth];
     secondDateWithDayOfWeek = daysOfWeek[secondDay.getDay()] + " " + secondDateTrial;
 
-    booking_dates = document.getElementsByClassName("booking-dates");
-    booking_id = document.getElementsByClassName("booking-id");
-
+    booking_dates = document.getElementsByClassName('booking-dates');
+    // JS is only recognising the first member of this class?
     console.log(secondDateWithDayOfWeek);
 
-    for (var i=0; i < booking_dates.length; i++) {
+    for (let i=0; i < booking_dates.length; i++) {
+        console.log(booking_dates[i].innerHTML);
         if (booking_dates[i].innerHTML == secondDateWithDayOfWeek) {
             booking_dates[i].style.backgroundColor = "red";
         } else {
