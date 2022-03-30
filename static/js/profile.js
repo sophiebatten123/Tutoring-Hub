@@ -83,22 +83,22 @@ function deleteBooking() {
 
 function updateBookings() {
     var currentDate = new Date();
-    var previousDay = new Date(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate() - 1);
+    var secondDay = new Date(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate() + 1);
     var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     var daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-    var previousDate = previousDay.getDate();
-    var previousMonth = previousDay.getMonth();
-    var previousDateTrial = previousDate + " " + monthNames[previousMonth];
-    previousDateWithDayOfWeek = daysOfWeek[previousDay.getDay()] + " " + previousDateTrial;
+    var secondDate = secondDay.getDate();
+    var secondMonth = secondDay.getMonth();
+    var secondDateTrial = secondDate + " " + monthNames[secondMonth];
+    secondDateWithDayOfWeek = daysOfWeek[secondDay.getDay()] + " " + secondDateTrial;
 
     booking_dates = document.getElementsByClassName("booking-dates");
+    booking_id = document.getElementsByClassName("booking-id");
 
-    console.log(previousDateWithDayOfWeek);
+    console.log(secondDateWithDayOfWeek);
 
     for (var i=0; i < booking_dates.length; i++) {
-        if (booking_dates[i].innerHTML == previousDateWithDayOfWeek) {
+        if (booking_dates[i].innerHTML == secondDateWithDayOfWeek) {
             booking_dates[i].style.backgroundColor = "red";
-            // I am wanting to then delete this from the database?
         } else {
             return
         }
