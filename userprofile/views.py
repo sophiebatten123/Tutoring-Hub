@@ -7,6 +7,7 @@ from django.shortcuts import render, get_object_or_404
 from .models import UserProfile
 from .forms import MakeProfileForm
 from tutorprofile.models import Booking
+import json
 
 @login_required
 def profile(request):
@@ -40,12 +41,15 @@ def delete_booking(request):
     '''
     This will delete the users booking
     '''
-    student_name = request.user
-    Booking.objects.filter(student=student_name).delete()
+    request_body = json.loads(request.body)
+    id = request_body['id']
+
+    print(id)
+
+    Booking.objects.filter(id=id).delete()
 
     context = {
         'profile_delete': 'Your profile is deleted',
     }
 
-    print('deleted')
     return render(request, 'userprofile/profile.html', context)
