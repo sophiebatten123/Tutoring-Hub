@@ -40,6 +40,9 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("tutor-profile").style.display="block";
         document.getElementById("bookings-button").style.display="block";
         document.getElementById("qualifications").style.display="none";
+        document.getElementById("confirm-date").innerHTML = '';
+        document.getElementById("confirm-time").innerHTML = '';
+        clearBooking();
     }
 
     function openQualifications() {
@@ -47,6 +50,9 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("bookings").style.display="none";
         document.getElementById("tutor-profile").style.display="none";
         document.getElementById("bookings-button").style.display="block";
+        document.getElementById("confirm-date").innerHTML = '';
+        document.getElementById("confirm-time").innerHTML = '';
+        clearBooking();
     }
 
     function closeBooking() {

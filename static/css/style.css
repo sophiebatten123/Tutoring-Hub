@@ -291,6 +291,22 @@ th, td {
     float: right;
 }
 
+.tutor-booking-info {
+    height: 100px;
+    background-color: #fec173;
+    margin-top: 50px;
+    padding-top: 20px;
+}
+
+.tutor-booking-info a {
+    text-decoration: none;
+    color: #258d8c;
+}
+
+.tutoring-heading {
+    margin-bottom: 60px;
+}
+
 /* ............................................... Footer styling */
 
 .footer {
