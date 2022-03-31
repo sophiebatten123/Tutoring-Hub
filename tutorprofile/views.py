@@ -4,8 +4,10 @@ Importing the relevant packages.
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 from .models import Booking
-from django.http import JsonResponse
 import json
+from django.db.models import Q
+from django.contrib import messages
+from django.http import JsonResponse
 
 
 def tutor_one(request):
@@ -47,12 +49,16 @@ def confirm_booking(request):
         tutor = request_body['tutor']
         subject = request_body['subject']
 
-        booking.date = date
-        booking.time = time
-        booking.tutor = tutor
-        booking.subject = subject
-        booking.student = request.user
-        booking.save()
+        if Booking.objects.filter(Q(date=date) & Q(time=time) & Q(tutor=tutor)).exists():
+            messages.success(request, ('This lesson is already booked.'))
+        else:
+            booking.date = date
+            booking.time = time
+            booking.tutor = tutor
+            booking.subject = subject
+            booking.student = request.user
+            booking.save()
+            messages.success(request, ('You have booked in the lesson!'))
 
         bookings = Booking.objects.all().values()
 
