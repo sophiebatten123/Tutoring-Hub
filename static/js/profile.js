@@ -57,7 +57,9 @@ function getCookie(name) {
 }
 
 function deleteBooking() {
-    delete_btn = document.getElementsByClassName("btn-delete")
+    delete_btn = document.getElementsByClassName("btn-delete");
+
+    console.log('booking being deleted');
 
     for (i=0; i < delete_btn.length; i++) {
         delete_btn[i].style.backgroundColor = "red";
@@ -84,24 +86,28 @@ function deleteBooking() {
 
 function updateBookings() {
     var currentDate = new Date();
-    var secondDay = new Date(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate() + 1);
+    var previousDay = new Date(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate() - 1);
     var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     var daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-    var secondDate = secondDay.getDate();
-    var secondMonth = secondDay.getMonth();
-    var secondDateTrial = secondDate + " " + monthNames[secondMonth];
-    secondDateWithDayOfWeek = daysOfWeek[secondDay.getDay()] + " " + secondDateTrial;
+    var previousDate = previousDay.getDate();
+    var previousMonth = previousDay.getMonth();
+    var previousDateTrial = previousDate + " " + monthNames[previousMonth];
+    previousDateWithDayOfWeek = daysOfWeek[previousDay.getDay()] + " " + previousDateTrial;
 
     booking_dates = document.getElementsByClassName('booking-dates');
-    // JS is only recognising the first member of this class?
-    console.log(secondDateWithDayOfWeek);
+    delete_btn = document.getElementsByClassName("btn-delete");
+
+    console.log(previousDateWithDayOfWeek);
 
     for (let i=0; i < booking_dates.length; i++) {
-        console.log(booking_dates[i].innerHTML);
-        if (booking_dates[i].innerHTML == secondDateWithDayOfWeek) {
-            booking_dates[i].style.backgroundColor = "red";
-        } else {
-            return
+        for (let j=0; j < delete_btn.length; j++) {
+            console.log(booking_dates[i].innerHTML);
+            if (booking_dates[i].innerHTML == previousDateWithDayOfWeek) {
+                delete_btn[j].click();
+                deleteBooking()
+            } else {
+                booking_dates[i].style.backgroundColor = "white";
+            }
         }
     }
 }
