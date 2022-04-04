@@ -65,7 +65,24 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     selectDate()
+    checkBookings()
 })
+
+function checkBookings() {
+    console.log("checking bookings")
+    var time = document.getElementsByClassName("time-slot");
+    var date = document.getElementsByClassName("day-slot");
+    var tutor = document.getElementById("tutor-name");
+
+    fetch("check_booking/")
+    .then(response => {
+        console.log(response);
+        return response.text();
+    })
+    .catch(error => {
+        console.error(error);
+    });
+}
 
 function selectDate(){
     var date = document.getElementsByClassName("day-slot");
@@ -121,7 +138,6 @@ function confirmBooking(){
         var tutor = tutorName.innerHTML;
         var subject = subjectName.innerHTML;
 
-
         // Date and time variables are sent to the users database via the fetch function.
         fetch("confirm_booking/", {
             method: "POST",
@@ -144,6 +160,7 @@ function confirmBooking(){
         .catch(error => {
             console.log(error);
         });
+        
     }
 }
 

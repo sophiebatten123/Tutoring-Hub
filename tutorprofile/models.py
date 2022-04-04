@@ -18,4 +18,4 @@ class Booking(models.Model):
     student = models.ForeignKey(User, default=None, on_delete=models.CASCADE)
 
     def __str__(self):
-        return f"{self.student} booked a lesson on {self.date} at {self.time}"
+        return f"{self.student} booked a lesson on {self.date} at {self.time} with {self.tutor}"
