@@ -68,22 +68,6 @@ document.addEventListener("DOMContentLoaded", () => {
     checkBookings()
 })
 
-//function checkBookings() {
-    //console.log("checking bookings")
-    //var time = document.getElementsByClassName("time-slot");
-    //var date = document.getElementsByClassName("day-slot");
-    //var tutor = document.getElementById("tutor-name");
-
-    //fetch("check_booking/")
-    //.then(response => {
-        //console.log(response);
-        //return response.text();
-    //})
-    //.catch(error => {
-        //console.error(error);
-    //});
-//}
-
 function selectDate(){
     date = document.getElementsByClassName("day-slot");
     confirmDay = document.getElementById("confirm-date");
