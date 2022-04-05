@@ -10,49 +10,66 @@ from django.contrib import messages
 from django.http import JsonResponse
 
 
-def check_booking(request):
-    '''
-    This function is to check previously booked lessons
-    and mark them as inactive on each tutors calender.
-    '''
+# def check_booking(request):
 
-    booking = Booking.objects.all()
+    # booking = Booking.objects.all()
 
-    tutor_one_bookings = Booking.objects.filter(tutor='Barry Hyman')
-    tutor_two_bookings = Booking.objects.filter(tutor='Mark Macintosh')
-    tutor_three_bookings = Booking.objects.filter(tutor='Jennifer Roberts')
+    # tutor_one_bookings = Booking.objects.filter(tutor='Barry Hyman')
+    # tutor_two_bookings = Booking.objects.filter(tutor='Mark Macintosh')
+    # tutor_three_bookings = Booking.objects.filter(tutor='Jennifer Roberts')
 
-    print(tutor_one_bookings)
-    print(tutor_two_bookings)
-    print(tutor_three_bookings)
+    # print(tutor_one_bookings)
+    # print(tutor_two_bookings)
+    # print(tutor_three_bookings)
 
-    context = {
-        "date": tutor_one_bookings.date,
-        "time": tutor_one_bookings.time,
-    }
+    # context = {
+        # tutor_one_bookings: tutor_one_bookings,
+        # "date": tutor_one_bookings.date,
+        # "time": tutor_one_bookings.time,
+    # }
 
-    return render(request, 'tutorprofile/tutor_one.html', context)
+    # return render(request, 'tutorprofile/tutor_one.html', context)
 
 
 def tutor_one(request):
     '''
     This renders the first tutor page.
     '''
-    return render(request, 'tutorprofile/tutor_one.html')
+
+    tutor_one_bookings = Booking.objects.filter(tutor='Barry Hyman')
+
+    context = {
+        'tutor_one_bookings': tutor_one_bookings,
+    }
+
+    return render(request, 'tutorprofile/tutor_one.html', context)
 
 
 def tutor_two(request):
     '''
     This renders the second tutor page.
     '''
-    return render(request, 'tutorprofile/tutor_two.html')
+
+    tutor_two_bookings = Booking.objects.filter(tutor='Jennifer Roberts')
+
+    context = {
+        'tutor_two_bookings': tutor_two_bookings,
+    }
+
+    return render(request, 'tutorprofile/tutor_two.html', context)
 
 
 def tutor_three(request):
     '''
     This renders the third tutor page.
     '''
-    return render(request, 'tutorprofile/tutor_three.html')
+
+    tutor_three_bookings = Booking.objects.filter(tutor='Mark Macintosh')
+
+    context = {
+        'tutor_three_bookings': tutor_three_bookings,
+    }
+    return render(request, 'tutorprofile/tutor_three.html', context)
 
 
 @login_required

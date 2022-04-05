@@ -68,26 +68,28 @@ document.addEventListener("DOMContentLoaded", () => {
     checkBookings()
 })
 
-function checkBookings() {
-    console.log("checking bookings")
-    var time = document.getElementsByClassName("time-slot");
-    var date = document.getElementsByClassName("day-slot");
-    var tutor = document.getElementById("tutor-name");
+//function checkBookings() {
+    //console.log("checking bookings")
+    //var time = document.getElementsByClassName("time-slot");
+    //var date = document.getElementsByClassName("day-slot");
+    //var tutor = document.getElementById("tutor-name");
 
-    fetch("check_booking/")
-    .then(response => {
-        console.log(response);
-        return response.text();
-    })
-    .catch(error => {
-        console.error(error);
-    });
-}
+    //fetch("check_booking/")
+    //.then(response => {
+        //console.log(response);
+        //return response.text();
+    //})
+    //.catch(error => {
+        //console.error(error);
+    //});
+//}
 
 function selectDate(){
-    var date = document.getElementsByClassName("day-slot");
-    var confirmDay = document.getElementById("confirm-date");
-    var confirmTime = document.getElementById("confirm-time");
+    date = document.getElementsByClassName("day-slot");
+    confirmDay = document.getElementById("confirm-date");
+    confirmTime = document.getElementById("confirm-time");
+    tutor_one_bookings = document.getElementById("tutor_one_bookings");
+
 
     //Resets the innerhtml of the booking for time when a new date is selected.
     confirmTime.innerHTML = ''
@@ -98,24 +100,67 @@ function selectDate(){
             squareClicked = event.target;
             squareClicked.style.backgroundColor = "green";
             confirmDay.innerHTML = squareClicked.innerHTML
+            selectTime(squareClicked.innerHTML)
         })
-        selectTime()
     }
 }
 
-function selectTime(){
+function selectTime(date){
+    var i=0;
     document.getElementById("time-slots").style.opacity = "100%"
-    var time = document.getElementsByClassName("time-slot");
-    var confirmTime = document.getElementById("confirm-time");
+    time = document.getElementsByClassName("time-slot");
+    tutorName = document.getElementById('tutor-name').innerHTML;
+    tutor_one_dates = document.getElementsByClassName('tutor_one_dates');
+    time = document.getElementsByClassName("time-slot");
+    confirmTime = document.getElementById("confirm-time");
 
-    for (var i=0; i < time.length; i++) {
-        time[i].style.backgroundColor = "white";
-        time[i].addEventListener("click", function(event) {
-            squareClicked = event.target;
-            squareClicked.style.backgroundColor = "green";
-            confirmTime.innerHTML = squareClicked.innerHTML
-        })
+    if (tutorName == 'Barry Hyman') {
+        for (j=0; j < time.length; j++) {
+                time[j].style.backgroundColor = 'white';
+                time[j].style.display = 'block';
+                time[j].addEventListener("click", function(event) {
+                    squareClicked = event.target;
+                    squareClicked.style.backgroundColor = "green";
+                    confirmTime.innerHTML = squareClicked.innerHTML;
+                })
+        }
+        for (i=0; i < tutor_one_dates.length; i++) {
+            if (date == tutor_one_dates[i].innerHTML) {
+                tutorOneTimes(i);
+            } else {
+            
+            }
+        }
+    } else if (tutorName == "Jennifer Roberts") {
+        console.log('Hi Jenifer');
+    } else {
+        console.log('Hi Mark');
     }
+}
+
+function tutorOneTimes(i){
+    tutor_one_times = document.getElementsByClassName('tutor_one_times');
+    time = document.getElementsByClassName("time-slot");
+    confirmTime = document.getElementById("confirm-time");
+
+    for (j=0; j < tutor_one_times.length; j++) {
+        let j = i;
+        for (k=0; k < time.length; k++) {
+            time[k].style.backgroundColor = "white";
+            if (time[k].innerHTML == tutor_one_times[j].innerHTML) {
+                time[k].style.display = 'none'
+            } else {
+            }
+
+            time[k].addEventListener("click", function(event) {
+                squareClicked = event.target;
+                console.log(squareClicked.innerHTML);
+                squareClicked.style.backgroundColor = "green";
+                confirmTime.innerHTML = squareClicked.innerHTML;
+            })
+        }
+    }
+
 }
 
 function confirmBooking(){

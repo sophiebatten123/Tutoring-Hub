@@ -127,6 +127,12 @@
                         target="blank">Click Here</a><br> Lessons are available to book on a weekly basis, please book ahead to avoid
                         disapointment.</h5>
                 </div>
+                <div class="row" id="tutor_two_bookings">
+                    {% for booking in tutor_two_bookings %}
+                        <h3>{{ booking.date }}</h3>
+                        <h3>{{ booking.time }}</h3>
+                    {% endfor %}
+                </div>
             </div>
         </div>
     </div>
