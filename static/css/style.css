@@ -243,6 +243,11 @@ th, td {
 .edit-button {
     text-align: right;
 }
+
+.booking-opacity {
+    opacity: 0;
+}
+
 /* ............................................... Bookings Sections */
 
 .hidden-mon {

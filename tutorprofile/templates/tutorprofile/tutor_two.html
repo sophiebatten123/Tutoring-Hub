@@ -95,19 +95,19 @@
                     <h3>Select a time:</h3>
                     <table class="center">
                         <tr>
-                            <td class="time-slot table" onclick="selectTime()">2.30 - 3.30 pm</td>
+                            <td class="time-slot table">2.30 - 3.30 pm</td>
                         </tr>
                         <tr>
-                            <td class="time-slot table" onclick="selectTime()">3.30 - 4.30 pm</td>
+                            <td class="time-slot table">3.30 - 4.30 pm</td>
                         </tr>
                         <tr>
-                            <td class="time-slot table" onclick="selectTime()">4.30 - 5.30 pm</td>
+                            <td class="time-slot table">4.30 - 5.30 pm</td>
                         </tr>
                         <tr>
-                            <td class="time-slot table" onclick="selectTime()">5.30 - 6.30 pm</td>
+                            <td class="time-slot table">5.30 - 6.30 pm</td>
                         </tr>
                         <tr>
-                            <td class="time-slot table" onclick="selectTime()">6.30 - 7.30 pm</td>
+                            <td class="time-slot table">6.30 - 7.30 pm</td>
                         </tr>
                     </table>
                 </div>
@@ -127,10 +127,10 @@
                         target="blank">Click Here</a><br> Lessons are available to book on a weekly basis, please book ahead to avoid
                         disapointment.</h5>
                 </div>
-                <div class="row" id="tutor_two_bookings">
+                <div class="row booking-opacity" id="tutor_two_bookings">
                     {% for booking in tutor_two_bookings %}
-                        <h3>{{ booking.date }}</h3>
-                        <h3>{{ booking.time }}</h3>
+                    <h3 class="tutor_two_dates">{{ booking.date }}</h3>
+                    <h3 class="tutor_two_times">{{ booking.time }}</h3>
                     {% endfor %}
                 </div>
             </div>
