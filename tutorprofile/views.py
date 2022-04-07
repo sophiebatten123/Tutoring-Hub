@@ -4,10 +4,11 @@ Importing the relevant packages.
 import json
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
+from django.views import generic
 from django.db.models import Q
 from django.contrib import messages
 from django.http import JsonResponse
-from .models import Booking
+from .models import Booking, Review
 
 
 def tutor_one(request):
