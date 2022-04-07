@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("edit-btn").addEventListener("click", editProfile);
     document.getElementById("make-profile").style.display="none";
     document.getElementById("exit-btn").addEventListener("click", closeProfile);
+    document.getElementById("")
 
     function upcomingLessons() {
         document.getElementById("upcoming-lessons").style.display="block";
