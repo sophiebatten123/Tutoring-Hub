@@ -29,7 +29,7 @@ class Review(models.Model):
     Creating a tutor review
     '''
     tutor = models.CharField(max_length=50)
-    student = models.ForeignKey(User, on_delete=models.CASCADE, related_name="reviews")
+    student = models.ForeignKey(User, on_delete=models.CASCADE, related_name="review")
     review = models.CharField(max_length=150)
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
