@@ -88,3 +88,13 @@ def confirm_booking(request):
         return JsonResponse(args)
 
     return render(request, template_name, args)
+
+
+class ReviewList(generic.ListView):
+    '''
+    Allows the student to rate the tutor
+    '''
+    model = Review
+    queryset = Review.objects.filter(status=1).order_by('-created_on')
+    template_name = 'tutorprofile/tutor_one.html'
+    print(queryset)

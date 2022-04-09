@@ -56,6 +56,20 @@
         <div class="col-6" id="reviews">
             <h3>Reviews:</h3>
             <div class="row">
+                {% for review in review_list %}
+                    <div class="col-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <p> Review: {{ review.review }}</p>
+                                <p> Student: {{ review.student }}</p>
+                                <p> Tutor: {{ review.tutor }}</p>
+                            </div>
+                            <hr />
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="row">
                 <button class="btn btn-signup btn-lg" id="create-review">Leave a review</button>
             </div>
             <div class="container" id="review-container">
