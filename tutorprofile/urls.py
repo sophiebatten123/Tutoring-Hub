@@ -12,6 +12,7 @@ urlpatterns = [
     path('tutor_one/reviews/', views.ReviewListTutorOne.as_view(), name='tutor_one_reviews'),
     path('tutor_one/profile/', views.tutor_one_profile, name='tutor_one_profile'),
     path('tutor_one/qualifications/', views.tutor_one_qualifications, name='tutor_one_qualifications'),
+    path('tutor_one/create_review/', views.tutor_one_create_review, name='tutor_one_create_review'),
     path('tutor_two/', views.tutor_two, name='tutor_two'),
     path('tutor_two/confirm_booking/', views.confirm_booking, name='confirm_booking'),
     path('tutor_two/confirm_booking/success/', views.confirm_booking, name='confirm_booking_success'),

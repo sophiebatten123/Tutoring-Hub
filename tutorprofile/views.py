@@ -4,11 +4,12 @@ Importing the relevant packages.
 import json
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
-from django.views import generic
+from django.views import generic, View
 from django.db.models import Q
 from django.contrib import messages
-from django.http import JsonResponse
+from django.http import JsonResponse, HttpResponseRedirect
 from .models import Booking, Review
+from .forms import ReviewForm
 
 
 def tutor_one(request):
@@ -137,3 +138,18 @@ class ReviewListTutorThree(generic.ListView):
     model = Review
     queryset = Review.objects.filter(Q(status=1) & Q(tutor='Mark Macintosh')).order_by('-created_on')
     template_name = 'tutorprofile/tutor_three_reviews.html'
+
+
+def tutor_one_create_review(request):
+    '''
+    Creating the tutor one review
+    '''
+    if request.method == "POST":
+        form = ReviewForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect('tutorprofile/tutor_one_reviews.html')
+    else:
+        form = ReviewForm()
+
+    return render(request, 'tutorprofile/tutor_one_create_review.html', {'form' : form})
