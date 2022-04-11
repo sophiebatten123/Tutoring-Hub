@@ -24,6 +24,14 @@ def tutor_one(request):
     return render(request, 'tutorprofile/tutor_one.html', context)
 
 
+def tutor_one_profile(request):
+    return render(request, 'tutorprofile/tutor_one_profile.html')
+
+
+def tutor_one_qualifications(request):
+    return render(request, 'tutorprofile/tutor_one_qualifications.html')
+
+
 def tutor_two(request):
     '''
     This renders the second tutor page.
@@ -35,6 +43,14 @@ def tutor_two(request):
     }
 
     return render(request, 'tutorprofile/tutor_two.html', context)
+
+
+def tutor_two_profile(request):
+    return render(request, 'tutorprofile/tutor_two_profile.html')
+
+
+def tutor_two_qualifications(request):
+    return render(request, 'tutorprofile/tutor_two_qualifications.html')
 
 
 def tutor_three(request):
@@ -49,6 +65,12 @@ def tutor_three(request):
     return render(request, 'tutorprofile/tutor_three.html', context)
 
 
+def tutor_three_profile(request):
+    return render(request, 'tutorprofile/tutor_three_profile.html')
+
+
+def tutor_three_qualifications(request):
+    return render(request, 'tutorprofile/tutor_three_qualifications.html')
 @login_required
 def confirm_booking(request):
     '''
@@ -90,10 +112,28 @@ def confirm_booking(request):
     return render(request, template_name, args)
 
 
-class ReviewList(generic.ListView):
+class ReviewListTutorOne(generic.ListView):
     '''
     Allows the student to rate the tutor
     '''
     model = Review
-    queryset = Review.objects.filter(status=1).order_by('-created_on')
+    queryset = Review.objects.filter(Q(status=1) & Q(tutor='Barry Hyman')).order_by('-created_on')
     template_name = 'tutorprofile/tutor_one_reviews.html'
+
+
+class ReviewListTutorTwo(generic.ListView):
+    '''
+    Allows the student to rate the tutor
+    '''
+    model = Review
+    queryset = Review.objects.filter(Q(status=1) & Q(tutor='Jennifer Roberts')).order_by('-created_on')
+    template_name = 'tutorprofile/tutor_two_reviews.html'
+
+
+class ReviewListTutorThree(generic.ListView):
+    '''
+    Allows the student to rate the tutor
+    '''
+    model = Review
+    queryset = Review.objects.filter(Q(status=1) & Q(tutor='Mark Macintosh')).order_by('-created_on')
+    template_name = 'tutorprofile/tutor_three_reviews.html'
