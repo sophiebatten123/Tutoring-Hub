@@ -96,5 +96,4 @@ class ReviewList(generic.ListView):
     '''
     model = Review
     queryset = Review.objects.filter(status=1).order_by('-created_on')
-    template_name = 'tutorprofile/tutor_one.html'
-    print(queryset)
+    template_name = 'tutorprofile/tutor_one_reviews.html'

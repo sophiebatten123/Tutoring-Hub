@@ -27,15 +27,13 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("qualifications").style.display="none";
     document.getElementById("exit-booking").addEventListener("click", closeBooking);
     document.getElementById("confirm-btn").addEventListener("click", confirmBooking);
-    document.getElementById("reviews").style.display="none";
-    document.getElementById("reviews-btn").addEventListener("click", openReviews);
     document.getElementById("create-review").addEventListener("click", openForm);
     document.getElementById("review-container").style.display = "none";
+
     
     function openBooking() {
         document.getElementById("bookings").style.display="block";
         document.getElementById("bookings-button").style.display="none";
-        document.getElementById("reviews").style.display="none";
         document.getElementById("tutor-profile").style.display="none";
         document.getElementById("qualifications").style.display="none";
     }
@@ -44,7 +42,6 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("bookings").style.display="none";
         document.getElementById("tutor-profile").style.display="block";
         document.getElementById("bookings-button").style.display="block";
-        document.getElementById("reviews").style.display="none";
         document.getElementById("qualifications").style.display="none";
         document.getElementById("confirm-date").innerHTML = '';
         document.getElementById("confirm-time").innerHTML = '';
@@ -54,18 +51,6 @@ document.addEventListener("DOMContentLoaded", () => {
     function openQualifications() {
         document.getElementById("qualifications").style.display="block";
         document.getElementById("bookings").style.display="none";
-        document.getElementById("reviews").style.display="none";
-        document.getElementById("tutor-profile").style.display="none";
-        document.getElementById("bookings-button").style.display="block";
-        document.getElementById("confirm-date").innerHTML = '';
-        document.getElementById("confirm-time").innerHTML = '';
-        clearBooking();
-    }
-
-    function openReviews() {
-        document.getElementById("reviews").style.display="block";
-        document.getElementById("bookings").style.display="none";
-        document.getElementById("qualifications").style.display="none";
         document.getElementById("tutor-profile").style.display="none";
         document.getElementById("bookings-button").style.display="block";
         document.getElementById("confirm-date").innerHTML = '';
@@ -85,6 +70,16 @@ document.addEventListener("DOMContentLoaded", () => {
     selectDate()
     checkBookings()
 })
+
+function openQualifications() {
+    document.getElementById("qualifications").style.display="block";
+    document.getElementById("bookings").style.display="none";
+    document.getElementById("tutor-profile").style.display="none";
+    document.getElementById("bookings-button").style.display="block";
+    document.getElementById("confirm-date").innerHTML = '';
+    document.getElementById("confirm-time").innerHTML = '';
+    clearBooking();
+}
 
 function selectDate(){
     date = document.getElementsByClassName("day-slot");
