@@ -13,27 +13,6 @@ YEAR_GROUPS = (
     ('11', 'Year 11'),
 )
 
-ACCOUNT_TYPE = (
-    ('student', 'Student'),
-    ('tutor', 'Tutor'),
-)
-
-GRADES = (
-    ('1', 'Grade 1'),
-    ('2', 'Grade 2'),
-    ('3', 'Grade 3'),
-    ('4', 'Grade 4'),
-    ('5', 'Grade 5'),
-    ('6', 'Grade 6'),
-    ('7', 'Grade 7'),
-    ('8', 'Grade 8'),
-    ('9', 'Grade 9'),
-)
-
-SCIENCE = (
-    ('cell-biology', 'Cell Biology'),
-    ('infection-response', 'Infection and Response'),
-)
 
 class UserProfile(models.Model):
     '''
@@ -45,15 +24,13 @@ class UserProfile(models.Model):
     full_name = models.CharField(max_length=100)
     first_name = models.CharField(max_length=100, null=True)
     surname = models.CharField(max_length=100, null=True)
+    maths = models.CharField(max_length=200, null=True, blank=True)
+    english = models.CharField(max_length=200, null=True, blank=True)
+    science = models.CharField(max_length=200, null=True, blank=True)
     year_group = models.CharField(max_length=13, choices=YEAR_GROUPS, default='9')
     email = models.EmailField(max_length=254, null=True, blank=True)
-    current_grade = models.CharField(max_length=6, choices=GRADES, default='1', null=True)
-    predicted_grade = models.CharField(max_length=6, choices=GRADES, default='1', null=True)
     about_me = models.TextField()
-    science = models.CharField(max_length=40, choices=SCIENCE, default='cell-biology')
-    account_type = models.CharField(max_length=7, choices=ACCOUNT_TYPE, default='student')
     slug = models.SlugField(max_length=200, unique=True)
-    featured_image = CloudinaryField('image', default='placeholder')
 
     def save(self, *args, **kwargs):
         '''

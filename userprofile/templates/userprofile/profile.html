@@ -26,53 +26,53 @@
                     </div>
                 </div>
             </div>
-            <div class="col-5 about-text" id="about-me">
+            <div class="col-9 about-text" id="about-me">
                 <div class="row about-spacer">
                     <h3>About Me!</h3>
                     <p>{{ profile.about_me }}</p>
-                    <p>Current grade: Grade {{ profile.current_grade }}</p>
-                    <p>Predicted grade: Grade {{ profile.predicted_grade }}</p>
+                    <hr />
                 </div>
-            </div>
-            <div class="col-4" id="about-subject">
-                <div class="row subjects" id="science">
-                    <div class="col-8">
-                        <h3>Science <i class="fa-solid fa-flask"></i></h3>
-                        <p><i class="fa-solid fa-question"></i></p>
-                        <p><i class="fa-solid fa-question"></i></p>
-                        <p><i class="fa-solid fa-question"></i></p>
+                <div class="row">
+                    <div class="col-4 profile-subjects">
+                        <h3>Maths: <i class="fa-solid fa-calculator"></i></h3>
+                        <hr />
+                        <p class="profile-text">"{{ profile.maths }}"</p>
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <a class="nav-link book-btn homepage-buttons" id="profile-booking-button" href="{% url 'tutor_one' %}">Book in a Maths Lesson</a>
                     </div>
-                    <div class="col-4 grade-text">
-                        <p>Current grade: Grade {{ profile.current_grade }}</p>
-                        <p>Predicted grade: Grade {{ profile.predicted_grade }}</p>
-                        <a class="nav-link book-btn profile-tutor-buttons" href="{% url 'tutor_two' %}">Book Lesson</a>
+                    <div class="col-4 profile-subjects">
+                        <h3>Science: <i class="fa-solid fa-flask"></i></h3>
+                        <hr />
+                        <p class="profile-text">"{{ profile.science }}"</p>
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <a class="nav-link book-btn homepage-buttons" id="profile-booking-button" href="{% url 'tutor_two' %}">Book in a Science Lesson</a>
                     </div>
+                    <div class="col-4 profile-subjects">
+                        <h3>English: <i class="fa-solid fa-pen"></i></h3>
+                        <hr />
+                        <p class="profile-text">"{{ profile.english }}"</p>
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <a class="nav-link book-btn homepage-buttons" id="profile-booking-button" href="{% url 'tutor_three' %}">Book in an English Lesson</a>
+                    </div>
+                    <hr />
                 </div>
-                <div class="row subjects" id="maths">
-                    <div class="col-8">
-                        <h3>Maths <i class="fa-solid fa-calculator"></i></h3>
-                        <p><i class="fa-solid fa-question"></i></p>
-                        <p><i class="fa-solid fa-question"></i></p>
-                        <p><i class="fa-solid fa-question"></i></p>
-                    </div>
-                    <div class="col-4 grade-text">
-                        <p>Current grade: Grade {{ profile.current_grade }}</p>
-                        <p>Predicted grade: Grade {{ profile.predicted_grade }}</p>
-                        <a class="nav-link book-btn profile-tutor-buttons" href="{% url 'tutor_one' %}">Book Lesson</a>
-                    </div>
-                </div>
-                <div class="row subjects" id="english">  
-                    <div class="col-8">
-                        <h3>English <i class="fa-solid fa-pen"></i></h3>
-                        <p><i class="fa-solid fa-question"></i></p>
-                        <p><i class="fa-solid fa-question"></i></p>
-                        <p><i class="fa-solid fa-question"></i></p>
-                    </div>
-                    <div class="col-4 grade-text">
-                        <p>Current grade: Grade {{ profile.current_grade }}</p>
-                        <p>Predicted grade: Grade {{ profile.predicted_grade }}</p>
-                        <a class="nav-link book-btn profile-tutor-buttons" href="{% url 'tutor_three' %}">Book Lesson</a>
-                    </div>
+                <div class="row tutor-booking-info" id="profile-teams-info">
+                    <h5>All lessons take place virtually using Microsoft Teams. For more information: <a
+                        href="https://www.microsoft.com/en-gb/microsoft-teams/group-chat-software?rtc=1"
+                        target="blank">Click Here</a><br> Lessons are available to book on a weekly basis, please book ahead to avoid
+                        disapointment.</h5>
                 </div>
             </div>
             <div class="col-9" id="upcoming-lessons">

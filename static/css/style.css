@@ -173,31 +173,31 @@ hr {
 
 #exit-btn{
     text-align: right;
+    padding: 0;
 }
 
-.subjects {
-    margin: 20px 0;
-    height: 200px;
-    background-color: #ebf5f5;
+.profile-subjects i {
+    color: #efa74b;
+    float: right;
+    padding-right: 10px;
 }
 
-.subjects i {
-    font-size: 15px;
+.profile-text {
+    background-color: #258d8c0f;
+    text-align: center;
+    padding: 10px;
 }
 
-.profile-tutor-buttons {
-    border: solid 2px black;
-    height: 50px;
-    margin-top: 40px;
-    background-color: #fec173;
-    color: black;
-    font-size: 20px;
+#profile-teams-info {
+    margin-top: 15px;
+    background-color: #258d8c0f;
+}
+
+#profile-booking-button {
+    width: 100%;
     text-align: center;
 }
 
-.grade-text {
-    padding-top: 50px;
-}
 /* ............................................... Reviews */
 
 #reviews {
