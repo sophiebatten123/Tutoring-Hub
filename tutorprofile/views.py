@@ -73,7 +73,7 @@ def tutor_three_profile(request):
 def tutor_three_qualifications(request):
     return render(request, 'tutorprofile/tutor_three_qualifications.html')
 
-    
+
 @login_required
 def confirm_booking(request):
     '''
@@ -145,6 +145,7 @@ class ReviewListTutorThree(generic.ListView):
     paginate_by = 6
 
 
+@login_required
 def tutor_one_create_review(request):
     '''
     Creating the tutor one review
@@ -164,6 +165,7 @@ def tutor_one_create_review(request):
     return render(request, 'tutorprofile/tutor_one_create_review.html', {'form' : form})
 
 
+@login_required
 def tutor_two_create_review(request):
     '''
     Creating the tutor two review
@@ -183,6 +185,7 @@ def tutor_two_create_review(request):
     return render(request, 'tutorprofile/tutor_two_create_review.html', {'form' : form})
 
 
+@login_required
 def tutor_three_create_review(request):
     '''
     Creating the tutor two review
