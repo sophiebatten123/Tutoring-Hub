@@ -72,6 +72,8 @@ def tutor_three_profile(request):
 
 def tutor_three_qualifications(request):
     return render(request, 'tutorprofile/tutor_three_qualifications.html')
+
+    
 @login_required
 def confirm_booking(request):
     '''
@@ -118,8 +120,9 @@ class ReviewListTutorOne(generic.ListView):
     Allows the student to rate the tutor
     '''
     model = Review
-    queryset = Review.objects.filter(Q(status=1) & Q(tutor='Barry Hyman')).order_by('-created_on')
+    queryset = Review.objects.filter(Q(tutor='Barry Hyman')).order_by('-created_on')
     template_name = 'tutorprofile/tutor_one_reviews.html'
+    paginate_by = 6
 
 
 class ReviewListTutorTwo(generic.ListView):
@@ -127,8 +130,9 @@ class ReviewListTutorTwo(generic.ListView):
     Allows the student to rate the tutor
     '''
     model = Review
-    queryset = Review.objects.filter(Q(status=1) & Q(tutor='Jennifer Roberts')).order_by('-created_on')
+    queryset = Review.objects.filter(Q(tutor='Jennifer Roberts')).order_by('-created_on')
     template_name = 'tutorprofile/tutor_two_reviews.html'
+    paginate_by = 6
 
 
 class ReviewListTutorThree(generic.ListView):
@@ -136,8 +140,9 @@ class ReviewListTutorThree(generic.ListView):
     Allows the student to rate the tutor
     '''
     model = Review
-    queryset = Review.objects.filter(Q(status=1) & Q(tutor='Mark Macintosh')).order_by('-created_on')
+    queryset = Review.objects.filter(Q(tutor='Mark Macintosh')).order_by('-created_on')
     template_name = 'tutorprofile/tutor_three_reviews.html'
+    paginate_by = 6
 
 
 def tutor_one_create_review(request):
@@ -147,9 +152,51 @@ def tutor_one_create_review(request):
     if request.method == "POST":
         form = ReviewForm(request.POST)
         if form.is_valid():
-            form.save()
-            return HttpResponseRedirect('tutorprofile/tutor_one_reviews.html')
+            review_form = form.save(commit=False)
+            review_form.tutor = 'Barry Hyman'
+            review_form.student = request.user
+            review_form.save()
+            messages.success(request, ('Thank you for your review!'))
+            return HttpResponseRedirect('../reviews')
     else:
         form = ReviewForm()
 
     return render(request, 'tutorprofile/tutor_one_create_review.html', {'form' : form})
+
+
+def tutor_two_create_review(request):
+    '''
+    Creating the tutor two review
+    '''
+    if request.method == "POST":
+        form = ReviewForm(request.POST)
+        if form.is_valid():
+            review_form = form.save(commit=False)
+            review_form.tutor = 'Jennifer Roberts'
+            review_form.student = request.user
+            review_form.save()
+            messages.success(request, ('Thank you for your review!'))
+            return HttpResponseRedirect('../reviews')
+    else:
+        form = ReviewForm()
+
+    return render(request, 'tutorprofile/tutor_two_create_review.html', {'form' : form})
+
+
+def tutor_three_create_review(request):
+    '''
+    Creating the tutor two review
+    '''
+    if request.method == "POST":
+        form = ReviewForm(request.POST)
+        if form.is_valid():
+            review_form = form.save(commit=False)
+            review_form.tutor = 'Mark Macintosh'
+            review_form.student = request.user
+            review_form.save()
+            messages.success(request, ('Thank you for your review!'))
+            return HttpResponseRedirect('../reviews')
+    else:
+        form = ReviewForm()
+
+    return render(request, 'tutorprofile/tutor_three_create_review.html', {'form' : form})

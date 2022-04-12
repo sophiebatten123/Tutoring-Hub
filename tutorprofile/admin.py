@@ -8,7 +8,7 @@ from django_summernote.admin import SummernoteModelAdmin
 class PostReview(SummernoteModelAdmin):
 
     list_display = ('student', 'tutor', 'created_on')
-    list_filter = ('status', 'created_on')
+    list_filter = ('created_on',)
     search_fields = ['student', 'tutor']
     summernote_fields = ('review')
 
