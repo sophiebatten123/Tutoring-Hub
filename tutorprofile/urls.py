@@ -19,10 +19,12 @@ urlpatterns = [
     path('tutor_two/reviews/', views.ReviewListTutorTwo.as_view(), name='tutor_two_reviews'),
     path('tutor_two/profile/', views.tutor_two_profile, name='tutor_two_profile'),
     path('tutor_two/qualifications/', views.tutor_two_qualifications, name='tutor_two_qualifications'),
+    path('tutor_two/create_review/', views.tutor_two_create_review, name='tutor_two_create_review'),
     path('tutor_three/', views.tutor_three, name='tutor_three'),
     path('tutor_three/confirm_booking/', views.confirm_booking, name='confirm_booking'),
     path('tutor_three/confirm_booking/success/', views.confirm_booking, name='confirm_booking_success'),
     path('tutor_three/reviews/', views.ReviewListTutorThree.as_view(), name='tutor_three_reviews'),
     path('tutor_three/profile/', views.tutor_three_profile, name='tutor_three_profile'),
     path('tutor_three/qualifications/', views.tutor_three_qualifications, name='tutor_three_qualifications'),
+    path('tutor_three/create_review/', views.tutor_three_create_review, name='tutor_three_create_review'),
 ]

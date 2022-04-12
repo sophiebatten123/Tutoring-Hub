@@ -64,6 +64,10 @@ html, body {
     font-size: 20px;
 }
 
+hr {
+    color: #258d8c;
+}
+
 /* ............................................... Home page styling */
 
 .header-image {
@@ -192,41 +196,65 @@ html, body {
 }
 
 .grade-text {
-    padding-top: 20px;
+    padding-top: 50px;
 }
 /* ............................................... Reviews */
 
-.form-popup {
-    display: none;
-    width: 30%;
-    position: fixed;
-    bottom: 400px;
-    border: 3px solid #f1f1f1;
+#reviews {
+    background-color: #258d8c0f;
+    margin-top: 120px;
+    height: 350px;
 }
 
-.form-container {
-    max-width: 300px;
-    padding: 10px;
-    background-color: white;
+#tutor_name {
+    color: #258d8c;
 }
 
-.form-container input {
-    width: 100%;
+.card_space {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.review_comment {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: right;
+    float: right;
+}
+
+.button-style {
+    border: solid 2px black;
+    width: 300px;
+    border-radius: 5px;
     padding: 15px;
-    margin: 5px 0 22px 0;
-    border: none;
-    background: #f1f1f1;
+    margin-top: 40px;
+    background-color: #fec173;
+    color: black;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
 }
 
-.form-container input:focus {
-    background-color: #ddd;
-    outline: none;
+.color-card {
+    background-color: #258d8c0f;
+}
+
+.page-link {
+    float: right;
 }
 
 /* ............................................... Stars */
 
-.post {
-    display: none;
+.star-rating {
+    float: right;
+    margin-right: 30px;
 }
 
 .star-rating input {
@@ -235,7 +263,6 @@ html, body {
 
 .star-rating label {
     padding: 10px;
-    margin: 20px 0 20px 0;
     width: 0;
     float: right;
     transition: all 0.2s ease;
@@ -248,52 +275,6 @@ input:not(:checked) ~ label:hover ~ label{
 
 input:checked ~ label{
     color: #fd4;
-}
-
-#rate-1:checked ~ form header:before{
-    content: "I just hate it ";
-}
-
-#rate-2:checked ~ form header:before{
-    content: "I don't like it ";
-}
-
-#rate-3:checked ~ form header:before{
-    content: "It is awesome ";
-}
-
-#rate-4:checked ~ form header:before{
-    content: "I just like it ";
-}
-
-#rate-5:checked ~ form header:before{
-    content: "I just love it ";
-}
-
-form header{
-    width: 100%;
-    font-size: 25px;
-    color: orange;
-    font-weight: 500;
-    padding-top: 20px;
-    text-align: center;
-    transition: all 0.2s ease;
-}
-
-form .textarea{
-    height: 100px;
-    width: 100%;
-    overflow: hidden;
-}
-
-form .textarea textarea{
-    height: 100%;
-    width: 100%;
-    outline: none;
-    border: 1px solid #333;
-    padding: 10px;
-    font-size: 17px;
-    resize: none;
 }
 
 /* ............................................... Tutor profile page styling */

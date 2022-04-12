@@ -31,23 +31,35 @@
                 </div>
             </div>
         </div>
-        <div class="col-6" id="reviews">
-            <h3>Reviews:</h3>
+        <div class="col-6" id="reviews-page">
+            <a href="{% url 'tutor_two_create_review' %}" class="button-style">Create a review</a>
+            <br />
+            <br />
             <div class="row">
                 {% for review in review_list %}
-                    <div class="col-4">
+                    <div class="col-6 card_space">
                         <div class="card">
-                            <div class="card-body">
-                                {{ review.review|safe }}
-                                <p> Student: {{ review.student }}</p>
-                                <p> Tutor: {{ review.tutor }}</p>
+                            <div class="card-body color-card">
+                                <p class="review_comment">{{ review.review|safe }} - {{ review.student }} </p>
+                                <hr />
+                                <p class="right">{{ review.created_on}}</p>
                             </div>
-                            <hr />
                         </div>
                     </div>
                 {% endfor %}
+                {% if is_paginated %}
+                <nav aria-label="Page navigation">
+                    <ul class="pagination right">
+                        {% if page_obj.has_previous %}
+                        <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
+                        {% endif %}
+                        {% if page_obj.has_next %}
+                        <li><a href="?page={{ page_obj.next_page_number }}" class="page-link">NEXT &raquo;</a></li>
+                        {% endif %}
+                    </ul>
+                </nav>
+                {% endif %}
             </div>
-            <a href="{% url 'tutor_one_create_review' %}">Create a review</a>
         </div>
         <div class="col-3" id="bookings-button">
             <div class="row booking-button">

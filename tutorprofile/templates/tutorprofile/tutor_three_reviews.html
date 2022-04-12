@@ -30,55 +30,35 @@
                 </div>
             </div>
         </div>
-        <div class="col-6" id="reviews">
-            <h3>Reviews:</h3>
+        <div class="col-6" id="reviews-page">
+            <a href="{% url 'tutor_two_create_review' %}" class="button-style">Create a review</a>
+            <br />
+            <br />
             <div class="row">
                 {% for review in review_list %}
-                    <div class="col-4">
+                    <div class="col-6 card_space">
                         <div class="card">
-                            <div class="card-body">
-                                {{ review.review|safe }}
-                                <p> Student: {{ review.student }}</p>
-                                <p> Tutor: {{ review.tutor }}</p>
+                            <div class="card-body color-card">
+                                <p class="review_comment">{{ review.review|safe }} - {{ review.student }} </p>
+                                <hr />
+                                <p class="right">{{ review.created_on}}</p>
                             </div>
-                            <hr />
                         </div>
                     </div>
                 {% endfor %}
+                {% if is_paginated %}
+                <nav aria-label="Page navigation">
+                    <ul class="pagination right">
+                        {% if page_obj.has_previous %}
+                        <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
+                        {% endif %}
+                        {% if page_obj.has_next %}
+                        <li><a href="?page={{ page_obj.next_page_number }}" class="page-link">NEXT &raquo;</a></li>
+                        {% endif %}
+                    </ul>
+                </nav>
+                {% endif %}
             </div>
-            <div class="row">
-                <button class="btn btn-signup btn-lg" id="create-review">Leave a review</button>
-            </div>
-            <div class="container" id="review-container">
-                <div class="post">
-                  <div class="text">Thanks for rating us!</div>
-                  <div class="edit">EDIT</div>
-                </div>
-                <div class="container col-6 star-rating">
-                    <input type="radio" name="rate" id="rate-5">
-                    <label for="rate-5" class="fas fa-star"></label>
-                    <input type="radio" name="rate" id="rate-4">
-                    <label for="rate-4" class="fas fa-star"></label>
-                    <input type="radio" name="rate" id="rate-3">
-                    <label for="rate-3" class="fas fa-star"></label>
-                    <input type="radio" name="rate" id="rate-2">
-                    <label for="rate-2" class="fas fa-star"></label>
-                    <input type="radio" name="rate" id="rate-1">
-                    <label for="rate-1" class="fas fa-star"></label>
-
-                  <form action="#">
-                    <header></header>
-                    <div class="textarea">
-                      <textarea cols="30" placeholder="Describe your experience.."></textarea>
-                    </div>
-                    <div class="btn">
-                      <button type="submit" class="btn submit-review">Submit Review</button>
-                      <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-                    </div>
-                  </form>
-
-                </div>
-              </div>
         </div>
         <div class="col-3" id="bookings-button">
             <div class="row booking-button">
