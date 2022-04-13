@@ -1,19 +1,19 @@
 '''
 Importing the relevant packages.
 '''
+import json
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, get_object_or_404
+from tutorprofile.models import Booking
 from .models import UserProfile
 from .forms import MakeProfileForm
-from tutorprofile.models import Booking
-import json
+
 
 @login_required
 def profile(request):
     ''' This will render the profile template '''
     user_profile = get_object_or_404(UserProfile, user=request.user)
-    print(user_profile)
     if request.method == 'POST':
         form = MakeProfileForm(request.POST, instance=user_profile)
         if form.is_valid():
@@ -42,11 +42,9 @@ def delete_booking(request):
     This will delete the users booking
     '''
     request_body = json.loads(request.body)
-    id = request_body['id']
+    student_id = request_body['id']
 
-    print(id)
-
-    Booking.objects.filter(id=id).delete()
+    Booking.objects.filter(id=student_id).delete()
 
     context = {
         'profile_delete': 'Your profile is deleted',

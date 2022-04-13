@@ -31,7 +31,7 @@ class Review(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
 
     class Meta:
+        '''
+        Orders the reviews based on when they were created.
+        '''
         ordering = ['-created_on']
-    
-    def __str__(self):
-        return self.review

@@ -16,8 +16,8 @@ class MakeProfileForm(forms.ModelForm):
         model = UserProfile
         fields = ('full_name', 'year_group', 'about_me', 'maths', 'english', 'science',)
         labels = {
-        "maths": "<br /> How do you find the following subjects? What would you like to work on in lessons? <br /><br />Maths:",
-        "english": "English: ",
-        "science": "Science: ",
-        "about_me": "<br /> Tell us about yourself: ",
+            "maths": "<br /> How do you find the following subjects? What would you like to work on in lessons? <br /><br />Maths:",
+            "english": "English: ",
+            "science": "Science: ",
+            "about_me": "<br /> Tell us about yourself: ",
         }
