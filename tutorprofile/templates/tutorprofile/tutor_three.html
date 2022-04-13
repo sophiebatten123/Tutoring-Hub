@@ -32,7 +32,7 @@
         </div>
         <div class="col-3" id="bookings-button">
             <div class="row booking-button">
-                <a href="{% url 'tutor_three' %}"><button class="btn btn-signup btn-lg user-btns tutorpage-buttons" id="booking-btn">Book Lesson</button></a>
+                <a href="{% url 'tutor_three' %}" id="booking-btn">Book Lesson</a>
             </div>
         </div>
         <div class="col-9" id="bookings">
@@ -41,7 +41,7 @@
                     <h3><i class="fa-solid fa-pen"></i> English Tutoring</h3>
                 </div>
                 <div class="col-6 exit-booking-button">
-                    <button class="btn btn-signup btn-lg" id="exit-booking"><i class="fa-solid fa-circle-xmark"></i></button>
+                    <button class="btn btn-signup btn-lg" id="exit-booking" aria-label="Exit booking"><i class="fa-solid fa-circle-xmark"></i></button>
                 </div>
             </div>
             <div class="row">
@@ -95,7 +95,7 @@
                     <p>Date: <span id="confirm-date"></span></p>
                     <p>Time: <span id="confirm-time"></span></p>
                     <div class="row booking-button">
-                        <button class="btn btn-signup btn-lg user-btns tutorpage-buttons" id="confirm-btn">Confirm Booking</button>
+                        <button class="btn btn-signup btn-lg user-btns tutorpage-buttons" id="confirm-btn" aria-label="Confirm-booking">Confirm Booking</button>
                     </div>
                 </div>
                 <div class="row tutor-booking-info">
