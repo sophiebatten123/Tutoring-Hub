@@ -23,8 +23,6 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("bookings-button").style.display="none";
     document.getElementById("exit-booking").addEventListener("click", closeBooking);
     document.getElementById("confirm-btn").addEventListener("click", confirmBooking);
-    document.getElementById("create-review").addEventListener("click", openForm);
-    document.getElementById("review-container").style.display = "none";
 
     
     function openBooking() {
@@ -44,7 +42,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     selectDate()
-    checkBookings()
 })
 
 function selectDate(){
@@ -58,12 +55,16 @@ function selectDate(){
     confirmTime.innerHTML = ''
 
     for (i=0; i < date.length; i++) {
-        date[i].style.backgroundColor = "white";
         date[i].addEventListener("click", function(event) {
             squareClicked = event.target;
             squareClicked.style.backgroundColor = "green";
             confirmDay.innerHTML = squareClicked.innerHTML
             selectTime(squareClicked.innerHTML)
+            for (i=0; i < date.length; i++) {
+                if (date[i] != squareClicked) {
+                    date[i].style.backgroundColor = "white";
+                }
+            }
         })
     }
 }
