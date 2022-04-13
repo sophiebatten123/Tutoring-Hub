@@ -45,7 +45,6 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 function selectDate(){
-    console.log("date")
     date = document.getElementsByClassName("day-slot");
     confirmDay = document.getElementById("confirm-date");
     confirmTime = document.getElementById("confirm-time");
@@ -56,12 +55,16 @@ function selectDate(){
     confirmTime.innerHTML = ''
 
     for (i=0; i < date.length; i++) {
-        date[i].style.backgroundColor = "white";
         date[i].addEventListener("click", function(event) {
             squareClicked = event.target;
             squareClicked.style.backgroundColor = "green";
             confirmDay.innerHTML = squareClicked.innerHTML
             selectTime(squareClicked.innerHTML)
+            for (i=0; i < date.length; i++) {
+                if (date[i] != squareClicked) {
+                    date[i].style.backgroundColor = "white";
+                }
+            }
         })
     }
 }
