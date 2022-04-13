@@ -1,0 +1,22 @@
+{
+  "name": "tutoring-hub",
+  "version": "1.0.0",
+  "description": "[Tutoring Site Live Link](https://tutoring-hub.herokuapp.com/) [Github Repository](https://github.com/sophiebatten123/Tutoring-Hub)",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sophiebatten123/Tutoring-Hub.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sophiebatten123/Tutoring-Hub/issues"
+  },
+  "homepage": "https://github.com/sophiebatten123/Tutoring-Hub#readme",
+  "devDependencies": {
+    "jest": "^27.5.1"
+  }
+}
