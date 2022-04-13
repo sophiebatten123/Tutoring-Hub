@@ -4,7 +4,7 @@ Importing the relevant packages.
 import json
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
-from django.views import generic, View
+from django.views import generic
 from django.db.models import Q
 from django.contrib import messages
 from django.http import JsonResponse, HttpResponseRedirect
@@ -14,7 +14,7 @@ from .forms import ReviewForm
 
 def tutor_one(request):
     '''
-    This renders the first tutor page.
+    This renders the first tutors booking page.
     '''
     tutor_one_bookings = Booking.objects.filter(tutor='Barry Hyman')
 
@@ -26,16 +26,22 @@ def tutor_one(request):
 
 
 def tutor_one_profile(request):
+    '''
+    Renders the tutor one profile page.
+    '''
     return render(request, 'tutorprofile/tutor_one_profile.html')
 
 
 def tutor_one_qualifications(request):
+    '''
+    Renders the tutor one's qualifications page.
+    '''
     return render(request, 'tutorprofile/tutor_one_qualifications.html')
 
 
 def tutor_two(request):
     '''
-    This renders the second tutor page.
+    This renders the second tutors booking page.
     '''
     tutor_two_bookings = Booking.objects.filter(tutor='Jennifer Roberts')
 
@@ -47,16 +53,22 @@ def tutor_two(request):
 
 
 def tutor_two_profile(request):
+    '''
+    Renders the tutor two's profile page.
+    '''
     return render(request, 'tutorprofile/tutor_two_profile.html')
 
 
 def tutor_two_qualifications(request):
+    '''
+    Renders the tutor two's qualifications page.
+    '''
     return render(request, 'tutorprofile/tutor_two_qualifications.html')
 
 
 def tutor_three(request):
     '''
-    This renders the third tutor page.
+    This renders the third tutors booking page.
     '''
     tutor_three_bookings = Booking.objects.filter(tutor='Mark Macintosh')
 
@@ -67,10 +79,16 @@ def tutor_three(request):
 
 
 def tutor_three_profile(request):
+    '''
+    Renders the tutor three's profile page.
+    '''
     return render(request, 'tutorprofile/tutor_three_profile.html')
 
 
 def tutor_three_qualifications(request):
+    '''
+    Renders the tutor three's qualifications page.
+    '''
     return render(request, 'tutorprofile/tutor_three_qualifications.html')
 
 
@@ -162,7 +180,7 @@ def tutor_one_create_review(request):
     else:
         form = ReviewForm()
 
-    return render(request, 'tutorprofile/tutor_one_create_review.html', {'form' : form})
+    return render(request, 'tutorprofile/tutor_one_create_review.html', {'form': form})
 
 
 @login_required
@@ -182,7 +200,7 @@ def tutor_two_create_review(request):
     else:
         form = ReviewForm()
 
-    return render(request, 'tutorprofile/tutor_two_create_review.html', {'form' : form})
+    return render(request, 'tutorprofile/tutor_two_create_review.html', {'form': form})
 
 
 @login_required
@@ -202,4 +220,4 @@ def tutor_three_create_review(request):
     else:
         form = ReviewForm()
 
-    return render(request, 'tutorprofile/tutor_three_create_review.html', {'form' : form})
+    return render(request, 'tutorprofile/tutor_three_create_review.html', {'form': form})

@@ -20,7 +20,7 @@ The site is fully responsive and designed in a simplistic and easy to navigate m
 - As a First Time Visitor, I should be able to create a profile page based upon my subject needs.
 - As a First Time Visitor, I should have clear instructions on how tutoring sessions are ran.
 - As a First Time Visitor, I should be able to view the tutors profiles, qualifications and reviews.
-- As a First Time Visitor, I shouldbe able to book in a tutoring session with one of the tutors.
+- As a First Time Visitor, I should be able to book in a tutoring session with one of the tutors.
 
 ### Returning Visitor Goals:
 - As a Returning Visitor, I should be able to view upcoming tutoring sessions on my profile page.
