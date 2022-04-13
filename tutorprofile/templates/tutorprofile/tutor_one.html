@@ -23,10 +23,10 @@
                 </div>
             </div>
             <div class="row center-block">
-                <div class="col-10">
-                    <a href="{% url 'tutor_one_profile' %}"><button class="btn btn-signup btn-lg user-btns" id="proile-btn">Profile Page</button></a>
-                    <a href="{% url 'tutor_one_qualifications' %}"><button class="btn btn-signup btn-lg user-btns" id="qualifications-btn">Qualifications</button></a>
-                    <a href="{% url 'tutor_one_reviews' %}"><button class="btn btn-signup btn-lg user-btns" id="reviews-btn">Reviews</button></a>
+                <div class="col-10 page-buttons-container" >
+                    <a href="{% url 'tutor_one_profile' %}" class="page-buttons">Profile Page</a>
+                    <a href="{% url 'tutor_one_qualifications' %}" class="page-buttons">Qualifications</a>
+                    <a href="{% url 'tutor_one_reviews' %}" class="page-buttons">Reviews</a>
                 </div>
             </div>
         </div>
@@ -104,8 +104,7 @@
                         href="https://www.microsoft.com/en-gb/microsoft-teams/group-chat-software?rtc=1"
                         target="blank">Click Here</a><br> Lessons are available to book on a weekly basis, please book ahead to avoid
                         disapointment.</h5>
-                </div>
-                <div class="row booking-opacity" id="tutor_one_bookings">
+                </div> <div class="row booking-opacity" id="tutor_one_bookings">
                     {% for booking in tutor_one_bookings %}
                         <h3 class="tutor_one_dates">{{ booking.date }}</h3>
                         <h3 class="tutor_one_times">{{ booking.time }}</h3>
