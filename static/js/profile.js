@@ -1,4 +1,3 @@
-//Constant variables
 const csrftoken = getCookie('csrftoken');
 
 document.addEventListener("DOMContentLoaded", () => { 
@@ -9,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("edit-btn").addEventListener("click", editProfile);
     document.getElementById("make-profile").style.display="none";
     document.getElementById("exit-btn").addEventListener("click", closeProfile);
-    document.getElementById("")
+    document.getElementById("");
 
     function upcomingLessons() {
         document.getElementById("upcoming-lessons").style.display="block";
@@ -34,9 +33,9 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("about-me").style.display="block";
     }
 
-    updateBookings()
-    deleteBooking()
-})
+    updateBookings();
+    deleteBooking();
+});
 
 function getCookie(name) {
     let cookieValue = null;
@@ -44,7 +43,6 @@ function getCookie(name) {
         const cookies = document.cookie.split(';');
         for (let i = 0; i < cookies.length; i++) {
             const cookie = cookies[i].trim();
-            // Does this cookie string begin with the name we want?
             if (cookie.substring(0, name.length + 1) === (name + '=')) {
                 cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
                 break;
@@ -75,14 +73,13 @@ function deleteBooking() {
             })
             .then(data => {
                 window.location.href = "/profile";
-            })
-        })
+            });
+        });
     }
 }
 
 function updateBookings() {
     var currentDate = new Date();
-    // What happens if the booking date is more than 1 day old? Is it possible to specify if the dates have already been as opposed to if they are 1 day old?
     var previousDay = new Date(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate() - 1);
     var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     var daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
@@ -98,7 +95,7 @@ function updateBookings() {
         for (let j=0; j < delete_btn.length; j++) {
             if (booking_dates[i].innerHTML == previousDateWithDayOfWeek) {
                 delete_btn[j].click();
-                deleteBooking()
+                deleteBooking();
             } else {
                 booking_dates[i].style.backgroundColor = "white";
             }

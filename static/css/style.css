@@ -162,6 +162,8 @@ hr {
 
 .user-image {
     display: flex;
+    height: 200px;
+    width: 100%;
     justify-content: center;
     font-size: 150px;
 }
@@ -229,19 +231,6 @@ hr {
     float: right;
 }
 
-.button-style {
-    border: solid 2px black;
-    width: 300px;
-    border-radius: 5px;
-    padding: 15px;
-    margin-top: 40px;
-    background-color: #fec173;
-    color: black;
-    font-size: 20px;
-    text-align: center;
-    text-decoration: none;
-}
-
 .color-card {
     background-color: #258d8c0f;
 }
@@ -297,6 +286,17 @@ input:checked ~ label{
 .booking-button {
     float: right;
     padding-right: 50px;
+}
+
+.booking-button a{
+    border: solid 2px black;
+    border-radius: 5px;
+    padding: 15px;
+    background-color: #fec173;
+    color: black;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
 }
 
 .tutorpage-buttons {

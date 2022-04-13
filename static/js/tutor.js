@@ -1,4 +1,4 @@
-window.onload = dateGenerator()
+window.onload = dateGenerator();
 
 function getCookie(name) {
     let cookieValue = null;
@@ -41,8 +41,8 @@ document.addEventListener("DOMContentLoaded", () => {
         clearBooking();
     }
 
-    selectDate()
-})
+    selectDate();
+});
 
 function selectDate(){
     date = document.getElementsByClassName("day-slot");
@@ -52,26 +52,26 @@ function selectDate(){
 
 
     //Resets the innerhtml of the booking for time when a new date is selected.
-    confirmTime.innerHTML = ''
+    confirmTime.innerHTML = '';
 
     for (i=0; i < date.length; i++) {
         date[i].addEventListener("click", function(event) {
             squareClicked = event.target;
             squareClicked.style.backgroundColor = "green";
-            confirmDay.innerHTML = squareClicked.innerHTML
-            selectTime(squareClicked.innerHTML)
-            for (i=0; i < date.length; i++) {
-                if (date[i] != squareClicked) {
-                    date[i].style.backgroundColor = "white";
+            confirmDay.innerHTML = squareClicked.innerHTML;
+            selectTime(squareClicked.innerHTML);
+            for (j=0; j < date.length; j++) {
+                if (date[j] != squareClicked) {
+                    date[j].style.backgroundColor = "white";
                 }
             }
-        })
+        });
     }
 }
 
 function selectTime(date){
     var i=0;
-    document.getElementById("time-slots").style.opacity = "100%"
+    document.getElementById("time-slots").style.opacity = "100%";
     time = document.getElementsByClassName("time-slot");
     tutorName = document.getElementById('tutor-name').innerHTML;
     tutor_one_dates = document.getElementsByClassName('tutor_one_dates');
@@ -87,12 +87,12 @@ function selectTime(date){
             squareClicked = event.target;
             squareClicked.style.backgroundColor = "green";
             confirmTime.innerHTML = squareClicked.innerHTML;
-            for (i=0; i < time.length; i++) {
-                if (time[i] != squareClicked) {
-                    time[i].style.backgroundColor = "white";
+            for (j=0; j < time.length; j++) {
+                if (time[j] != squareClicked) {
+                    time[j].style.backgroundColor = "white";
                 }
             }
-        })
+        });
     }
 
     if (tutorName == 'Barry Hyman') {
@@ -132,15 +132,14 @@ function tutorOneTimes(i){
         for (k=0; k < time.length; k++) {
             time[k].style.backgroundColor = "white";
             if (time[k].innerHTML == tutor_one_times[j].innerHTML) {
-                time[k].style.display = 'none'
+                time[k].style.display = 'none';
             } else {
             }
-
             time[k].addEventListener("click", function(event) {
                 squareClicked = event.target;
                 squareClicked.style.backgroundColor = "green";
                 confirmTime.innerHTML = squareClicked.innerHTML;
-            })
+            });
         }
     }
 }
@@ -155,7 +154,7 @@ function tutorTwoTimes(i){
         for (k=0; k < time.length; k++) {
             time[k].style.backgroundColor = "white";
             if (time[k].innerHTML == tutor_two_times[j].innerHTML) {
-                time[k].style.display = 'none'
+                time[k].style.display = 'none';
             } else {
             }
 
@@ -163,7 +162,7 @@ function tutorTwoTimes(i){
                 squareClicked = event.target;
                 squareClicked.style.backgroundColor = "green";
                 confirmTime.innerHTML = squareClicked.innerHTML;
-            })
+            });
         }
     }
 }
@@ -178,7 +177,7 @@ function tutorThreeTimes(i){
         for (k=0; k < time.length; k++) {
             time[k].style.backgroundColor = "white";
             if (time[k].innerHTML == tutor_three_times[j].innerHTML) {
-                time[k].style.display = 'none'
+                time[k].style.display = 'none';
             } else {
             }
 
@@ -186,7 +185,7 @@ function tutorThreeTimes(i){
                 squareClicked = event.target;
                 squareClicked.style.backgroundColor = "green";
                 confirmTime.innerHTML = squareClicked.innerHTML;
-            })
+            });
         }
     }
 }
@@ -197,7 +196,7 @@ function confirmBooking(){
     var confirmTime = document.getElementById("confirm-time");
     var tutorName = document.getElementById("tutor-name");
     var subjectName = document.getElementById("subject");
-    var time = document.getElementsByClassName("time-slot")
+    var time = document.getElementsByClassName("time-slot");
 
     /* Upon click of the confirm booking button the users selection of date and time are recognised.
     If the user has not selected a date or time an error message will be displayed on the screen.
