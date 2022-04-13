@@ -87,6 +87,11 @@ function selectTime(date){
             squareClicked = event.target;
             squareClicked.style.backgroundColor = "green";
             confirmTime.innerHTML = squareClicked.innerHTML;
+            for (i=0; i < time.length; i++) {
+                if (time[i] != squareClicked) {
+                    time[i].style.backgroundColor = "white";
+                }
+            }
         })
     }
 
