@@ -23,8 +23,6 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("bookings-button").style.display="none";
     document.getElementById("exit-booking").addEventListener("click", closeBooking);
     document.getElementById("confirm-btn").addEventListener("click", confirmBooking);
-    document.getElementById("create-review").addEventListener("click", openForm);
-    document.getElementById("review-container").style.display = "none";
 
     
     function openBooking() {
@@ -44,10 +42,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     selectDate()
-    checkBookings()
 })
 
 function selectDate(){
+    console.log("date")
     date = document.getElementsByClassName("day-slot");
     confirmDay = document.getElementById("confirm-date");
     confirmTime = document.getElementById("confirm-time");
