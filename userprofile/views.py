@@ -3,6 +3,7 @@ Importing the relevant packages.
 '''
 import json
 from django.contrib import messages
+from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, get_object_or_404
 from tutorprofile.models import Booking
@@ -44,7 +45,12 @@ def delete_booking(request):
     request_body = json.loads(request.body)
     student_id = request_body['id']
 
-    Booking.objects.filter(id=student_id).delete()
+    if Booking.objects.filter(student=request.user).exists():
+        Booking.objects.filter(id=student_id).delete()
+        messages.success(request, ('Tutoring session deleted'))
+        return HttpResponse(status=201)
+    else:
+        print('nothing')
 
     context = {
         'profile_delete': 'Your profile is deleted',

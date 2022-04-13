@@ -111,7 +111,7 @@ def confirm_booking(request):
         subject = request_body['subject']
 
         if Booking.objects.filter(Q(student=request.user) & Q(tutor=tutor)).exists():
-            messages.success(request, ('You can only have one lesson booked per tutor each week.'))
+            messages.warning(request, ('You can only have one lesson booked per tutor each week.'))
         else:
             booking.date = date
             booking.time = time
