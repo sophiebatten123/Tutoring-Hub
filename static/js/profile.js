@@ -15,21 +15,18 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("upcoming-lessons").style.display="block";
         document.getElementById("about-me").style.display="none";
         document.getElementById("make-profile").style.display="none";
-        document.getElementById("about-subject").style.display="none";
     }
 
     function profilePage() {
         document.getElementById("about-me").style.display="block";
         document.getElementById("upcoming-lessons").style.display="none";
         document.getElementById("make-profile").style.display="none";
-        document.getElementById("about-subject").style.display="block";
     }
 
     function editProfile() {
         document.getElementById("make-profile").style.display="block";
         document.getElementById("about-me").style.display="none";
         document.getElementById("upcoming-lessons").style.display="none";
-        document.getElementById("about-subject").style.display="none";
     }
 
     function closeProfile() {

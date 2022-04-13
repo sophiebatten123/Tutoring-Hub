@@ -32,3 +32,9 @@ The site is fully responsive and designed in a simplistic and easy to navigate m
 - As a Frequent Visitor, I should be able to access further learning through useful subject links and games.
 - As a Frequent Visitor, I should be able to edit my account in the event that my details change.
 - As a Frequent Visitor, I should be able to delete my account if I am no longer wanting tuition.
+
+# Agile Planning Guide
+
+## LUCID Logic Flowchart 
+
+![Lucid Flow Chart](static/images/lucid.png)
