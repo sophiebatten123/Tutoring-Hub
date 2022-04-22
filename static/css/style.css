@@ -20,6 +20,16 @@ html, body {
     color: white;
 }
 
+.header-nav {
+    color: white;
+    padding-top: 5px;
+    font-size: 25px;
+}
+
+.nav-elements {
+    font-size: 22px;
+}
+
 .border {
     border: solid 2px black;
 }
