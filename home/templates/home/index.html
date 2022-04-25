@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block content %}
 
@@ -82,15 +83,22 @@
     </div>
 </div>
 
-
 <div class="container-fluid">
-    <div class="row center">
-        <div class="row">
-            <div class="row text-homepage-world">
-                <h5><i class="fa-solid fa-quote-left homepage-icons quote-padding"></i>I have learnt so much in my
-                    tutoring sessions and am really enjoying being able to ask questions again.<i
-                        class="fa-solid fa-quote-right homepage-icons quote-padding"></i></h5>
-            </div>
+    <div class="carousel">
+        <div class="carousel__item">
+            <h5><i class="fa-solid fa-quote-left homepage-icons quote-padding"></i>I have learnt so much in my
+            tutoring sessions and am really enjoying being able to ask questions again.<i
+                class="fa-solid fa-quote-right homepage-icons quote-padding"></i><br/>-Chris Henderson</h5>
+        </div>
+        <div class="carousel__item">
+            <h5><i class="fa-solid fa-quote-left homepage-icons quote-padding"></i>Thank you so much for all the
+                support I have been given at TutorHub. It is great to feel more confient in my subjects.
+                <i class="fa-solid fa-quote-right homepage-icons quote-padding"></i><br/>-Melanie Johnson</h5>
+        </div>
+        <div class="carousel__item">
+            <h5><i class="fa-solid fa-quote-left homepage-icons quote-padding"></i>I am really enjoying my lessons
+                and have managed to improve my grades at school as a result of the help given by TutorHub's amazing
+                tutors.<i class="fa-solid fa-quote-right homepage-icons quote-padding"></i><br/>-David McKenzie</h5>
         </div>
     </div>
 </div>
@@ -171,4 +179,8 @@
     </div>
 </div>
 
+{% endblock %}
+
+{% block postloadjs %}
+<script src="{% static 'js/home.js' %}"></script>
 {% endblock %}
