@@ -13,7 +13,7 @@ html, body {
 
 .navbar {
     background-color: #258d8c;
-    padding-left: 50px;
+    justify-content: right;
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -23,7 +23,19 @@ html, body {
 .header-nav {
     color: white;
     padding-top: 5px;
-    font-size: 25px;
+    font-size: 30px;
+    background-color: #258d8c;
+    color: white;
+}
+
+.header-nav a{
+    margin-bottom: 0;
+    text-decoration: none;
+    color: white;
+}
+
+.header-nav a:hover{
+    color: black;
 }
 
 .nav-elements {
@@ -56,6 +68,14 @@ html, body {
     margin: auto;
     margin-bottom: 20px;
     margin-top: 20px;
+}
+
+#placeholder-top {
+    margin-top: 0;
+}
+
+#placeholder-bottom {
+    margin-bottom: 0;
 }
 
 .table-space {
@@ -102,29 +122,11 @@ hr {
     border-radius: 50%;
 }
 
-#circle-1 {
-    width:300px; 
-    height:150px; 
-    border:solid 20px #000;
-    border-color: #fec173 transparent transparent transparent;
-    position: absolute;
-    left: 120px;
-    top: 100px;
-    background-color: white;
-}
-
-#circle-2 {
-    width:300px; 
-    height:150px; 
-    border:solid 20px #000;
-    border-color: transparent transparent #fec173 transparent;
-    position: absolute;
-    left: 550px;
-    top: 100px;
-    background-color: white;
-}
-
 /* ............................................... Home page styling */
+
+#medium-header {
+    display: none;
+}
 
 .homepage-icons {
     padding-top: 10px;
@@ -133,22 +135,29 @@ hr {
     color: #258d8c;
 }
 
+.homepage-icons-gears {
+    padding-top: 10px;
+    padding-bottom: 15px;
+    font-size: 30px;
+    color:#fec173;
+}
+
 .quote-padding {
     padding: 20px;
 }
 
 .video-area {
-    position: relative;
+    margin: auto;
     padding-top: 20px;
+    position: relative;
+
 }
 
 #video {
     border: 4px solid #258d8c;
     border-radius: 5px;
     padding: 0;
-    position: absolute;
-    left: 220px;
-    top: 0px;
+    z-index: 3;
 }
 
 .header-homepage {
@@ -163,10 +172,25 @@ hr {
     text-align: left;
 }
 
+#text-homepage-header {
+    margin-left: 50px;
+    margin-bottom: 30px;
+    width:300px; 
+    height:50px; 
+}
+
+#text-homepage-tutors {
+    padding: 10px;
+    margin-left: 100px;
+    margin-bottom: 30px;
+    width:300px; 
+    height:50px;
+}
+
 .information-strip {
     margin: auto;
+    font-size: 20px;
     padding: 0;
-    padding-top: 20px;
     margin-bottom: 20px;
 }
 
@@ -201,6 +225,19 @@ hr {
 .tutors-heading {
     padding-top: 20px;
     padding-left: 150px;
+}
+
+.tutor-icon-padding {
+    padding: 10px;
+}
+
+.tutor-text {
+    font-size: 20px;
+    padding: 0 30px;
+}
+
+.blue-background {
+    background-color: #258d8c17;
 }
 
 /*................................................. Reviews */
@@ -569,4 +606,61 @@ th, td {
 
 .footer li i {
     color: white;
+    font-size: 25px;
+    margin-top: 20px;
+}
+
+/*..................................Media Queries*/
+
+@media(max-width:992px) {
+    #medium-header {
+        display: block;
+    }
+    #large-header {
+        display: none;
+    }
+    .header-text {
+        padding-top: 10px;
+    }
+    .header-image img {
+        height: 300px;
+    }
+    .video-area {
+        height: 350px;
+    }
+    #video {
+        left: 150px;
+        top: 0px;
+    }
+    #circle-1 {
+        left: 50px;
+        top: 100px;
+    }
+    #circle-2 {
+        left: 500px;
+        top: 100px;
+    }
+    .carousel__item {
+        height: 120px;
+        padding: 0;
+    }
+    .carousel__nav {
+        padding-bottom: 0;
+    }
+    .carousel__item h5 {
+        font-size: 18px;
+    }
+    .quote-padding {
+        padding: 5px;
+    }
+    #text-homepage-tutors {
+        margin-left: 20px;
+    }
+    .tutor-text {
+        margin-bottom: 30px;
+        font-size: 18px;
+    }
+    .homepage-buttons {
+        margin-bottom: 20px;
+    }
 }
