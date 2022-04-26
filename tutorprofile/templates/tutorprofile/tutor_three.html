@@ -5,7 +5,7 @@
 
 <div class="container-fluid center-block">
     <div class="row profile">
-        <div class="col-3">
+        <div class="col-md-12 col-lg-3">
             <div class="row">
                 <div class="col-12 user-image">
                     <img src="../../static/images/tutorthree.avif" alt="image of a tutor">
@@ -30,12 +30,16 @@
                 </div>
             </div>
         </div>
-        <div class="col-3" id="bookings-button">
+        <div class="tutor-medium-placeholder">
+            <div class="row placeholder">
+            </div>
+        </div>
+        <div class="col-md-12 col-lg-3" id="bookings-button">
             <div class="row booking-button">
                 <a href="{% url 'tutor_three' %}" id="booking-btn">Book Lesson</a>
             </div>
         </div>
-        <div class="col-9" id="bookings">
+        <div class="col-md-12 col-lg-9" id="bookings">
             <div class="row">
                 <div class="col-6 tutoring-heading">
                     <h3><i class="fa-solid fa-pen"></i> English Tutoring</h3>
@@ -48,9 +52,9 @@
                 <h5>Select the date and time below suitable for your english lesson.</h5>
             </div>
             <div class="row booking-table">
-                <div class="col-4">
+                <div class="col-sm-12 col-md-4">
                     <h3>Select a date:</h3>
-                    <table class="center">
+                    <table class="center table-width">
                         <tr>
                             <th class="day-slot table" id="day-one"></th>
                         </tr>
@@ -68,9 +72,9 @@
                         </tr>
                     </table>
                 </div>
-                <div class="col-4" id="time-slots">
+                <div class="col-sm-12 col-md-4" id="time-slots">
                     <h3>Select a time:</h3>
-                    <table class="center">
+                    <table class="center table-width">
                         <tr>
                             <td class="time-slot table">2.30 - 3.30 pm</td>
                         </tr>
@@ -88,14 +92,14 @@
                         </tr>
                     </table>
                 </div>
-                <div class="col-4 confirm-booking" id="confirm">
+                <div class="col-sm-12 col-md-4 confirm-booking" id="confirm">
                     <h3>Confirm your booking:</h3>
                     <p>Tutor: <span id="tutor-name">Mark Macintosh</span></p>
                     <p>Subject: <span id="subject">English</span></p>
                     <p>Date: <span id="confirm-date"></span></p>
                     <p>Time: <span id="confirm-time"></span></p>
                     <div class="row booking-button">
-                        <button class="btn btn-signup btn-lg user-btns tutorpage-buttons" id="confirm-btn" aria-label="Confirm-booking">Confirm Booking</button>
+                        <button class="btn btn-signup btn-lg user-btns tutorpage-buttons" id="confirm-btn" aria-label="Confirm booking">Confirm Booking</button>
                     </div>
                 </div>
                 <div class="row tutor-booking-info">
