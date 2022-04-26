@@ -16,16 +16,23 @@ html, body {
     justify-content: right;
 }
 
+.nav-link-upcoming-lessons {
+    width: 200px;
+}
+
 .navbar-light .navbar-nav .nav-link {
     color: white;
 }
 
 .header-nav {
+    height: 50px;
     color: white;
     padding-top: 5px;
     font-size: 30px;
     background-color: #258d8c;
     color: white;
+    display: flex;
+    position: relative;
 }
 
 .header-nav a{
@@ -120,6 +127,24 @@ hr {
 
 .box{ 
     border-radius: 50%;
+}
+
+#username-right {
+    position: absolute;
+    right: 20px;
+    top: 25px;
+    margin-bottom: 0;
+}
+
+#nav-title {
+    position: absolute;
+    left: 20px;
+    top: 0px;
+    font-size: 40px;
+}
+
+#nav-title i {
+    color: #fec173;
 }
 
 /* ............................................... Home page styling */
@@ -834,5 +859,12 @@ th, td {
     }
     .profile {
         height: 1900px;
+    }
+}
+
+@media(max-width:410px) {
+    #nav-title {
+        left: 0;
+        font-size: 35px;
     }
 }

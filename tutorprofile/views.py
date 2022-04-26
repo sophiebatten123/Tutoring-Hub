@@ -123,7 +123,7 @@ def confirm_booking(request):
 
         bookings = Booking.objects.all().values()
 
-        template_name = "userprofile/profile.html"
+        template_name = "userprofile/upcoming_lessons.html"
 
         args = {
             "bookings": list(bookings),

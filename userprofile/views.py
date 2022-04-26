@@ -30,7 +30,6 @@ def profile(request):
     template = 'userprofile/profile.html'
     context = {
         'profile': user_profile,
-        'bookings': Booking.objects.filter(student=request.user),
         'form': form,
         'on_profile_page': True
     }
@@ -56,4 +55,16 @@ def delete_booking(request):
         'profile_delete': 'Your profile is deleted',
     }
 
-    return render(request, 'userprofile/profile.html', context)
+    return render(request, 'userprofile/upcoming_lessons.html', context)
+
+
+def upcoming_lessons(request):
+    '''
+    Renders the students upcoming lessons
+    '''
+    template = 'userprofile/upcoming_lessons.html'
+    context = {
+        'bookings': Booking.objects.filter(student=request.user),
+    }
+
+    return render(request, template, context)

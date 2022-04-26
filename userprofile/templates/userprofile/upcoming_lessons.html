@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="container-fluid center-block">
+    <div class="row profile">
+        <div class="col-9">
+            <div class="row">
+                <h3>Your upcoming lessons are:</h3>
+                {% for booking in bookings %}
+                <div class="col-12">
+                    <table class="table-space">
+                        <tr>
+                            <td class="bold">{{ booking.subject }} Lesson <span class="type">Online</span></td>
+                        </tr>
+                        <tr>
+                            <td>{{ booking.tutor }}</td>
+                        </tr>
+                        <tr>
+                            <td class="booking-dates">{{ booking.date }}</td>
+                        </tr>
+                        <tr>
+                            <td>{{ booking.time }}</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button class="btn btn-delete btn-lg" value="{{ booking.id }}">Cancel</button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
+
+{% block postloadjs %}
+<script src="{% static 'js/upcoming_lessons.js' %}"></script>
+{% endblock %}

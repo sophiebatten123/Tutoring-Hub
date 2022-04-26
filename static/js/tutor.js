@@ -227,7 +227,7 @@ function confirmBooking(){
             })
         })
         .then(data => {
-            window.location.href = "/profile";
+            window.location.href = "/profile/upcoming_lessons";
         })
         .catch(error => {
             console.log(error);

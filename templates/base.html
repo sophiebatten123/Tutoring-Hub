@@ -22,7 +22,10 @@
 </head>
 <body>
     <div class="col-12 header-nav">
-        <a class="nav-link" href="{% url 'index' %}">TutorHub</a>
+        <a class="nav-link" id="nav-title" href="{% url 'index' %}"><i class="fa-solid fa-lightbulb"></i> TutorHub</a>
+        {% if user.is_authenticated %}
+            <h3 id="username-right">Welcome {{ user.username }}!</h3>
+        {% endif %}
     </div>
     <nav class="navbar navbar-expand navbar-light">
         <div class="conatiner-fluid">
@@ -35,6 +38,9 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'profile' %}">Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link-upcoming-lessons nav-link" href="{% url 'upcoming_lessons' %}">Upcoming Lessons</a>
                         </li>
                         {% else %}
                         <li class="nav-item">

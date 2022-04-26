@@ -21,7 +21,6 @@
                 <div class="row center-block">
                     <div class="col-10">
                         <button class="btn btn-signup btn-lg user-btns" id="profile-btn">Profile Page</button>
-                        <button class="btn btn-signup btn-lg user-btns" id="upcoming-lessons-btn">Upcoming Lessons</button>
                         <button class="btn btn-signup btn-lg user-btns" id="edit-btn">Edit Profile</button>
                     </div>
                 </div>
@@ -73,34 +72,6 @@
                         href="https://www.microsoft.com/en-gb/microsoft-teams/group-chat-software?rtc=1"
                         target="blank">Click Here</a><br> Lessons are available to book on a weekly basis, please book ahead to avoid
                         disapointment.</h5>
-                </div>
-            </div>
-            <div class="col-9" id="upcoming-lessons">
-                <div class="row">
-                    <h3>Your upcoming lessons are:</h3>
-                    {% for booking in bookings %}
-                    <div class="col-12">
-                        <table class="table-space">
-                            <tr>
-                                <td class="bold">{{ booking.subject }} Lesson <span class="type">Online</span></td>
-                            </tr>
-                            <tr>
-                                <td>{{ booking.tutor }}</td>
-                            </tr>
-                            <tr>
-                                <td class="booking-dates">{{ booking.date }}</td>
-                            </tr>
-                            <tr>
-                                <td>{{ booking.time }}</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <button class="btn btn-delete btn-lg" value="{{ booking.id }}">Cancel</button>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                    {% endfor %}
                 </div>
             </div>
             <div class="col-9" id="make-profile">
