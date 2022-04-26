@@ -87,14 +87,14 @@ The site is fully responsive and designed in a simplistic and easy to navigate m
 
 <details>
     <summary>Desktop Wireframes - Click Here:</summary>
-   
+    <img src="static/images/desktop-home-wireframe.png" width="500">
 </details>
 
 ## Mobile Wireframes
 
 <details>
     <summary>Mobile Wireframes - Click Here:</summary>
-    
+    <img src="static/images/mobile-home-wireframe.png" width="500">
 </details>
 
 ## Logic Function Wireframes
