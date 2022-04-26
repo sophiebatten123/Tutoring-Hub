@@ -24,11 +24,11 @@
     <div class="col-12 header-nav">
         <a class="nav-link" href="{% url 'index' %}">TutorHub</a>
     </div>
-    <nav class="navbar navbar-expand-lg navbar-light">
+    <nav class="navbar navbar-expand navbar-light">
         <div class="conatiner-fluid">
             <div class="row">
                 <div class="col-8 nav-elements">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <ul class="navbar-nav mb-lg-0">
                         {% if user.is_authenticated %}
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
