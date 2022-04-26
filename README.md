@@ -15,6 +15,7 @@ The site is fully responsive and designed in a simplistic and easy to navigate m
 
 - [UX](#ux)
   - [User Stories](#user-stories)
+  - [Agile Planning](#agile-planning)
   - [Design](#design)
     - [Colour Scheme](#colour-scheme)
     - [Typography](#typography)
@@ -30,7 +31,6 @@ The site is fully responsive and designed in a simplistic and easy to navigate m
     - [Book in Tutoring Lessons](#bookings)
     - [View/Cancel Upcoming Lessons](#view)
     - [Leave Tutor Reviews](#rate)
-    - [Share Your Work](#share)
   - [Deployed Website](#deployed-website)
     - [Desktop Homepage](#desktop-home)
     - [Mobile Homepage](#mobile-home)
@@ -66,13 +66,41 @@ The site is fully responsive and designed in a simplistic and easy to navigate m
 9. As a Frequent Visitor, I should be able to access further learning through useful subject links and games.
 10. As a Frequent Visitor, I should be able to edit my account in the event that my details change.
 
+# Agile Planning Enviroment
+
+## MoSCow Method
+
+Throughout my project I frequently used the project board on GitHub ensuring I carefully followed the MoSCow method.
+
+To ensure that the ideas I had for my project were realistic in the timeframe given it was important to:
+- Ensure the 'Must Have' elements never exceeded 60% of the assigned tasks.
+- Regularly update the project board and reflect upon each iteration.
+- Refer to the project board regularly to keep focussed throughout the project.
+
+Using the MoSCow technique was extremely useful and helped me to accomplish more during my project. 
+Below is a screenshot of the Agile Planning enviroment that I used throughout my project:
+
+![Agile-Planning](static/images/agile.png)
+
 # Design
 
+Throughout this project it was important that the design of the site was simplistic and carefully incorporated contrasting colours. 
+This was accomplisheed by delicately adding turqouise and orange within the icons, button and header elements on the page. 
+
+By using this technique the following criteria was accomplished:
+- Foreground elements were never hindered by the background colours.
+- Elements of importance stood out clearly on the page for the user. 
+- Site navigation was clear, cohesive and easy to navigate.
+
 ## Colour Scheme
+
+The colours for the site were selected through product research. It became clear that similar sites often use contrasting colours, making things 'pop' on the page. Furthermore it was important that the colours on the site allowed an easy flow of content throughout.
 
 ![Colour-Scheme](static/images/colours.png)
 
 ## Typography
+
+Fonts were equally important on the site. The aim was to create a childish feeling to the site, complementing the cartoon imagery seen within the header image. Moreover, text colours were kept simple either black or white with only the icon colours changing. This was to ensure that the information was accessible to users who may be visaully impaired.
 
 ![Typography](static/images/navigation.png)
 ![Typography](static/images/text.png)
@@ -107,6 +135,12 @@ The site is fully responsive and designed in a simplistic and easy to navigate m
 #
 # Site Improvements
 
+TutorHub has a few oppurtunities for devlopment that would complement the sites purpose. These include:
+
+- Users would benefit from the option to 'rearrange' lesson bookings as opposed to just having the option to cancel them.
+- Users would benefit from recieving email confirmation when a lesson has been successfully booked.
+- Users would benefit from the ability to share good work on the site, this would help contribute to the community ethos.
+
 # Features
 
 ## Register/ Login
@@ -123,8 +157,6 @@ The site is fully responsive and designed in a simplistic and easy to navigate m
 ## View/Cancel Upcoming Lessons
 
 ## Leave Tutor Reviews
-
-## Share Your Work
 
 # Deployed Website
 
