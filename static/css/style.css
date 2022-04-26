@@ -667,6 +667,10 @@ th, td {
     background-color: #258d8c;
 }
 
+.footer-text {
+    font-size: 20px;
+}
+
 .footer li {
     display: inline;
     padding: 10px;

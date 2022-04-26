@@ -1,11 +1,11 @@
 [Tutoring Site Live Link](https://tutoring-hub.herokuapp.com/)
 [Github Repository](https://github.com/sophiebatten123/Tutoring-Hub)
 
-# STEM Tutoring Site
+# TutoHub
 
 (Developer: Sophie Batten)
 
-STEM Tutoring offers secondary school pupils world class tuition FREE as part of the education recovery plan. It is vital, now more than ever, that students are able gain a deeper relational understanding of concepts and understand the practical nature of STEM subjects, all of which have been set aside throughout the pandemic. Our tutors deliver their lesson via [Microsoft Teams](https://www.microsoft.com/en-gb/microsoft-teams/group-chat-software?rtc=1) which ensures no smart technology is required and gives all pupils regardless of their background the opportunity to learn.
+TutorHub offers secondary school pupils world class tuition FREE as part of the education recovery plan. It is vital, now more than ever, that students are able gain a deeper relational understanding of concepts and understand the practical nature of STEM subjects, all of which have been set aside throughout the pandemic. Our tutors deliver their lesson via [Microsoft Teams](https://www.microsoft.com/en-gb/microsoft-teams/group-chat-software?rtc=1) which ensures no smart technology is required and gives all pupils regardless of their background the opportunity to learn.
 
 The site is fully responsive and designed in a simplistic and easy to navigate manner. It has been coded using HTML, CSS, JavaScript, Python and Django using the MVC framework to scaffold the design process. Furthermore, the project went through continuos agile development to ensure features were working effectively.
 
@@ -63,24 +63,23 @@ The site is fully responsive and designed in a simplistic and easy to navigate m
 8. As a Returning Visitor, I should be able to leave reviews on the tutor pages. 
 
 ### Frequent Visitor Goals:
-9. As a Frequent Visitor, I should be able to post my tutoring work within the 'Sharing Good Practice' forum area.
-10. As a Frequent Visitor, I should be able to access further learning through useful subject links and games.
-11. As a Frequent Visitor, I should be able to edit my account in the event that my details change.
-12. As a Frequent Visitor, I should be able to delete my account if I am no longer wanting tuition.
+9. As a Frequent Visitor, I should be able to access further learning through useful subject links and games.
+10. As a Frequent Visitor, I should be able to edit my account in the event that my details change.
 
 # Design
 
 ## Colour Scheme
 
-![Colour-Scheme]()
+![Colour-Scheme](static/images/colours.png)
 
 ## Typography
 
-![Typography]()
+![Typography](static/images/navigation.png)
+![Typography](static/images/text.png)
 
 ## Imagery
 
-![Imagery]()
+![Imagery](static/images/images.png)
 
 # Wireframes
 
