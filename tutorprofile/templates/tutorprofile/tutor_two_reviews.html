@@ -4,8 +4,8 @@
 {% block content %}
 
 <div class="container-fluid center-block">
-    <div class="row profile">
-        <div class="col-3">
+    <div class="row profile-page">
+        <div class="col-md-12 col-lg-3">
             <div class="row">
                 <div class="col-12 user-image">
                     <img src="../../../static/images/tutortwo.avif" alt="image of a tutor">
@@ -30,13 +30,17 @@
                 </div>
             </div>
         </div>
-        <div class="col-6 booking-button" id="reviews-page">
+        <div class="tutor-medium-placeholder">
+            <div class="row placeholder">
+            </div>
+        </div>
+        <div class="col-md-12 col-lg-6 booking-button" id="reviews-page">
             <a href="{% url 'tutor_two_create_review' %}">Create a review</a>
             <br />
             <br />
             <div class="row">
                 {% for review in review_list %}
-                    <div class="col-6 card_space">
+                    <div class="col-md-12 col-lg-6 card_space">
                         <div class="card">
                             <div class="card-body color-card">
                                 <p class="review_comment">{{ review.review|safe }} - {{ review.student }} </p>
@@ -60,7 +64,7 @@
                 {% endif %}
             </div>
         </div>
-        <div class="col-3" id="bookings-button">
+        <div class="col-md-12 col-lg-3" id="bookings-button">
             <div class="row booking-button">
                 <a href="{% url 'tutor_two' %}" id="booking-btn">Book Lesson</a>
             </div>

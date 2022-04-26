@@ -4,8 +4,8 @@
 {% block content %}
 
 <div class="container-fluid center-block">
-    <div class="row profile">
-        <div class="col-3">
+    <div class="row profile-page">
+        <div class="col-md-12 col-lg-3">
             <div class="row">
                 <div class="col-12 user-image">
                     <img src="../../../static/images/tutorone.avif" alt="image of a tutor">
@@ -30,7 +30,11 @@
                 </div>
             </div>
         </div>
-        <div class="col-6" id="tutor-profile">
+        <div class="tutor-medium-placeholder">
+            <div class="row placeholder">
+            </div>
+        </div>
+        <div class="col-md-12 col-lg-6" id="tutor-profile">
             <blockquote cite="Benjamin Franklin"><i>"Tell me and I forget, teach me and I remember, involve me and I learn."</i></blockquote>
             <h3>About Me:</h3>
             <p>I am a recent graduate from Manchester University with a degree in Chemistry and am also able to
@@ -43,7 +47,7 @@
                 when it was fashionable for learning to be more "child centred". This is an approach I have found to
                 pay rich dividends in terms of a pupil's academic and personal development.</p>
         </div>
-        <div class="col-3" id="bookings-button">
+        <div class="col-md-12 col-lg-3" id="bookings-button">
             <div class="row booking-button">
                 <a href="{% url 'tutor_one' %}" id="booking-btn">Book Lesson</a>
             </div>
