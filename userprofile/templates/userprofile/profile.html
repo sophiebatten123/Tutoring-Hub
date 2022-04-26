@@ -4,35 +4,38 @@
 {% load crispy_forms_tags %}
 {% block content %}
 
+<div>
+    <div class="row placeholder" id="placeholder-top">
+    </div>
+</div>
 
 <div class="container-fluid center-block">
-    <div class="row profile">
+    <div class="row profile-student">
         {% if profile.full_name %}
-            <div class="col-3">
+            <div class="col-md-12 col-lg-3">
                 <div class="row">
                     <div class="col-12 user-image"><img src="../../static/images/user.png" alt="cartoon image of a person"></div>
                 </div>
                 <div class="row">
-                    <div class="col-12 user-info">
+                    <div class="col-12 user-info-student-profile">
                         <h1>{{ profile.full_name }}</h1>
                         <p>Year {{ profile.year_group }} Student</p>
                     </div>
                 </div>
-                <div class="row center-block">
-                    <div class="col-10">
-                        <button class="btn btn-signup btn-lg user-btns" id="profile-btn">Profile Page</button>
+                <div class="row">
+                    <div class="col-12">
                         <button class="btn btn-signup btn-lg user-btns" id="edit-btn">Edit Profile</button>
                     </div>
                 </div>
             </div>
-            <div class="col-9 about-text" id="about-me">
+            <div class="col-md-12 col-lg-9 about-text" id="about-me">
                 <div class="row about-spacer">
-                    <h3>About Me!</h3>
+                    <h3><b>About Me! <i class="fa-solid fa-gears homepage-icons-gears"></i></b></h3>
                     <p>{{ profile.about_me }}</p>
                     <hr />
                 </div>
                 <div class="row">
-                    <div class="col-4 profile-subjects">
+                    <div class="col-sm-12 col-lg-4 profile-subjects">
                         <h3>Maths: <i class="fa-solid fa-calculator"></i></h3>
                         <hr />
                         <p class="profile-text">"{{ profile.maths }}"</p>
@@ -43,7 +46,7 @@
                         <br />
                         <a class="nav-link book-btn homepage-buttons" id="profile-booking-button" href="{% url 'tutor_one' %}">Book in a Maths Lesson</a>
                     </div>
-                    <div class="col-4 profile-subjects">
+                    <div class="col-sm-12 col-lg-4 profile-subjects">
                         <h3>Science: <i class="fa-solid fa-flask"></i></h3>
                         <hr />
                         <p class="profile-text">"{{ profile.science }}"</p>
@@ -54,7 +57,7 @@
                         <br />
                         <a class="nav-link book-btn homepage-buttons" id="profile-booking-button" href="{% url 'tutor_two' %}">Book in a Science Lesson</a>
                     </div>
-                    <div class="col-4 profile-subjects">
+                    <div class="col-sm-12 col-lg-4 profile-subjects">
                         <h3>English: <i class="fa-solid fa-pen"></i></h3>
                         <hr />
                         <p class="profile-text">"{{ profile.english }}"</p>
@@ -74,7 +77,7 @@
                         disapointment.</h5>
                 </div>
             </div>
-            <div class="col-9" id="make-profile">
+            <div class="col-md-12 col-lg-9" id="make-profile">
                 <div class="row exit-profile">
                     <button class="btn btn-signup btn-lg" id="exit-btn"><i class="fa-solid fa-circle-xmark"></i></button>
                 </div>
@@ -87,18 +90,17 @@
                 </div>
             </div>
         {% else %}
-        <div class="col-3">
+        <div class="col-md-12 col-lg-3">
             <div class="row">
                 <div class="col-12 user-image"><img src="../../static/images/user.png" alt="cartoon image of a person"></div>
             </div>
             <div class="row center-block">
                 <div class="col-10">
-                    <button class="btn btn-signup btn-lg user-btns hidden" id="profile-btn">Profile Page</button>
                     <button class="btn btn-signup btn-lg user-btns hidden" id="upcoming-lessons-btn">Upcoming Lessons</button>
                 </div>
             </div>
         </div>
-        <div class="col-9 about-text" id="about-me">
+        <div class="col-md-3 col-lg-9 about-text" id="about-me">
             <div class="row about-spacer">
                 <h2>Weclome {{ request.user }}! </h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis efficitur velit nec nunc imperdiet, sit
@@ -110,11 +112,6 @@
                     laoreet urna nisl, tristique pharetra urna egestas eu. In quis arcu egestas, pellentesque dui eget,
                     molestie tortor.</p>
                 <button class="btn btn-signup btn-lg user-btns btn-color" id="edit-btn">Create Profile</button>
-            </div>
-        </div>
-        <div class="col-9" id="upcoming-lessons">
-            <div class="row">
-                <h3>Your upcoming lessons are:</h3>
             </div>
         </div>
         <div class="col-9" id="make-profile">
@@ -130,6 +127,11 @@
             </div>
         </div>
         {% endif %}
+    </div>
+</div>
+
+<div>
+    <div class="row placeholder" id="placeholder-bottom">
     </div>
 </div>
 

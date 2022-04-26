@@ -45,6 +45,10 @@ html, body {
     color: black;
 }
 
+.alert {
+    margin-bottom: 0;
+}
+
 .nav-elements {
     font-size: 22px;
 }
@@ -60,6 +64,7 @@ html, body {
 
 .user-btns {
     width: 100%;
+    margin-left: 35px;
     text-align: left;
 }
 
@@ -78,20 +83,13 @@ html, body {
 }
 
 #placeholder-top {
+    padding: 0;
     margin-top: 0;
 }
 
 #placeholder-bottom {
+    padding: 0;
     margin-bottom: 0;
-}
-
-.table-space {
-    margin-top: 8px;
-    width: 50%;
-}
-
-.table-space td {
-    padding: 8px;
 }
 
 .bold {
@@ -269,7 +267,7 @@ hr {
     background-color: #258d8c17;
 }
 
-/*................................................. Reviews */
+/*................................................. Reviews on Homepage*/
 
 .carousel {
     position: relative;
@@ -347,6 +345,13 @@ hr {
     height: 810px;
 }
 
+.profile-student {
+    width: 100%;
+    margin-top: 20px;
+    padding: 20px;
+    height: 800px;
+}
+
 .profile-page {
     width: 100%;
     margin-top: 20px;
@@ -366,6 +371,10 @@ hr {
     margin-top: 25px;
     margin-left: 50px;
     margin-bottom: 25px;
+}
+
+.user-info-student-profile {
+    margin-left: 50px;
 }
 
 .user-info i {
@@ -406,7 +415,7 @@ hr {
 }
 
 .profile-subjects i {
-    color: #efa74b;
+    color:#258d8c;
     float: right;
     padding-right: 10px;
 }
@@ -427,7 +436,21 @@ hr {
     text-align: center;
 }
 
-/* ............................................... Reviews */
+/*...............................................Upcoming bookings */
+
+.table-width-bookings {
+    width: 50%;
+    margin: auto;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.table-width-bookings td {
+    padding: 8px;
+}
+
+/* ............................................... Reviews on Tutor Pages */
+
 
 #reviews {
     background-color: #258d8c0f;
@@ -668,6 +691,12 @@ th, td {
     .information-strip {
         padding-left: 50px;
     }
+    .user-info-student-profile {
+        margin-left: 0;
+    }
+    .user-info h1 {
+        font-size: 35px;
+    }
 }
 
 @media(max-width:1200px) {
@@ -770,6 +799,17 @@ th, td {
     .profile-page {
         height: 900px;
     }
+    .user-info-student-profile {
+        text-align: center;
+    }
+    .user-btns {
+        text-align: center;
+        margin-left: 0;
+        background-color:#258d8c0f;
+    }
+    .profile-student {
+        height: 1800px;
+    }
 }
 
 @media(max-width:820px) {
@@ -778,6 +818,9 @@ th, td {
     }
     #large-about-us-header {
         padding-left: 100px;
+    }
+    .table-width-bookings {
+        width: 80%;
     }
 }
 

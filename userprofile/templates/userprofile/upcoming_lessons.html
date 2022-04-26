@@ -3,14 +3,17 @@
 
 {% block content %}
 
-<div class="container-fluid center-block">
-    <div class="row profile">
-        <div class="col-9">
-            <div class="row">
+<div class="row placeholder" id="placeholder-top">
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="row center">
                 <h3>Your upcoming lessons are:</h3>
                 {% for booking in bookings %}
                 <div class="col-12">
-                    <table class="table-space">
+                    <table class="table-space table-width-bookings">
                         <tr>
                             <td class="bold">{{ booking.subject }} Lesson <span class="type">Online</span></td>
                         </tr>
@@ -32,6 +35,9 @@
                 </div>
             {% endfor %}
     </div>
+</div>
+
+<div class="row placeholder" id="placeholder-bottom">
 </div>
 
 {% endblock %}
