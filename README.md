@@ -116,6 +116,9 @@ Fonts were equally important on the site. The aim was to create a childish feeli
 <details>
     <summary>Desktop Wireframes - Click Here:</summary>
     <img src="static/images/desktop-home-wireframe.png" width="500">
+    <img src="static/images/desktop-student-wireframe.png" width="500">
+    <img src="static/images/desktop-tutor-wireframe.png" width="500">
+    <img src="static/images/booking-wireframe.png" width="500">
 </details>
 
 ## Mobile Wireframes
@@ -123,6 +126,9 @@ Fonts were equally important on the site. The aim was to create a childish feeli
 <details>
     <summary>Mobile Wireframes - Click Here:</summary>
     <img src="static/images/mobile-home-wireframe.png" width="500">
+    <img src="static/images/mobile-student-wireframe.png" width="500">
+    <img src="static/images/mobile-tutor-wireframe.png" width="500">
+    <img src="static/images/booking-wireframe.png" width="500">
 </details>
 
 ## Logic Function Wireframes

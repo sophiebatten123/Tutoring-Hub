@@ -14,7 +14,7 @@ class PostReview(SummernoteModelAdmin):
     Posts the review form onto the tutor profiles.
     '''
     list_display = ('student', 'tutor', 'created_on')
-    list_filter = ('created_on',)
+    list_filter = ('created_on', 'tutor',)
     search_fields = ['student', 'tutor']
     summernote_fields = ('review')
 
@@ -24,8 +24,9 @@ class PostBooking(admin.ModelAdmin):
     '''
     Posts the booking form onto the tutor profiles.
     '''
-    list_display = ('student', 'date', 'time')
-    search_fields = ['student', 'date', 'time']
+    list_display = ('student', 'tutor', 'date', 'time')
+    search_fields = ['student', 'tutor', 'date', 'time']
+    list_filter = ('tutor', 'student',)
 
     def approve_booking(self, queryset):
         '''
