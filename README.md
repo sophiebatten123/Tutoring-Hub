@@ -178,12 +178,61 @@ Above is a screenshot of the deployed webiste in desktop view. It was really imp
 
 A screenshot of the website from a mobile device can be seen above. The site remained easy to navigate on mobile devices and the design ensured that the content was clear.
 
-# 
+# Functionality
+
+## Fixed Bugs and Errors
+
+|Bug/Error Identified|Reason for the error|Fix for the error|
+|--------------------|--------------------|-----------------|
+| Users were able to double book tutors timeslots.| The information on the page wasn't being generated based on the database. | Information generated to the booking page was generated based upon the database information.|
+| Users could select multiple date/time slots. | The selectDate and selectTime functions were being called twice. | The onClick function within the HTML function was removed.|
+| User bookings were not appearing on the upcoming bookings page.| The information was being sent to the user profile page in the views.py file. | URL link was changed within the views.py to match the desired page.|
+
+## Technologies Used
+
+- HTML
+- CSS
+- JavaScript
+- Python
+- Django
+
+## Programs Used
+
+- ![Font Awesome](https://fontawesome.com/) - All icons included on the site were taken from Font Awesome.
+- ![Am I Responsive](http://ami.responsivedesign.is/) - Was used to create the mockup image for the README file.
+- ![Google Fonts](https://fonts.google.com/) - The fonts used on the site were imported from Google Fonts
+- ![GitHub](https://github.com/) - Was the coding platform used to create and deploy the site.
+- ![Heroku](https://id.heroku.com/login) - Used to deploy the site.
+- ![JSHint](https://jshint.com/) - Used to check JavaScript functionality.
+- ![W3C Markup Validation Service](https://validator.w3.org/) - Used to validate the HTML code on the site.
+- ![W3C Jigsaw CSS Validation Service](https://jigsaw.w3.org/css-validator/) - Used to validate the CSS code used on the site.
+
+
 # Testing
 
 ## Manual Testing 
 
+Manual testing was completed iteratively throughout the project and the site was regularly tested on different browsers and on different screen sizes. Moreover, Dev tools was used often to identify errors within HTML and CSS code, alongside the console feature to identify errors in Javascript code.
+
+Alongside, I regulalry generated lighthouse reports which gave me an idea how well the site was performing. Attached below is a screenshot of the sites lighthouse report at the deployment stage of my project:
+
+<details>
+    <summary>Lighthouse Report - Click Here:</summary>
+</details>
+
 ## Automatic Testing 
+
+Automatic testing of HTML and CSS was checked using W3C Validator ensuring there were no errors or warnings within the code. When the site was ran through the validator there were no errors present.
+
+Attached below is a screenshot of the HTML and CSS Validator showing this:
+
+<details>
+    <summary>HTML Validator - Click Here:</summary>
+</details>
+
+<details>
+    <summary>CSS Validator - Click Here:</summary>
+</details>
 
 ## Wave Testing
 
@@ -207,7 +256,9 @@ The Django Framework was intalled and my project deployed to HEROKU using the Co
 
 ## Content
 
-- The images used on my site were taken from [Shutterstock]().
+- The images used on my site were taken from [Shutterstock](https://www.shutterstock.com/).
+- Images and video clips were also used from [Pexels](https://www.pexels.com/).
+- The carousel feature on the homepage was shown using the following YouTube tutorial [DCode](https://www.youtube.com/watch?v=XtFlpgaLbZ4)
 - The icons included throughout the website were taken from [Font-Awesome](https://fontawesome.com/).
 - The colour theme was chosen using [coolors](https://coolors.co/).
 - Help and support was given by the Code Institute Tutors on some of the logic functions within the website. 
