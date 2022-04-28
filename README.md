@@ -198,14 +198,14 @@ A screenshot of the website from a mobile device can be seen above. The site rem
 
 ## Programs Used
 
-- ![Font Awesome](https://fontawesome.com/) - All icons included on the site were taken from Font Awesome.
-- ![Am I Responsive](http://ami.responsivedesign.is/) - Was used to create the mockup image for the README file.
-- ![Google Fonts](https://fonts.google.com/) - The fonts used on the site were imported from Google Fonts
-- ![GitHub](https://github.com/) - Was the coding platform used to create and deploy the site.
-- ![Heroku](https://id.heroku.com/login) - Used to deploy the site.
-- ![JSHint](https://jshint.com/) - Used to check JavaScript functionality.
-- ![W3C Markup Validation Service](https://validator.w3.org/) - Used to validate the HTML code on the site.
-- ![W3C Jigsaw CSS Validation Service](https://jigsaw.w3.org/css-validator/) - Used to validate the CSS code used on the site.
+- [Font Awesome](https://fontawesome.com/) - All icons included on the site were taken from Font Awesome.
+- [Am I Responsive](http://ami.responsivedesign.is/) - Was used to create the mockup image for the README file.
+- [Google Fonts](https://fonts.google.com/) - The fonts used on the site were imported from Google Fonts
+- [GitHub](https://github.com/) - Was the coding platform used to create and deploy the site.
+- [Heroku](https://id.heroku.com/login) - Used to deploy the site.
+- [JSHint](https://jshint.com/) - Used to check JavaScript functionality.
+- [W3C Markup Validation Service](https://validator.w3.org/) - Used to validate the HTML code on the site.
+- [W3C Jigsaw CSS Validation Service](https://jigsaw.w3.org/css-validator/) - Used to validate the CSS code used on the site.
 
 
 # Testing
