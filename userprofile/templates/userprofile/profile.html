@@ -28,9 +28,9 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-12 col-lg-9 about-text" id="about-me">
+            <div class="col-md-12 col-lg-9 about-text about-me" id="about-me-text">
                 <div class="row about-spacer">
-                    <h3><b>About Me! <i class="fa-solid fa-gears homepage-icons-gears"></i></b></h3>
+                    <h2><b>About Me! <i class="fa-solid fa-gears homepage-icons-gears"></i></b></h2>
                     <p>{{ profile.about_me }}</p>
                     <hr />
                 </div>
@@ -39,93 +39,61 @@
                         <h3>Maths: <i class="fa-solid fa-calculator"></i></h3>
                         <hr />
                         <p class="profile-text">"{{ profile.maths }}"</p>
-                        <br />
-                        <br />
-                        <br />
-                        <br />
-                        <br />
-                        <a class="nav-link book-btn homepage-buttons" id="profile-booking-button" href="{% url 'tutor_one' %}">Book in a Maths Lesson</a>
+                        <a class="nav-link book-btn homepage-buttons profile-booking-button" href="{% url 'tutor_one' %}">Book in a Maths Lesson</a>
                     </div>
                     <div class="col-sm-12 col-lg-4 profile-subjects">
                         <h3>Science: <i class="fa-solid fa-flask"></i></h3>
                         <hr />
                         <p class="profile-text">"{{ profile.science }}"</p>
-                        <br />
-                        <br />
-                        <br />
-                        <br />
-                        <br />
-                        <a class="nav-link book-btn homepage-buttons" id="profile-booking-button" href="{% url 'tutor_two' %}">Book in a Science Lesson</a>
+                        <a class="nav-link book-btn homepage-buttons" href="{% url 'tutor_two' %}">Book in a Science Lesson</a>
                     </div>
                     <div class="col-sm-12 col-lg-4 profile-subjects">
                         <h3>English: <i class="fa-solid fa-pen"></i></h3>
                         <hr />
                         <p class="profile-text">"{{ profile.english }}"</p>
-                        <br />
-                        <br />
-                        <br />
-                        <br />
-                        <br />
-                        <a class="nav-link book-btn homepage-buttons" id="profile-booking-button" href="{% url 'tutor_three' %}">Book in an English Lesson</a>
+                        <a class="nav-link book-btn homepage-buttons" href="{% url 'tutor_three' %}">Book in an English Lesson</a>
                     </div>
                     <hr />
                 </div>
                 <div class="row tutor-booking-info" id="profile-teams-info">
-                    <h5>All lessons take place virtually using Microsoft Teams. For more information: <a
+                    <p>All lessons take place virtually using Microsoft Teams. For more information: <a
                         href="https://www.microsoft.com/en-gb/microsoft-teams/group-chat-software?rtc=1"
                         target="blank">Click Here</a><br> Lessons are available to book on a weekly basis, please book ahead to avoid
-                        disapointment.</h5>
+                        disapointment.</p>
                 </div>
             </div>
-            <div class="col-md-12 col-lg-9" id="make-profile">
-                <div class="row exit-profile">
-                    <button class="btn btn-signup btn-lg" id="exit-btn" aria-label="exit-button"><i class="fa-solid fa-circle-xmark"></i></button>
+            <div class="col-md-12 col-lg-9" id="edit-profile">
+                <div class="row exit-profile" id="exit-btn-container">
+                    <i class="fa-solid fa-circle-xmark" id="exit-btn"></i>
                 </div>
                 <div class="row">
                     <form method="post">
                         {{ form | crispy}}
                         {% csrf_token %}
-                        <button type="submit" class="btn btn-signup btn-lg">Submit</button>
+                        <button type="submit" class="btn btn-signup btn-lg homepage-buttons" id="submit-profile-edit-btn">Submit</button>
                     </form>
                 </div>
             </div>
         {% else %}
-        <div class="col-md-12 col-lg-3">
-            <div class="row">
-                <div class="col-12 user-image"><img src="../../static/images/user.png" alt="cartoon image of a person"></div>
-            </div>
-            <div class="row center-block">
-                <div class="col-10">
-                    <button class="btn btn-signup btn-lg user-btns hidden" id="upcoming-lessons-btn">Upcoming Lessons</button>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3 col-lg-9 about-text" id="about-me">
+        <div class="col-12 about-text center about-me">
             <div class="row about-spacer">
                 <h2>Weclome {{ request.user }}! </h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis efficitur velit nec nunc imperdiet, sit
-                    amet eleifend lorem iaculis. Donec convallis condimentum lectus ut interdum. Nam facilisis, ante at
-                    dapibus gravida, risus dolor mollis enim, nec dignissim nibh neque non ipsum. Duis venenatis, orci
-                    vitae porta ultrices, sapien diam varius lorem, et pulvinar orci elit ut dolor. Aliquam erat
-                    volutpat. Nam suscipit mauris et mauris imperdiet euismod. Pellentesque habitant morbi tristique
-                    senectus et netus et malesuada fames ac turpis egestas. Ut quis risus ligula. Nulla facilisi. Sed
-                    laoreet urna nisl, tristique pharetra urna egestas eu. In quis arcu egestas, pellentesque dui eget,
-                    molestie tortor.</p>
-                <button class="btn btn-signup btn-lg user-btns btn-color" id="edit-btn">Create Profile</button>
+                <p>Your profile page gives your tutors an idea of how you find their subject, what you struggle on and how
+                    they can help you in lessons. <br/> Feel free to add some outside interests aswell this will allow them to
+                    get to know you better!</p>
             </div>
         </div>
-        <div class="col-9" id="make-profile">
-            <div class="row exit-profile">
-                <button class="btn btn-signup btn-lg" id="exit-btn"><i class="fa-solid fa-circle-xmark"></i></button>
-            </div>
+        <div class="col-2"></div>
+        <div class="col-8 make-profile">
             <div class="row">
                 <form method="post">
                     {{ form | crispy}}
                     {% csrf_token %}
-                    <button type="submit" class="btn btn-signup btn-lg">Submit</button>
+                    <button type="submit" class="btn btn-signup btn-lg homepage-buttons" id="submit-profile-btn">Submit</button>
                 </form>
             </div>
         </div>
+        <div class="col-2"></div>
         {% endif %}
     </div>
 </div>

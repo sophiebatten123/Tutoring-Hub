@@ -236,7 +236,14 @@ Attached below is a screenshot of the HTML and CSS Validator showing this:
 
 ## Wave Testing
 
-#
+Alongside checking my code was free from code errors I also used [WAVE](https://wave.webaim.org/) to check the accessibilty of my website. This tool is specificially aimed at catering for people with disabilities, highlighting any problems they could have accessing the content including:
+
+- Error - Contrast of navigation headings against the navigation bar. This was fixed by making the navigation bar darker to contrast against the white text.
+- Warning - Alt text on images were not descriptive enough. I fixed this by adding more context behnd the images.
+- Warning - Youtube video included. This warning was not fixed as the Youtube video contains subtitles.
+
+All errors were removed from the website as a result of using this software.
+
 # Deployment
 
 The website was deployed using Github and Heroku through the following steps:

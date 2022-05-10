@@ -12,7 +12,7 @@ html, body {
 }
 
 .navbar {
-    background-color: #258d8c;
+    background-color: #1c7d7c;
     justify-content: right;
 }
 
@@ -29,7 +29,7 @@ html, body {
     color: white;
     padding-top: 5px;
     font-size: 30px;
-    background-color: #258d8c;
+    background-color: #1c7d7c;
     color: white;
     display: flex;
     position: relative;
@@ -41,8 +41,16 @@ html, body {
     color: white;
 }
 
+#home-page-link {
+    float: left;
+}
+
 .header-nav a:hover{
-    color: black;
+    color: rgba(0,0,0,.55);
+}
+
+.nav-link {
+ color: white;
 }
 
 .alert {
@@ -99,14 +107,14 @@ html, body {
 }
 
 hr {
-    color: #258d8c;
+    color: #1c7d7c;
 }
 
 .blue-strip {
     height: 50px;
     width: 50px;
     padding: 0;
-    background-color: #258d8c;
+    background-color: #1c7d7c;
     border-radius: 50%;
     justify-content: center;
     margin: auto;
@@ -151,11 +159,15 @@ hr {
     display: none;
 }
 
+#register-button {
+    width: 60%;
+}
+
 .homepage-icons {
     padding-top: 10px;
     padding-bottom: 15px;
     font-size: 20px;
-    color: #258d8c;
+    color: #1c7d7c;
 }
 
 .homepage-icons-gears {
@@ -177,7 +189,7 @@ hr {
 }
 
 #video {
-    border: 4px solid #258d8c;
+    border: 4px solid #1c7d7c;
     border-radius: 5px;
     padding: 0;
     z-index: 3;
@@ -236,12 +248,18 @@ hr {
 
 .homepage-buttons {
     border-radius: 5px;
-    width: 60%;
     margin: auto;
     background-color: #fec173;
     color: black;
     font-size: 20px;
     margin-bottom: 50px;
+}
+
+.homepage-buttons:hover {
+    cursor: pointer;
+    color: black;
+    font-size: 20px;
+    opacity: 0.85;
 }
 
 .header-image img {
@@ -296,7 +314,7 @@ hr {
     width: 20px;
     height: 20px;
     display: inline-block;
-    background:#258d8c;
+    background:#1c7d7c;
     border-radius: 50%;
     margin: 0 5px;
 }
@@ -328,7 +346,7 @@ hr {
 }
 
 .register-links {
-    color: #258d8c;
+    color: #1c7d7c;
     text-decoration: none;
 }
 
@@ -347,9 +365,8 @@ hr {
 
 .profile-student {
     width: 100%;
-    margin-top: 20px;
-    padding: 20px;
-    height: 800px;
+    padding: 10px;
+    height: 930px;
 }
 
 .profile-page {
@@ -409,13 +426,17 @@ hr {
     background-color: aliceblue;
 }
 
-#exit-btn{
+#exit-btn-container{
     text-align: right;
     padding: 0;
 }
 
+#exit-btn:hover {
+    cursor: pointer;
+}
+
 .profile-subjects i {
-    color:#258d8c;
+    color:#1c7d7c;
     float: right;
     padding-right: 10px;
 }
@@ -424,6 +445,7 @@ hr {
     background-color: #258d8c0f;
     text-align: center;
     padding: 10px;
+    height: 300px;
 }
 
 #profile-teams-info {
@@ -431,9 +453,36 @@ hr {
     background-color: #258d8c0f;
 }
 
-#profile-booking-button {
+#profile-teams-info p {
+    font-size: 20px;
+    text-align: center;
+}
+
+.profile-booking-button {
     width: 100%;
     text-align: center;
+}
+
+#submit-profile-btn {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+.make-profile {
+    background-color: #258d8c0f;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.about-me {
+    font-size: 18px;
+}
+
+#submit-profile-edit-btn {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 0px;
 }
 
 /*...............................................Upcoming bookings */
@@ -459,7 +508,7 @@ hr {
 }
 
 #tutor_name {
-    color: #258d8c;
+    color: #1c7d7c;
 }
 
 .card_space {
@@ -635,7 +684,7 @@ th, td {
 .btn-complete {
     padding-top: 2px;
     padding-bottom: 2px;
-    background-color: #258d8c;
+    background-color: #1c7d7c;
     border: 2px solid black;
     color: white;
     float: left;
@@ -654,7 +703,7 @@ th, td {
 
 .tutor-booking-info a {
     text-decoration: none;
-    color: #258d8c;
+    color: #1c7d7c;
 }
 
 .tutoring-heading {
@@ -664,11 +713,12 @@ th, td {
 /* ............................................... Footer styling */
 
 .footer {
-    background-color: #258d8c;
+    background-color: #1c7d7c;
 }
 
 .footer-text {
     font-size: 20px;
+    color: white;
 }
 
 .footer li {
