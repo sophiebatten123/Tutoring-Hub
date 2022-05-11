@@ -331,7 +331,7 @@ hr {
 /* ................................................ Signup and register page */
 
 .sign-up {
-    height: 500px;
+    height: auto;
     width: 40%;
     margin: auto;
     background-color: #258d8c17;
@@ -343,6 +343,7 @@ hr {
 .register-buttons {
     width: 35%;
     margin: auto;
+    margin-bottom: 30px;
     background-color: #fec173;
     color: black;
     font-size: 20px;
