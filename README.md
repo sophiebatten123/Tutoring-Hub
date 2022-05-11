@@ -9,7 +9,7 @@ TutorHub offers secondary school pupils world class tuition FREE as part of the 
 
 The site is fully responsive and designed in a simplistic and easy to navigate manner. It has been coded using HTML, CSS, JavaScript, Python and Django using the MVC framework to scaffold the design process. Furthermore, the project went through continuos agile development to ensure features were working effectively.
 
-![Am I Responsive?]()
+![Am I Responsive?](static/images/responsive.png)
 
 # Table of Contents:
 
