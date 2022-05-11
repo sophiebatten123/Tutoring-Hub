@@ -58,6 +58,7 @@ def delete_booking(request):
     return render(request, 'userprofile/upcoming_lessons.html', context)
 
 
+@login_required
 def upcoming_lessons(request):
     '''
     Renders the students upcoming lessons

@@ -99,7 +99,6 @@ def confirm_booking(request):
     tutor. It sends data to the users database which
     will then be viewable on thier profile page
     '''
-
     if request.method == 'POST':
 
         booking = Booking()
