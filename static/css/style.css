@@ -25,7 +25,7 @@ html, body {
 }
 
 .header-nav {
-    height: 50px;
+    height: 100px;
     color: white;
     padding-top: 5px;
     font-size: 30px;
@@ -55,6 +55,7 @@ html, body {
 
 .alert {
     margin-bottom: 0;
+    padding-left: 40px;
 }
 
 .nav-elements {
@@ -136,10 +137,9 @@ hr {
 }
 
 #username-right {
-    position: absolute;
-    right: 20px;
-    top: 25px;
-    margin-bottom: 0;
+    float: right;
+    padding-top: 20px;
+    padding-right: 20px;
 }
 
 #nav-title {
@@ -185,7 +185,11 @@ hr {
     margin: auto;
     padding-top: 20px;
     position: relative;
+}
 
+.center-video {
+    padding-right: 0;
+    margin: auto;
 }
 
 #video {
@@ -328,17 +332,16 @@ hr {
 
 .sign-up {
     height: 500px;
-    width: 30%;
+    width: 40%;
     margin: auto;
     background-color: #258d8c17;
     padding-top: 50px;
-    padding-left: 50px;
-    text-align: left;
+    text-align: center;
     font-size: 20px;
 }
 
 .register-buttons {
-    width: 30%;
+    width: 35%;
     margin: auto;
     background-color: #fec173;
     color: black;
@@ -428,7 +431,7 @@ hr {
 
 #exit-btn-container{
     text-align: right;
-    padding: 0;
+    padding-top: 30px;
 }
 
 #exit-btn:hover {
@@ -592,7 +595,7 @@ input:checked ~ label{
 
 .booking-button {
     float: right;
-    padding-right: 50px;
+    padding-right: 60px;
 }
 
 .booking-button a{
@@ -613,6 +616,7 @@ input:checked ~ label{
     font-size: 20px;
 }
 
+
 .btn-color {
     width: 180px;
     background-color: orange;
@@ -632,6 +636,15 @@ th, td {
 .confirm-booking {
     margin-top: 25px;
     background-color: #258d8c12;
+}
+
+#confirm-btn {
+    width: 100%;
+    margin: auto;
+    margin-bottom: 20px;
+    background-color: #fec173;
+    color: black;
+    font-size: 20px;
 }
 
 .exit-booking-button {
@@ -760,6 +773,11 @@ th, td {
     .tutor-booking-info h5{
         font-size: 18px;
     }
+    .booking-button {
+        float: none;
+        margin: auto;
+        padding-right: 0;
+    }
 }
 
 @media(max-width:1100px) {
@@ -768,6 +786,9 @@ th, td {
     }
     .tutor-booking-info {
         height: 120px;
+    }
+    .sign-up {
+        width: 70%;
     }
 }
 
@@ -807,7 +828,7 @@ th, td {
     .carousel__nav {
         padding-bottom: 0;
     }
-    .carousel__item h5 {
+    .carousel__item h4 {
         font-size: 18px;
     }
     .quote-padding {
@@ -862,7 +883,7 @@ th, td {
         background-color:#258d8c0f;
     }
     .profile-student {
-        height: 1800px;
+        height: auto;
     }
 }
 
@@ -885,6 +906,14 @@ th, td {
     .profile-page {
         height: 1000px;
     }
+    #time-slots h3 {
+        padding-top: 20px;
+    }
+    #username-right {
+        margin: auto;
+        padding-top: 55px;
+    }
+
 }
 
 @media(max-width:750px) {
@@ -902,6 +931,12 @@ th, td {
     }
     #large-about-us-header {
         padding-left: 0;
+    }
+    .carousel__item {
+        height: 260px;
+    }
+    .carousel__item h4 {
+        font-size: 17px;
     }
 }
 
@@ -924,6 +959,9 @@ th, td {
     }
     .page-buttons-container a {
         padding: 5px;
+    }
+    .sign-up {
+        width: 100%;
     }
 }
 
@@ -951,7 +989,7 @@ th, td {
        margin: 5px 0;
     }
     .tutor-booking-info {
-        height: 180px;
+        height: 250px;
         margin-top: 20px;
     }
     .profile {
@@ -963,5 +1001,35 @@ th, td {
     #nav-title {
         left: 0;
         font-size: 35px;
+    }
+    .profile {
+        height: 2000px;
+    }
+}
+
+@media(max-width:300px) {
+    .table {
+        padding: 10px 20px;
+    }
+    .confirm-booking {
+        font-size: 17px;
+    }
+    .tutoring-heading {
+        margin-bottom: 30px;
+    }
+    .tutoring-heading h3 {
+        font-size: 20px;
+    }
+    #confirm-btn {
+        font-size: 17px;
+    }
+    .tutor-booking-info h5 {
+        font-size: 17px;
+    }
+    .tutor-booking-info {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0;
+        height: 200px;
     }
 }

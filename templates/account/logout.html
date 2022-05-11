@@ -9,7 +9,7 @@
 
 <div class="container-fluid">
   <div class="row">
-    <div class="col-md-12 col-lg-6 sign-up">
+    <div class="col-8 sign-up">
       <h1>{% trans "Sign Out" %}</h1>
 
       <p>{% trans 'Are you sure you want to sign out?' %}</p>
@@ -19,11 +19,8 @@
         {% if redirect_field_value %}
         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
         {% endif %}
-        <button type="submit">{% trans 'Sign Out' %}</button>
+        <button type="submit" class="register-buttons">{% trans 'Sign Out' %}</button>
       </form>
-    </div>
-    <div class="col-md-12 col-lg-6">
-      <img src="{% static 'images/register.png' %}" alt="image of cartoon working">
     </div>
   </div>
 </div>

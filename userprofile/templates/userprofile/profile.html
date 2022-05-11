@@ -45,13 +45,13 @@
                         <h3>Science: <i class="fa-solid fa-flask"></i></h3>
                         <hr />
                         <p class="profile-text">"{{ profile.science }}"</p>
-                        <a class="nav-link book-btn homepage-buttons" href="{% url 'tutor_two' %}">Book in a Science Lesson</a>
+                        <a class="nav-link book-btn homepage-buttons profile-booking-button" href="{% url 'tutor_two' %}">Book in a Science Lesson</a>
                     </div>
                     <div class="col-sm-12 col-lg-4 profile-subjects">
                         <h3>English: <i class="fa-solid fa-pen"></i></h3>
                         <hr />
                         <p class="profile-text">"{{ profile.english }}"</p>
-                        <a class="nav-link book-btn homepage-buttons" href="{% url 'tutor_three' %}">Book in an English Lesson</a>
+                        <a class="nav-link book-btn homepage-buttons profile-booking-button" href="{% url 'tutor_three' %}">Book in an English Lesson</a>
                     </div>
                     <hr />
                 </div>
@@ -75,7 +75,7 @@
                 </div>
             </div>
         {% else %}
-        <div class="col-12 about-text center about-me">
+        <div class="col-12 about-text center about-me" id="create-profile-page">
             <div class="row about-spacer">
                 <h2>Weclome {{ request.user }}! </h2>
                 <p>Your profile page gives your tutors an idea of how you find their subject, what you struggle on and how
