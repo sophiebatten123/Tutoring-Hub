@@ -63,8 +63,8 @@ The site is fully responsive and designed in a simplistic and easy to navigate m
 8. As a Returning Visitor, I should be able to leave reviews on the tutor pages. 
 
 ### Frequent Visitor Goals:
-9. As a Frequent Visitor, I should be able to access further learning through useful subject links and games.
-10. As a Frequent Visitor, I should be able to edit my account in the event that my details change.
+9. As a Frequent Visitor, I should be able to edit my account in the event that my details change.
+10. As a Frequent Visitor, I want my tutor to have availabilty for lessons so I dont get behind on my studies.
 
 # Agile Planning Enviroment
 
@@ -152,31 +152,50 @@ TutorHub has a few oppurtunities for devlopment that would complement the sites 
 ## Register/ Login
 
 - Upon entering the site users have the option to sign up for an account or, if already registered, login to their pre-existing accounts. (User Story 1)
-- This feature allows the user to book in lessons, leave tutor reviews and share their work. 
-- Furthermore, it allows the user to have a more personalised experience on the site showing their information and allowing them to keep track of any upcoming bookings. 
+- This feature allows the user to book in lessons and leave tutor reviews. 
+- Furthermore, it allows the user to have a more personalised experience on the site showing their information and allowing them to keep track of any upcoming bookings. (User Story 6)
 - The login and register pages use the 'Django Allauth Framework'. They have further been styled to blend with the design of the site using colours that complement the rest of the page.
 
+A picture of the registration page can be seen below:
+
+![Register](static/images/registerpage.png)
+
 ## Create a Student Profile
+- Students are able to create their own profile pages based upon their tutoring requirements. (User Story 2)
+- The profile page is set up to ensure that users dont repeat any information already given upon registering to the site.
+- This feature allows students to provide tutors with current subject starting points and introduce themselves before lessons. (User Story 3)
+- Students are instructed on their profile pages how to access the tuition lessons. (User Story 3)
+- Students are able to edit their profile information in the event that their information changes. (User Story 9)
+
+A picture of the student profile pages can be seen below:
+
+![Profile](static/images/profile.png)
 
 ## Book in Tutoring Lessons
+- Students can book in 1 lesson with a tutor at a time on their booking page. (User Story 5)
+- Bookings cannot be double booked and are updated on a daily basis. (User Story 10)
+- Time slots are updated dependent on the days avilability. (User Story 10)
+- Students are instructed on the tutor booking page on how to access the tuition lessons. (User Story 3)
+
+A picture of a tutor booking page can be seen below:
+
+![Bookings](static/images/booking.png)
 
 ## View/Cancel Upcoming Lessons
+- Students are able to view their upcoming lessons, including the subject, date and time of the lesson. (User Story 6)
+- Students are able to cancel their lessons if they are no longer able to attend. (User Story 7)
+
+A picture of the upcoming lessons page can be seen below:
+
+![Upcoming Lessons](static/images/upcominglessons.png)
 
 ## Leave Tutor Reviews
+- Students are able to leave a review on their tutors profile page. (User Story 8)
+- Reviews are able to be seen publically to ensure full transparancy in tutoring quality. (User Story 4)
 
-# Deployed Website
+A picture of the tutor reviews page can be seen below:
 
-## Desktop Homepage
-
-![Desktop-Homepage](static/images/desktop.png)
-
-Above is a screenshot of the deployed webiste in desktop view. It was really important throughout the design process that the layout was simplistic and that the main focus of the site was to get users to book lessons hence why this was central to the page.
-
-## Mobile Homepage
-
-![Mobile-Homepage](static/images/mobile.png)
-
-A screenshot of the website from a mobile device can be seen above. The site remained easy to navigate on mobile devices and the design ensured that the content was clear.
+![Reviews](static/images/reviews.png)
 
 # Functionality
 
