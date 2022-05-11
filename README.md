@@ -5,9 +5,9 @@
 
 (Developer: Sophie Batten)
 
-TutorHub offers secondary school pupils world class tuition FREE as part of the education recovery plan. It is vital, now more than ever, that students are able gain a deeper relational understanding of concepts and understand the practical nature of STEM subjects, all of which have been set aside throughout the pandemic. Our tutors deliver their lesson via [Microsoft Teams](https://www.microsoft.com/en-gb/microsoft-teams/group-chat-software?rtc=1) which ensures no smart technology is required and gives all pupils regardless of their background the opportunity to learn.
+Tutor Hub offers secondary school pupils world class tuition FREE as part of the education recovery plan. It is vital, now more than ever, that students are able gain a deeper relational understanding of concepts and understand the practical nature of STEM subjects, all of which have been set aside throughout the pandemic. Our tutors deliver their lesson via [Microsoft Teams](https://www.microsoft.com/en-gb/microsoft-teams/group-chat-software?rtc=1) which ensures no smart technology is required and gives all pupils regardless of their background the opportunity to learn.
 
-The site is fully responsive and designed in a simplistic and easy to navigate manner. It has been coded using HTML, CSS, JavaScript, Python and Django using the MVC framework to scaffold the design process. Furthermore, the project went through continuos agile development to ensure features were working effectively.
+The site is fully responsive and designed in a simplistic and easy to navigate manner. It has been coded using HTML, CSS, JavaScript, Python and Django using the MVC framework to scaffold the design process. Furthermore, the project went through continuous agile development to ensure features were working effectively.
 
 ![Am I Responsive?](static/images/responsive.png)
 
@@ -54,7 +54,7 @@ The site is fully responsive and designed in a simplistic and easy to navigate m
 1. As a First Time Visitor, I should be able to sign up for a student account.
 2. As a First Time Visitor, I should be able to create a profile page based upon my subject needs.
 3. As a First Time Visitor, I should have clear instructions on how tutoring sessions are ran.
-4. As a First Time Visitor, I should be able to view the tutors profiles, qualifications and reviews.
+4. As a First Time Visitor, I should be able to view the tutor's profiles, qualifications and reviews.
 5. As a First Time Visitor, I should be able to book in a tutoring session with one of the tutors.
 
 ### Returning Visitor Goals:
@@ -63,10 +63,10 @@ The site is fully responsive and designed in a simplistic and easy to navigate m
 8. As a Returning Visitor, I should be able to leave reviews on the tutor pages. 
 
 ### Frequent Visitor Goals:
-9. As a Frequent Visitor, I should be able to edit my account in the event that my details change.
-10. As a Frequent Visitor, I want my tutor to have availabilty for lessons so I dont get behind on my studies.
+9. As a Frequent Visitor, I should be able to edit my account if my details change.
+10. As a Frequent Visitor, I want my tutor to have availability for lessons so I don't get behind on my studies.
 
-# Agile Planning Enviroment
+# Agile Planning Environment
 
 ## MoSCow Method
 
@@ -78,29 +78,30 @@ To ensure that the ideas I had for my project were realistic in the timeframe gi
 - Refer to the project board regularly to keep focussed throughout the project.
 
 Using the MoSCow technique was extremely useful and helped me to accomplish more during my project. 
-Below is a screenshot of the Agile Planning enviroment that I used throughout my project:
+Below is a screenshot of the Agile Planning environment that I used throughout my project:
 
 ![Agile-Planning](static/images/agile.png)
 
 # Design
 
 Throughout this project it was important that the design of the site was simplistic and carefully incorporated contrasting colours. 
-This was accomplisheed by delicately adding turqouise and orange within the icons, button and header elements on the page. 
+This was accomplished by delicately adding turquoise and orange within the icons, button and header elements on the page. 
+---
 
-By using this technique the following criteria was accomplished:
+By using this technique, the following criteria was accomplished:
 - Foreground elements were never hindered by the background colours.
 - Elements of importance stood out clearly on the page for the user. 
 - Site navigation was clear, cohesive and easy to navigate.
 
 ## Colour Scheme
 
-The colours for the site were selected through product research. It became clear that similar sites often use contrasting colours, making things 'pop' on the page. Furthermore it was important that the colours on the site allowed an easy flow of content throughout.
+The colours for the site were selected through product research. It became clear that similar sites often use contrasting colours, making things 'pop' on the page. Furthermore, it was important that the colours on the site allowed an easy flow of content throughout.
 
 ![Colour-Scheme](static/images/colours.png)
 
 ## Typography
 
-Fonts were equally important on the site. The aim was to create a childish feeling to the site, complementing the cartoon imagery seen within the header image. Moreover, text colours were kept simple either black or white with only the icon colours changing. This was to ensure that the information was accessible to users who may be visaully impaired.
+Fonts were equally important on the site. The aim was to create a childish feeling to the site, complementing the cartoon imagery seen within the header image. Moreover, text colours were kept simple either black or white with only the icon colours changing. This was to ensure that the information was accessible to users who may be visually impaired.
 
 ![Typography](static/images/navigation.png)
 ![Typography](static/images/text.png)
@@ -141,10 +142,10 @@ Fonts were equally important on the site. The aim was to create a childish feeli
 #
 # Site Improvements
 
-TutorHub has a few oppurtunities for devlopment that would complement the sites purpose. These include:
+Tutor Hub has a few opportunities for development that would complement the sites' purpose. These include:
 
 - Users would benefit from the option to 'rearrange' lesson bookings as opposed to just having the option to cancel them.
-- Users would benefit from recieving email confirmation when a lesson has been successfully booked.
+- Users would benefit from receiving email confirmation when a lesson has been successfully booked.
 - Users would benefit from the ability to share good work on the site, this would help contribute to the community ethos.
 
 # Features
@@ -162,11 +163,11 @@ A picture of the registration page can be seen below:
 ![Register](static/images/registerpage.png)
 
 ## Create a Student Profile
-- Students are able to create their own profile pages based upon their tutoring requirements. **(User Story 2)**
-- The profile page is set up to ensure that users dont repeat any information already given upon registering to the site.
+- Students can create their own profile pages based upon their tutoring requirements. **(User Story 2)**
+- The profile page is set up to ensure that users don't repeat any information already given upon registering to the site.
 - This feature allows students to provide tutors with current subject starting points and introduce themselves before lessons. **(User Story 3)**
 - Students are instructed on their profile pages how to access the tuition lessons. **(User Story 3)**
-- Students are able to edit their profile information in the event that their information changes. **(User Story 9)**
+- Students can edit their profile information in the event that their information changes. **(User Story 9)**
 ---
 
 A picture of the student profile pages can be seen below:
@@ -175,8 +176,8 @@ A picture of the student profile pages can be seen below:
 
 ## Book in Tutoring Lessons
 - Students can book in 1 lesson with a tutor at a time on their booking page. **(User Story 5)**
-- Bookings cannot be double booked and are updated on a daily basis. **(User Story 10)**
-- Time slots are updated dependent on the days avilability. **(User Story 10)**
+- Bookings cannot be double booked and are updated daily. **(User Story 10)**
+- Time slots are updated dependent on the day's availability. **(User Story 10)**
 - Students are instructed on the tutor booking page on how to access the tuition lessons. **(User Story 3)**
 ---
 
@@ -185,8 +186,8 @@ A picture of a tutor booking page can be seen below:
 ![Bookings](static/images/booking.png)
 
 ## View/Cancel Upcoming Lessons
-- Students are able to view their upcoming lessons, including the subject, date and time of the lesson. **(User Story 6)**
-- Students are able to cancel their lessons if they are no longer able to attend. **(User Story 7)**
+- Students can view their upcoming lessons, including the subject, date and time of the lesson. **(User Story 6)**
+- Students can cancel their lessons if they are no longer able to attend. **(User Story 7)**
 ---
 
 A picture of the upcoming lessons page can be seen below:
@@ -194,8 +195,8 @@ A picture of the upcoming lessons page can be seen below:
 ![Upcoming Lessons](static/images/upcominglessons.png)
 
 ## Leave Tutor Reviews
-- Students are able to leave a review on their tutors profile page. **(User Story 8)**
-- Reviews are able to be seen publically to ensure full transparancy in tutoring quality. **(User Story 4)**
+- Students are able to leave a review on their tutor's profile page. **(User Story 8)**
+- Reviews can be seen publicly to ensure full transparency in tutoring quality. **(User Story 4)**
 ---
 
 A picture of the tutor reviews page can be seen below:
@@ -208,10 +209,10 @@ A picture of the tutor reviews page can be seen below:
 
 |Bug/Error Identified|Reason for the error|Fix for the error|
 |--------------------|--------------------|-----------------|
-| Users were able to double book tutors timeslots.| The information on the page wasn't being generated based on the database. | Information generated to the booking page was generated based upon the database information.|
+| Users were able to double book tutor's timeslots.| The information on the page wasn't being generated based on the database. | Information generated to the booking page was generated based upon the database information.|
 | Users could select multiple date/time slots. | The selectDate and selectTime functions were being called twice. | The onClick function within the HTML function was removed.|
 | User bookings were not appearing on the upcoming bookings page.| The information was being sent to the user profile page in the views.py file. | URL link was changed within the views.py to match the desired page.|
-| Images were not appearing in the Heroku Application| The images were not being loaded as cloudinary images. | Images were loaded using loudinary to locate the static file.|
+| Images were not appearing in the Heroku Application| The images were not being loaded as Cloudinary images. | Images were loaded using Cloudinary to locate the static file.|
 
 ## Technologies Used
 
@@ -224,7 +225,7 @@ A picture of the tutor reviews page can be seen below:
 ## Programs Used
 
 - [Font Awesome](https://fontawesome.com/) - All icons included on the site were taken from Font Awesome.
-- [Am I Responsive](http://ami.responsivedesign.is/) - Was used to create the mockup image for the README file.
+- [Am I Responsive](http://ami.responsivedesign.is/) - Was used to create the mock-up image for the README file.
 - [Google Fonts](https://fonts.google.com/) - The fonts used on the site were imported from Google Fonts
 - [GitHub](https://github.com/) - Was the coding platform used to create and deploy the site.
 - [Heroku](https://id.heroku.com/login) - Used to deploy the site.
@@ -239,7 +240,7 @@ A picture of the tutor reviews page can be seen below:
 
 Manual testing was completed iteratively throughout the project and the site was regularly tested on different browsers and on different screen sizes. Moreover, Dev tools was used often to identify errors within HTML and CSS code, alongside the console feature to identify errors in Javascript code.
 
-Alongside, I regulalry generated lighthouse reports which gave me an idea how well the site was performing. Attached below is a screenshot of the sites lighthouse report at the deployment stage of my project:
+Alongside, I regularly generated lighthouse reports which gave me an idea how well the site was performing. Attached below is a screenshot of the site's lighthouse report at the deployment stage of my project:
 
 <details>
     <summary>Lighthouse Report - Click Here:</summary>
@@ -264,27 +265,27 @@ Attached below is a screenshot of the HTML and CSS Validator showing this:
 
 ## Wave Testing
 
-Alongside checking my code was free from code errors I also used [WAVE](https://wave.webaim.org/) to check the accessibilty of my website. This tool is specificially aimed at catering for people with disabilities, highlighting any problems they could have accessing the content including:
+Alongside checking my code was free from code errors I also used [WAVE](https://wave.webaim.org/) to check the accessibility of my website. This tool is specifically aimed at catering for people with disabilities, highlighting any problems they could have including:
 
 - Error - Contrast of navigation headings against the navigation bar. This was fixed by making the navigation bar darker to contrast against the white text.
-- Warning - Alt text on images were not descriptive enough. I fixed this by adding more context behnd the images.
-- Warning - Youtube video included. This warning was not fixed as the Youtube video contains subtitles.
+- Warning - Alt text on images were not descriptive enough. I fixed this by adding more context behind the images.
+- Warning - YouTube video included. This warning was not fixed as the YouTube video contains subtitles.
 
 All errors were removed from the website as a result of using this software.
 
 # Deployment
 
-The website was deployed using Github and Heroku through the following steps:
+The website was deployed using GitHub and Heroku through the following steps:
 
-## Github
+## GitHub
 
-- Created a new github repository page using the 'Code Institute Template'.
+- Created a new GitHub repository page using the 'Code Institute Template'.
 - Opened the new repository by clicking on the 'Gitpod' button.
-- Intsalled the relevant apps and packages needed to deploy to HEROKU.
+- Installed the relevant apps and packages needed to deploy to HEROKU.
 
 ## Django and Heroku
 
-The Django Framework was intalled and my project deployed to HEROKU using the Code Institute [Django Blog Cheatsheet](https://codeinstitute.s3.amazonaws.com/fst/Django%20Blog%20Cheat%20Sheet%20v1.pdf).
+The Django Framework was installed and my project deployed to HEROKU using the Code Institute [Django Blog Cheatsheet](https://codeinstitute.s3.amazonaws.com/fst/Django%20Blog%20Cheat%20Sheet%20v1.pdf).
 
 
 # Credits
