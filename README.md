@@ -168,13 +168,13 @@ TutorHub has a few oppurtunities for devlopment that would complement the sites 
 
 ## Desktop Homepage
 
-![Desktop-Homepage]()
+![Desktop-Homepage](static/images/desktop.png)
 
 Above is a screenshot of the deployed webiste in desktop view. It was really important throughout the design process that the layout was simplistic and that the main focus of the site was to get users to book lessons hence why this was central to the page.
 
 ## Mobile Homepage
 
-![Mobile-Homepage]()
+![Mobile-Homepage](static/images/mobile.png)
 
 A screenshot of the website from a mobile device can be seen above. The site remained easy to navigate on mobile devices and the design ensured that the content was clear.
 
@@ -218,6 +218,7 @@ Alongside, I regulalry generated lighthouse reports which gave me an idea how we
 
 <details>
     <summary>Lighthouse Report - Click Here:</summary>
+    <img src="static/images/lighthouse.png" width="700">
 </details>
 
 ## Automatic Testing 
@@ -228,10 +229,12 @@ Attached below is a screenshot of the HTML and CSS Validator showing this:
 
 <details>
     <summary>HTML Validator - Click Here:</summary>
+    <img src="static/images/html.png" width="700">
 </details>
 
 <details>
     <summary>CSS Validator - Click Here:</summary>
+    <img src="static/images/css.png" width="700">
 </details>
 
 ## Wave Testing
