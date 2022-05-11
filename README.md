@@ -1,7 +1,7 @@
 [Tutoring Site Live Link](https://tutoring-hub.herokuapp.com/)
 [Github Repository](https://github.com/sophiebatten123/Tutoring-Hub)
 
-# TutoHub
+# TutorHub
 
 (Developer: Sophie Batten)
 
@@ -151,47 +151,52 @@ TutorHub has a few oppurtunities for devlopment that would complement the sites 
 
 ## Register/ Login
 
-- Upon entering the site users have the option to sign up for an account or, if already registered, login to their pre-existing accounts. (User Story 1)
+- Upon entering the site users have the option to sign up for an account or, if already registered, login to their pre-existing accounts. **(User Story 1)**
 - This feature allows the user to book in lessons and leave tutor reviews. 
-- Furthermore, it allows the user to have a more personalised experience on the site showing their information and allowing them to keep track of any upcoming bookings. (User Story 6)
+- Furthermore, it allows the user to have a more personalised experience on the site showing their information and allowing them to keep track of any upcoming bookings. **(User Story 6)**
 - The login and register pages use the 'Django Allauth Framework'. They have further been styled to blend with the design of the site using colours that complement the rest of the page.
+---
 
 A picture of the registration page can be seen below:
 
 ![Register](static/images/registerpage.png)
 
 ## Create a Student Profile
-- Students are able to create their own profile pages based upon their tutoring requirements. (User Story 2)
+- Students are able to create their own profile pages based upon their tutoring requirements. **(User Story 2)**
 - The profile page is set up to ensure that users dont repeat any information already given upon registering to the site.
-- This feature allows students to provide tutors with current subject starting points and introduce themselves before lessons. (User Story 3)
-- Students are instructed on their profile pages how to access the tuition lessons. (User Story 3)
-- Students are able to edit their profile information in the event that their information changes. (User Story 9)
+- This feature allows students to provide tutors with current subject starting points and introduce themselves before lessons. **(User Story 3)**
+- Students are instructed on their profile pages how to access the tuition lessons. **(User Story 3)**
+- Students are able to edit their profile information in the event that their information changes. **(User Story 9)**
+---
 
 A picture of the student profile pages can be seen below:
 
 ![Profile](static/images/profile.png)
 
 ## Book in Tutoring Lessons
-- Students can book in 1 lesson with a tutor at a time on their booking page. (User Story 5)
-- Bookings cannot be double booked and are updated on a daily basis. (User Story 10)
-- Time slots are updated dependent on the days avilability. (User Story 10)
-- Students are instructed on the tutor booking page on how to access the tuition lessons. (User Story 3)
+- Students can book in 1 lesson with a tutor at a time on their booking page. **(User Story 5)**
+- Bookings cannot be double booked and are updated on a daily basis. **(User Story 10)**
+- Time slots are updated dependent on the days avilability. **(User Story 10)**
+- Students are instructed on the tutor booking page on how to access the tuition lessons. **(User Story 3)**
+---
 
 A picture of a tutor booking page can be seen below:
 
 ![Bookings](static/images/booking.png)
 
 ## View/Cancel Upcoming Lessons
-- Students are able to view their upcoming lessons, including the subject, date and time of the lesson. (User Story 6)
-- Students are able to cancel their lessons if they are no longer able to attend. (User Story 7)
+- Students are able to view their upcoming lessons, including the subject, date and time of the lesson. **(User Story 6)**
+- Students are able to cancel their lessons if they are no longer able to attend. **(User Story 7)**
+---
 
 A picture of the upcoming lessons page can be seen below:
 
 ![Upcoming Lessons](static/images/upcominglessons.png)
 
 ## Leave Tutor Reviews
-- Students are able to leave a review on their tutors profile page. (User Story 8)
-- Reviews are able to be seen publically to ensure full transparancy in tutoring quality. (User Story 4)
+- Students are able to leave a review on their tutors profile page. **(User Story 8)**
+- Reviews are able to be seen publically to ensure full transparancy in tutoring quality. **(User Story 4)**
+---
 
 A picture of the tutor reviews page can be seen below:
 
@@ -206,6 +211,7 @@ A picture of the tutor reviews page can be seen below:
 | Users were able to double book tutors timeslots.| The information on the page wasn't being generated based on the database. | Information generated to the booking page was generated based upon the database information.|
 | Users could select multiple date/time slots. | The selectDate and selectTime functions were being called twice. | The onClick function within the HTML function was removed.|
 | User bookings were not appearing on the upcoming bookings page.| The information was being sent to the user profile page in the views.py file. | URL link was changed within the views.py to match the desired page.|
+| Images were not appearing in the Heroku Application| The images were not being loaded as cloudinary images. | Images were loaded using loudinary to locate the static file.|
 
 ## Technologies Used
 
