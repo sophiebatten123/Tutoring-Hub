@@ -482,7 +482,7 @@ hr {
     background-color: #258d8c0f;
     text-align: center;
     padding: 10px;
-    height: 300px;
+    height: 200px;
 }
 
 #profile-teams-info {
@@ -1059,7 +1059,7 @@ th, td {
         top: 10px;
     }
     .nav-header-border {
-        height: 90px;
+        height: 65px;
         border-bottom:#fec173 solid 2px;
     }
     .welcome-message {
