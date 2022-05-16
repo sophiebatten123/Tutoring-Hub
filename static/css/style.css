@@ -377,7 +377,14 @@ hr {
     width: 100%;
     margin-top: 20px;
     padding: 20px;
-    height: 810px;
+    height: auto;
+}
+
+.qualification-page {
+    width: 100%;
+    margin-top: 20px;
+    padding: 20px;
+    height: auto;
 }
 
 .about-text {
@@ -477,6 +484,7 @@ hr {
     background-color: #258d8c0f;
     border-radius: 5px;
     padding: 10px;
+    margin: auto;
 }
 
 .about-me {
@@ -577,6 +585,37 @@ input:checked ~ label{
 
 .table-width {
     width: 100%;
+}
+
+.qualifications-icons {
+    color: #1c7d7c;
+    padding: 10px;
+    font-size: 25px;
+}
+
+.qualification ul{
+    font-size: 19px;
+}
+
+.qualification i {
+    padding-right: 20px;
+}
+
+.qualification-icon-background {
+    padding-bottom: 20px;
+    padding-top: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #258d8c0f;
+}
+
+.hobbies i {
+    padding-right: 20px;
+}
+
+.tutor-qualification-heading {
+    color: #1c7d7c;
+    font-size: 23px;
 }
 
 .page-buttons-container a {
@@ -872,9 +911,6 @@ th, td {
     .tutor-medium-placeholder {
         display: block;
     }
-    .profile-page {
-        height: 900px;
-    }
     .user-info-student-profile {
         text-align: center;
     }
@@ -904,9 +940,6 @@ th, td {
     .profile {
         height: 1800px;
     }
-    .profile-page {
-        height: 1000px;
-    }
     #time-slots h3 {
         padding-top: 20px;
     }
@@ -924,6 +957,9 @@ th, td {
     #large-about-us-header {
         padding-left: 80px;
     }
+    .qualification ul {
+        font-size: 17px;
+    }
 }
 
 @media(max-width:630px) {
@@ -937,7 +973,10 @@ th, td {
         height: 260px;
     }
     .carousel__item h4 {
-        font-size: 17px;
+        font-size: 15px;
+    }
+    .qualification ul {
+        font-size: 15px;
     }
 }
 
@@ -948,9 +987,6 @@ th, td {
     }
     .information-strip {
         margin-top: 10px;
-    }
-    .profile-page {
-        height: 1200px;
     }
 }
 
@@ -972,9 +1008,6 @@ th, td {
     }
     .information-strip {
         margin-top: 2px;
-    }
-    .profile-page {
-        height: 1300px;
     }
 }
 

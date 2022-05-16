@@ -86,7 +86,6 @@ Below is a screenshot of the Agile Planning environment that I used throughout m
 
 Throughout this project it was important that the design of the site was simplistic and carefully incorporated contrasting colours. 
 This was accomplished by delicately adding turquoise and orange within the icons, button and header elements on the page. 
----
 
 By using this technique, the following criteria was accomplished:
 - Foreground elements were never hindered by the background colours.

@@ -4,7 +4,7 @@
 {% block content %}
 
 <div class="container-fluid center-block">
-    <div class="row profile-page">
+    <div class="row qualification-page">
         <div class="col-md-12 col-lg-3">
             <div class="row">
                 <div class="col-12 user-image">
@@ -33,17 +33,50 @@
             <div class="row placeholder">
             </div>
         </div>
-        <div class="col-md-12 col-lg-6" id="qualifications">
-            <blockquote cite="Benjamin Franklin"><i>"Tell me and I forget, teach me and I remember, involve me and I learn."</i></blockquote>
-            <h3>Qualifications:</h3>
-            <ul>
-                <li>Maths</li>
-                <li>Maths</li>
-                <li>Maths</li>
-                <li>Maths</li>
-            </ul>
+        <div class="col-md-12 col-lg-7" id="qualifications">
+            <div class="row">
+                <h2>Mathematics Tutor</h2>
+                <p class="tutor-qualification-heading"> - Head of Mathematics</p>
+                <hr/>
+            </div>
+            <div class="row qualification">
+                <h3><i class="fa-solid fa-briefcase homepage-icons-gears"></i>Experience:</h3>
+                <ul>
+                    <li>Head of Mathematics - Winchester Academy - (2018 - 2022)</li>
+                    <li>Standards and Progress Lead - Winchester Academy - (2015 - 2018)</li>
+                    <li>Mathematics Teacher - Bullwell Academy - (2013 - 2015)</li>
+                    <li>Mathematics Tutor GCSE & A Level - TutorDirect - (2010 - 2013)</li>
+                </ul>
+                <hr/>
+            </div>
+            <div class="row qualification">
+                <h3><i class="fa-solid fa-graduation-cap homepage-icons-gears"></i>Qualifications:</h3>
+                <ul>
+                    <li>(PGDE) Postgraduate Diploma in Education - Pass - Birmingham University</li>
+                    <li>(BSc) Mathematics and Mathematics Education - First Class Degree - Loughborough University</li>
+                    <li>Advanced Level Mathematics - A* Grade - Crembrook Academy</li>
+                    <li>Advanced Level Mechanics - A Grade  - Crembrook Academy</li>
+                    <li>Advanced Level Statistics - A* Grade  - Crembrook Academy</li>
+                    <li>Further Mathematics - A Grade  - Crembrook Academy</li>
+                </ul>
+                <hr/>
+            </div>
+            <div class="row qualification-icon-background">
+                <div class="col-3 center">
+                    <p><i class="fa-solid fa-shield qualifications-icons"></i> Enhanced DBS Checked</p>
+                </div>
+                <div class="col-3 center">
+                    <p><i class="fa-solid fa-thumbs-up qualifications-icons"></i> Tutors ID Verified</p>
+                </div>
+                <div class="col-3 center">
+                    <p><i class="fa-solid fa-lock qualifications-icons"></i> Qualified Teacher (QTS)</p>
+                </div>
+                <div class="col-3 center">
+                    <p><i class="fa-solid fa-heart qualifications-icons"></i> 100% Care</p>
+                </div>
+            </div>
         </div>
-        <div class="col-md-12 col-lg-3" id="bookings-button">
+        <div class="col-md-12 col-lg-2" id="bookings-button">
             <div class="row booking-button">
                 <a href="{% url 'tutor_one' %}" id="booking-btn">Book Lesson</a>
             </div>
