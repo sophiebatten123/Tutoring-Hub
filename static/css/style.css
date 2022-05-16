@@ -610,7 +610,7 @@ input:checked ~ label{
 }
 
 .hobbies i {
-    padding-right: 20px;
+    padding-right: 10px;
 }
 
 .tutor-qualification-heading {
@@ -792,6 +792,12 @@ th, td {
         font-size: 18px;
         padding: 10px 50px;
     }
+    .user-info h1 {
+        font-size: 26px;
+    }
+    .hobbies {
+        font-size: 15px;
+    }
 }
 
 @media(max-width:1230px) {
@@ -800,9 +806,6 @@ th, td {
     }
     .user-info-student-profile {
         margin-left: 0;
-    }
-    .user-info h1 {
-        font-size: 35px;
     }
 }
 
@@ -922,6 +925,9 @@ th, td {
     .profile-student {
         height: auto;
     }
+    .hobbies {
+        font-size: 17px;
+    }
 }
 
 @media(max-width:820px) {
@@ -947,7 +953,11 @@ th, td {
         margin: auto;
         padding-top: 55px;
     }
-
+    .hobbies {
+        display: inline-block;
+        text-align: center;
+        padding: 10px;
+    }
 }
 
 @media(max-width:750px) {
@@ -959,6 +969,9 @@ th, td {
     }
     .qualification ul {
         font-size: 17px;
+    }
+    .hobbies {
+        font-size: 15px;
     }
 }
 
