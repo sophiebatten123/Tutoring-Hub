@@ -15,8 +15,8 @@ The site is fully responsive and designed in a simplistic and easy to navigate m
 
 - [UX](#ux)
   - [User Stories](#user-stories)
-  - [Agile Planning](#agile-planning)
-  - [Design](#design)
+  - [Agile Planning](#agile-planning-enviroment)
+  - [Design](#tutorhub-design)
     - [Colour Scheme](#colour-scheme)
     - [Typography](#typography)
     - [Imagery](#imagery)
@@ -26,14 +26,11 @@ The site is fully responsive and designed in a simplistic and easy to navigate m
     - [Logic Function Wireframe](#logic-functions-wireframe)
     - [Site Improvements](#site-improvements)
   - [Features](#features)
-    - [Register/ Login](#login)
-    - [Create Student Profiles](#profiles)
-    - [Book in Tutoring Lessons](#bookings)
-    - [View/Cancel Upcoming Lessons](#view)
-    - [Leave Tutor Reviews](#rate)
-  - [Deployed Website](#deployed-website)
-    - [Desktop Homepage](#desktop-home)
-    - [Mobile Homepage](#mobile-home)
+    - [Register/ Login](#register-or-login)
+    - [Create Student Profiles](#create-a-student-profile)
+    - [Book in Tutoring Lessons](#book-in-tutoring-lessons)
+    - [View/Cancel Upcoming Lessons](#view-or-cancel-upcoming-lessons)
+    - [Leave Tutor Reviews](#leave-tutor-reviews)
  - [Functionality](#functionality)
     - [Fixed Bugs and Errors](#fixed-bugs-and-errors)
     - [Technologies Used](#technologies-used)
@@ -83,6 +80,7 @@ Below is a screenshot of the Agile Planning environment that I used throughout m
 ![Agile-Planning](static/images/agile.png)
 
 # Design
+## TutorHub Design
 
 Throughout this project it was important that the design of the site was simplistic and carefully incorporated contrasting colours. 
 This was accomplished by delicately adding turquoise and orange within the icons, button and header elements on the page. 
@@ -149,7 +147,7 @@ Tutor Hub has a few opportunities for development that would complement the site
 
 # Features
 
-## Register/ Login
+## Register or Login
 
 - Upon entering the site users have the option to sign up for an account or, if already registered, login to their pre-existing accounts. **(User Story 1)**
 - This feature allows the user to book in lessons and leave tutor reviews. 
@@ -184,7 +182,7 @@ A picture of a tutor booking page can be seen below:
 
 ![Bookings](static/images/booking.png)
 
-## View/Cancel Upcoming Lessons
+## View or Cancel Upcoming Lessons
 - Students can view their upcoming lessons, including the subject, date and time of the lesson. **(User Story 6)**
 - Students can cancel their lessons if they are no longer able to attend. **(User Story 7)**
 ---
