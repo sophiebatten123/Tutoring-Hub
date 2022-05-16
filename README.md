@@ -28,6 +28,7 @@ The site is fully responsive and designed in a simplistic and easy to navigate m
   - [Features](#features)
     - [Register/ Login](#register-or-login)
     - [Create Student Profiles](#create-a-student-profile)
+    - [Tutor Information](#tutor-information)
     - [Book in Tutoring Lessons](#book-in-tutoring-lessons)
     - [View/Cancel Upcoming Lessons](#view-or-cancel-upcoming-lessons)
     - [Leave Tutor Reviews](#leave-tutor-reviews)
@@ -35,6 +36,8 @@ The site is fully responsive and designed in a simplistic and easy to navigate m
     - [Fixed Bugs and Errors](#fixed-bugs-and-errors)
     - [Technologies Used](#technologies-used)
     - [Programs Used](#programs-used)
+- [Databases]
+    - [Upcoming Lesson Data](#upcoming-lessons-data-structure)
 - [Testing](#testing)
     - [Manual Testing](#manual-testing)
     - [Automatic Testing](#automatic-testing)
@@ -171,6 +174,16 @@ A picture of the student profile pages can be seen below:
 
 ![Profile](static/images/profile.png)
 
+## Tutor Information
+- Students can get to know their tutor by looking at their profile page information.
+- Students and parents can look at the tutors experience and qualifications through their profile.
+
+---
+
+A picture of the tutor profile information can be seen below:
+
+![Tutor Profile](static/images/tutor-profile.png)
+
 ## Book in Tutoring Lessons
 - Students can book in 1 lesson with a tutor at a time on their booking page. **(User Story 5)**
 - Bookings cannot be double booked and are updated daily. **(User Story 10)**
@@ -230,6 +243,13 @@ A picture of the tutor reviews page can be seen below:
 - [W3C Markup Validation Service](https://validator.w3.org/) - Used to validate the HTML code on the site.
 - [W3C Jigsaw CSS Validation Service](https://jigsaw.w3.org/css-validator/) - Used to validate the CSS code used on the site.
 
+# Databases
+
+## Upcoming Lessons Data Structure
+
+It was important when designing the site to consider the key elements that both tutors and students should be able to find quickly from a database. The upcoming lessons database was created to allow administrators to easily filter by tutor and/or student name. This was done to improve the effciency of data management, allowing for tutors and students to be able to see exactly the lessons they have coming up. The database fields also show the date and time of the lesson a vital element to the booking.
+
+![Bookings](static/images/bookings.png)
 
 # Testing
 
