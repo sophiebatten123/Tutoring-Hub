@@ -175,8 +175,8 @@ A picture of the student profile pages can be seen below:
 ![Profile](static/images/profile.png)
 
 ## Tutor Information
-- Students can get to know their tutor by looking at their profile page information.
-- Students and parents can look at the tutors experience and qualifications through their profile.
+- Students can get to know their tutor by looking at their profile page information. **(User Story 4)**
+- Students and parents can look at the tutors experience and qualifications through their profile. **(User Story 4)**
 
 ---
 
