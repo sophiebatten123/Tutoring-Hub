@@ -25,7 +25,7 @@ html, body {
 }
 
 .header-nav {
-    height: 100px;
+    height: auto;
     color: white;
     padding-top: 5px;
     font-size: 30px;
@@ -138,19 +138,30 @@ hr {
 
 .welcome-message {
     position: relative;
+    height: auto;
+}
+
+.header-bar {
+    height: auto;
 }
 
 .username-right {
     float: right;
-    padding-top: 20px;
     padding-right: 20px;
+    padding-top: 20px;
+    height: 70px;
 }
 
 .logout-right {
     position: absolute;
-    top: 50px;
+    top: 40px;
     right: 20px;
     font-size: 22px;
+}
+
+.nav-icon-logout {
+    color: #fec173;
+    font-size: 20px;
 }
 
 .small-welcome {
@@ -969,15 +980,6 @@ th, td {
         text-align: center;
         padding: 10px;
     }
-    .username-right {
-        padding-top: 0px;
-    }
-    #nav-title {
-        padding-top: 18px;
-    }
-    .logout-right {
-        top: 25px;
-    }
 }
 
 @media(max-width:750px) {
@@ -1047,6 +1049,21 @@ th, td {
     }
     .large-welcome {
         display: none;
+    }
+    .username-right {
+        float: left;
+        padding-top: 20px;
+        padding-left: 10px;
+    }
+    .logout-right {
+        top: 10px;
+    }
+    .nav-header-border {
+        height: 90px;
+        border-bottom:#fec173 solid 2px;
+    }
+    .welcome-message {
+        height: 50px;
     }
 }
 

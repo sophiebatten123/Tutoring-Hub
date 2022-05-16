@@ -22,14 +22,16 @@
 </head>
 <body>
     <div class="row header-nav">
-        <div class="col-sm-12 col-md-6">
-            <a class="nav-link" id="nav-title" href="{% url 'index' %}"><i class="fa-solid fa-lightbulb"></i> TutorHub</a>
+        <div class="col-sm-12 col-md-6 header-bar">
+            <div class="row nav-header-border">
+                <a class="nav-link" id="nav-title" href="{% url 'index' %}"><i class="fa-solid fa-lightbulb"></i> TutorHub</a>
+            </div>
         </div>
         <div class="col-sm-12 col-md-6 welcome-message">
             {% if user.is_authenticated %}
                 <h3 class="username-right large-welcome"> Welcome {{ user.username }}!</h3>
                 <h3 class="username-right small-welcome"> Hi {{ user.username }}!</h3>
-                <a class="nav-link logout-right" href="{% url 'account_logout' %}">Logout</a>
+                <a class="nav-link logout-right" href="{% url 'account_logout' %}">Logout <i class="fa-solid fa-arrow-right-from-bracket nav-icon-logout"></i></a>
             {% endif %}
         </div>
     </div>
