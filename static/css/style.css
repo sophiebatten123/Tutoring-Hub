@@ -136,10 +136,25 @@ hr {
     border-radius: 50%;
 }
 
-#username-right {
+.welcome-message {
+    position: relative;
+}
+
+.username-right {
     float: right;
     padding-top: 20px;
     padding-right: 20px;
+}
+
+.logout-right {
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    font-size: 22px;
+}
+
+.small-welcome {
+    display: none;
 }
 
 #nav-title {
@@ -949,14 +964,19 @@ th, td {
     #time-slots h3 {
         padding-top: 20px;
     }
-    #username-right {
-        margin: auto;
-        padding-top: 55px;
-    }
     .hobbies {
         display: inline-block;
         text-align: center;
         padding: 10px;
+    }
+    .username-right {
+        padding-top: 0px;
+    }
+    #nav-title {
+        padding-top: 18px;
+    }
+    .logout-right {
+        top: 25px;
     }
 }
 
@@ -1022,6 +1042,12 @@ th, td {
     .information-strip {
         margin-top: 2px;
     }
+    .small-welcome {
+        display: block;
+    }
+    .large-welcome {
+        display: none;
+    }
 }
 
 @media(max-width:485px) {
@@ -1046,7 +1072,7 @@ th, td {
 
 @media(max-width:410px) {
     #nav-title {
-        left: 0;
+        left: 5px;
         font-size: 35px;
     }
     .profile {
