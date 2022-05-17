@@ -24,7 +24,7 @@ The site is fully responsive and designed in a simplistic and easy to navigate m
     - [Desktop Wireframes](#desktop-wireframe)
     - [Mobile Wireframes](#mobile-wireframe)
     - [Site Improvements](#site-improvements)
-  - [Features](#features)
+  - [Features](#features-and-user-story-testing)
     - [Register/ Login](#register-or-login)
     - [Create Student Profiles](#create-a-student-profile)
     - [Tutor Information](#tutor-information)
@@ -36,6 +36,8 @@ The site is fully responsive and designed in a simplistic and easy to navigate m
     - [Technologies Used](#technologies-used)
     - [Programs Used](#programs-used)
 - [Databases]
+    - [Flowchart](#flowchart)
+    - [Entity Relationship Diagram](#entity-relationship-diagram)
     - [Upcoming Lesson Data](#upcoming-lessons-data-structure)
 - [Testing](#testing)
     - [Manual Testing](#manual-testing)
@@ -139,7 +141,7 @@ Tutor Hub has a few opportunities for development that would complement the site
 - Users would benefit from receiving email confirmation when a lesson has been successfully booked.
 - Users would benefit from the ability to share good work on the site, this would help contribute to the community ethos.
 
-# Features
+# Features and User Story Testing
 
 ## Register or Login
 
@@ -214,6 +216,7 @@ A picture of the tutor reviews page can be seen below:
 | Users could select multiple date/time slots. | The selectDate and selectTime functions were being called twice. | The onClick function within the HTML function was removed.|
 | User bookings were not appearing on the upcoming bookings page.| The information was being sent to the user profile page in the views.py file. | URL link was changed within the views.py to match the desired page.|
 | Images were not appearing in the Heroku Application| The images were not being loaded as Cloudinary images. | Images were loaded using Cloudinary to locate the static file.|
+| Images were not displaying in Safari web browser| Images were loaded with an avif tag which was not supported in the browser | Images were converted into jpg files.|
 
 ## Technologies Used
 
@@ -237,7 +240,7 @@ A picture of the tutor reviews page can be seen below:
 
 # Databases
 
-## Meta Human Hub Flowchart
+## Flowchart
 
 The following flowchart help to organise the structure of the site and helped to ensure that there was user based functionality:
 
@@ -272,7 +275,7 @@ Alongside, I regularly generated lighthouse reports which gave me an idea how we
 
 ## Automatic Testing 
 
-Automatic testing of HTML and CSS was checked using W3C Validator ensuring there were no errors or warnings within the code. When the site was ran through the validator there were no errors present.
+Automatic testing of HTML and CSS was checked using W3C Validator ensuring there were no errors or warnings within the code. When the site was ran through the validator there were no errors present. JavaScript was tested using [JShint](https://jshint.com/), this helped me to identify any errors in my code and warnings. The majority of warnings were removed and there were no errors at the time of deployment.
 
 Attached below is a screenshot of the HTML and CSS Validator showing this:
 
