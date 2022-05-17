@@ -645,6 +645,7 @@ input:checked ~ label{
     display: block;
     text-decoration: none;
     border: solid 1px #258d8c0f;
+    background-color: #258d8c0f;
     width: 100%;
     margin: 20px 0;
     padding: 10px;
@@ -924,7 +925,7 @@ th, td {
         display: inline;
     }
     .user-info {
-        height: 150px;
+        height: auto;
         text-align: center;
         margin: 0;
     }
@@ -950,6 +951,13 @@ th, td {
     }
     .hobbies {
         font-size: 17px;
+    }
+    #reviews {
+        margin-top: 0;
+        margin-bottom: 15px;
+    }
+    #reviews-page {
+        text-align: center;
     }
 }
 
