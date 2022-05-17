@@ -249,6 +249,8 @@ The following table helped me to understand and develop the entries within the d
 
 ![Database Design](static/images/database-design.png)
 
+Highlighted in blue are two fields that were changed in my project this was due to me wanting to make the site more interactive using JavaScript to select the date and time of bookings. Due to these selected fields being text fields the type of both blue highlighted sections above was altered to become a 'Char[50]' field.
+
 ## Upcoming Lessons Data Structure
 
 It was important when designing the site to consider the key elements that both tutors and students should be able to find quickly from a database. The upcoming lessons database was created to allow administrators to easily filter by tutor and/or student name. This was done to improve the effciency of data management, allowing for tutors and students to be able to see exactly the lessons they have coming up. The database fields also show the date and time of the lesson a vital element to the booking.
