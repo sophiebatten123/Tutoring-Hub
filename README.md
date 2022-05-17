@@ -23,7 +23,6 @@ The site is fully responsive and designed in a simplistic and easy to navigate m
   - [Wireframes](#wireframes)
     - [Desktop Wireframes](#desktop-wireframe)
     - [Mobile Wireframes](#mobile-wireframe)
-    - [Logic Function Wireframe](#logic-functions-wireframe)
     - [Site Improvements](#site-improvements)
   - [Features](#features)
     - [Register/ Login](#register-or-login)
@@ -132,14 +131,6 @@ Fonts were equally important on the site. The aim was to create a childish feeli
     <img src="static/images/booking-wireframe.png" width="500">
 </details>
 
-## Logic Function Wireframes
-
-<details>
-    <summary>Logic Function Wireframes - Click Here:</summary>
-    <img src="static/images/lucid.png" width="700">
-</details>
-
-#
 # Site Improvements
 
 Tutor Hub has a few opportunities for development that would complement the sites' purpose. These include:
@@ -231,6 +222,7 @@ A picture of the tutor reviews page can be seen below:
 - JavaScript
 - Python
 - Django
+- Cloudinary
 
 ## Programs Used
 
@@ -244,6 +236,18 @@ A picture of the tutor reviews page can be seen below:
 - [W3C Jigsaw CSS Validation Service](https://jigsaw.w3.org/css-validator/) - Used to validate the CSS code used on the site.
 
 # Databases
+
+## Meta Human Hub Flowchart
+
+The following flowchart help to organise the structure of the site and helped to ensure that there was user based functionality:
+
+![Lucid Flowchart](static/images/lucid.png)
+
+## Entity Relationship Diagram
+
+The following table helped me to understand and develop the entries within the database, whilst considering the relationship they have with each other:
+
+![Database Design](static/images/database-design.png)
 
 ## Upcoming Lessons Data Structure
 
@@ -292,7 +296,7 @@ All errors were removed from the website as a result of using this software.
 
 # Deployment
 
-The website was deployed using GitHub and Heroku through the following steps:
+My project was developed using a [GitPod](https://www.gitpod.io/) workspace within [GitHub](https://github.com/). The code was written and commited to [Git](https://git-scm.com/) and then pushed to [GitHub](https://github.com/) within the terminal window.
 
 ## GitHub
 
@@ -302,8 +306,39 @@ The website was deployed using GitHub and Heroku through the following steps:
 
 ## Django and Heroku
 
-The Django Framework was installed and my project deployed to HEROKU using the Code Institute [Django Blog Cheatsheet](https://codeinstitute.s3.amazonaws.com/fst/Django%20Blog%20Cheat%20Sheet%20v1.pdf).
+The following steps were taken to deploy the project to Heroku from the GitHub repository:
 
+1. Create the Heroku App:
+    - Before creating the Heroku app make sure your project has the following files:
+        - requirements.txt you can create one by typing **pip3 freeze --local > requirements.txt** in the terminal window.
+        - Procfile you can create one by typing **python run.py > Procfile**
+    - Select "Create new app" within Heroku.
+    - Choose a name for your app and select its location.
+2. Attach the Postgres database:
+    - Search "Postgres" within the Resources tab and select the Heroku Postgres option.
+3. Create the settings.py file:
+    - In Heroku navigate to the Settings tab, click on Reveal Config Vars and copy the DATABASE_URL.
+    - Create a SECRET_KEY value within the Reveal Config Vars.
+    - In your GitPod workspace, create an env.py file within the main directory.
+    - Add the DATABASE_URL value and your chosen SECRET_KEY value to the env.py file.
+    - Import the env.py file within the settings.py file and add the DATABASE_URL and SECRET_KEY as file paths.
+    - Add the CLOUDINARY_URL to the Reveal Config Vars in Heroku and add this to your settings.py file.
+    - Add the following sections to your settings.py file:
+        - Cloudinary to the INSTALLED_APPS list
+        - STATICFILE_STORAGE
+        - STATICFILES_DIRS
+        - STATIC_ROOT
+        - MEDIA_URL
+        - DEFAULT_FILE_STORAGE
+        - TEMPLATES_DIR
+        - Update DIRS in TEMPLATES with TEMPLATES_DIR
+        - Update ALLOWED_HOSTS with ['app_name.heroku.com','localhost']
+4. Store Static and Media files in Cloudinary and Deploy to Heroku:
+    - Create three directories in the main directory labelled: media, storage and templates.
+    - Create a file named "Procfile" in the main directory and ass the following: [web: gunicorn project-name.wsgi].
+    - Login to Heroku within the terminal window using **heroku login -i**
+    - Run the following command in the terminal window: **heroku git:remote -a your_app_name_here**. By doing this you will link the app to your GidPod terminal.
+    - After linking the app you can deploy new versions to Heroku by running the command **git push heroku main**.
 
 # Credits
 
