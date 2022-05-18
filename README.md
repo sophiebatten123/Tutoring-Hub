@@ -1,4 +1,5 @@
 [Tutoring Site Live Link](https://tutoring-hub.herokuapp.com/)
+
 [Github Repository](https://github.com/sophiebatten123/Tutoring-Hub)
 
 # TutorHub
@@ -319,7 +320,7 @@ My project was developed using a [GitPod](https://www.gitpod.io/) workspace with
 
 ## Django and Heroku
 
-The following steps were taken to deploy the project to Heroku from the GitHub repository:
+Deployment of my project was scaffolded using the Code Institute's [Django Blog Cheatsheet](https://codeinstitute.s3.amazonaws.com/fst/Django%20Blog%20Cheat%20Sheet%20v1.pdf). Furthermore, the following steps were taken to deploy the project to Heroku from the GitHub repository:
 
 1. Create the Heroku App:
     - Before creating the Heroku app make sure your project has the following files:
