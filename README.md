@@ -10,21 +10,23 @@ Tutor Hub offers secondary school pupils world class tuition FREE as part of the
 
 The site is fully responsive and designed in a simplistic and easy to navigate manner. It has been coded using HTML, CSS, JavaScript, Python and Django using the MVC framework to scaffold the design process. Furthermore, the project went through continuous agile development to ensure features were working effectively.
 
+Below is a screenshot of the finished project generated using [Am I Responsive](https://ui.dev/amiresponsive):
+
 ![Am I Responsive?](static/images/responsive.png)
 
 # Table of Contents:
 
 - [UX](#ux)
   - [User Stories](#user-stories)
-  - [Agile Planning](#agile-planning-enviroment)
+  - [Agile Planning Enviroment](#agile-planning-enviroment)
   - [Design](#tutorhub-design)
+    - [TutorHub Design](#tutorhub-design)
     - [Colour Scheme](#colour-scheme)
     - [Typography](#typography)
     - [Imagery](#imagery)
   - [Wireframes](#wireframes)
-    - [Desktop Wireframes](#desktop-wireframe)
-    - [Mobile Wireframes](#mobile-wireframe)
-    - [Site Improvements](#site-improvements)
+    - [Desktop Wireframes](#desktop-wireframes)
+    - [Mobile Wireframes](#mobile-wireframes)
   - [Features](#features-and-user-story-testing)
     - [Register/ Login](#register-or-login)
     - [Create Student Profiles](#create-a-student-profile)
@@ -32,17 +34,19 @@ The site is fully responsive and designed in a simplistic and easy to navigate m
     - [Book in Tutoring Lessons](#book-in-tutoring-lessons)
     - [View/Cancel Upcoming Lessons](#view-or-cancel-upcoming-lessons)
     - [Leave Tutor Reviews](#leave-tutor-reviews)
- - [Functionality](#functionality)
+  - [Functionality](#functionality)
     - [Fixed Bugs and Errors](#fixed-bugs-and-errors)
     - [Technologies Used](#technologies-used)
     - [Programs Used](#programs-used)
-- [Databases]
-    - [Flowchart](#flowchart)
+  - [Data Schema](#data-schema)
+    - [Logic Flowchart](#logic-flowchart)
     - [Entity Relationship Diagram](#entity-relationship-diagram)
     - [Upcoming Lesson Data](#upcoming-lessons-data-structure)
 - [Testing](#testing)
     - [Manual Testing](#manual-testing)
     - [Automatic Testing](#automatic-testing)
+    - [Python Testing](#python-testing)
+    - [JavaScript Testing](#javascript-testing)
     - [Wave Testing](#wave-testing)
 - [Future Features](#future-features)
 - [Deployment](#deployment)
@@ -133,14 +137,6 @@ Fonts were equally important on the site. The aim was to create a childish feeli
     <img src="static/images/mobile-tutor-wireframe.png" width="500">
     <img src="static/images/booking-wireframe.png" width="500">
 </details>
-
-# Site Improvements
-
-Tutor Hub has a few opportunities for development that would complement the sites' purpose. These include:
-
-- Users would benefit from the option to 'rearrange' lesson bookings as opposed to just having the option to cancel them.
-- Users would benefit from receiving email confirmation when a lesson has been successfully booked.
-- Users would benefit from the ability to share good work on the site, this would help contribute to the community ethos.
 
 # Features and User Story Testing
 
@@ -239,9 +235,9 @@ A picture of the tutor reviews page can be seen below:
 - [W3C Markup Validation Service](https://validator.w3.org/) - Used to validate the HTML code on the site.
 - [W3C Jigsaw CSS Validation Service](https://jigsaw.w3.org/css-validator/) - Used to validate the CSS code used on the site.
 
-# Databases
+# Data Schema
 
-## Flowchart
+## Logic Flowchart
 
 The following flowchart help to organise the structure of the site and helped to ensure that there was user based functionality:
 
@@ -307,6 +303,14 @@ Alongside checking my code was free from code errors I also used [WAVE](https://
 - Warning - YouTube video included. This warning was not fixed as the YouTube video contains subtitles.
 
 All errors were removed from the website as a result of using this software.
+
+# Future Features
+
+Tutor Hub has a few opportunities for development that would complement the sites' purpose. These include:
+
+- Users would benefit from the option to 'rearrange' lesson bookings as opposed to just having the option to cancel them.
+- Users would benefit from receiving email confirmation when a lesson has been successfully booked.
+- Users would benefit from the ability to share good work on the site, this would help contribute to the community ethos.
 
 # Deployment
 
