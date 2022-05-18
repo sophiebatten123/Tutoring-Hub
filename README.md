@@ -275,7 +275,7 @@ Alongside, I regularly generated lighthouse reports which gave me an idea how we
 
 ## Automatic Testing 
 
-Automatic testing of HTML and CSS was checked using W3C Validator ensuring there were no errors or warnings within the code. When the site was ran through the validator there were no errors present. JavaScript was tested using [JShint](https://jshint.com/), this helped me to identify any errors in my code and warnings. The majority of warnings were removed and there were no errors at the time of deployment.
+Automatic testing of HTML and CSS was checked using W3C Validator ensuring there were no errors or warnings within the code. When the site was ran through the validator there were no errors present.
 
 Attached below is a screenshot of the HTML and CSS Validator showing this:
 
@@ -288,6 +288,14 @@ Attached below is a screenshot of the HTML and CSS Validator showing this:
     <summary>CSS Validator - Click Here:</summary>
     <img src="static/images/css.png" width="700">
 </details>
+
+## Python Testing
+
+Python code was tested to ensure that it met PEP8 style guidelines. This was done within the terminal console, which displayed errors and warnings throughout the project which were in parallel to the project being produced. Furthermore, using the MVC framework I was able to keep track of the changes made and ensure that they had the desired output. After each change made to the Postgres Database I referred directly to it to track the changes, ensuring that upon ‘trial runs’ information was being successfully displayed and filters were displaying alongside.
+
+## JavaScript Testing
+
+JavaScript code was tested regularly both manually and automatically through [JShint](https://jshint.com/) and the [DevTools](https://developer.chrome.com/docs/devtools/). DevTools allowed me to test responses using the **console log** function and jShint enabled me to ensure that my code was hitting the style guidelines. Upon the launch of my project jShint showed no errors or warnings with my code.
 
 ## Wave Testing
 
