@@ -35,12 +35,15 @@ class UserProfile(models.Model):
         Override the original save method
         '''
         if not self.slug:
-            self.slug = self.user
+            self.slug = self.user.username
         super().save(*args, **kwargs)
+
+    def __str__(self):
+        return f"{self.full_name}"
 
 
 @receiver(post_save, sender=User)
-def create_or_update_user_profile(instance, created):
+def create_or_update_user_profile(instance, created, **kwargs):
     '''
     Create or update the user profile
     '''
