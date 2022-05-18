@@ -252,7 +252,7 @@ The following table helped me to understand and develop the entries within the d
 
 ![Database Design](static/images/database-design.png)
 
-Highlighted in blue are two fields that were changed in my project this was due to me wanting to make the site more interactive using JavaScript to select the date and time of bookings. Due to these selected fields being text fields the type of both blue highlighted sections above was altered to become a 'Char[50]' field.
+Highlighted in blue are two fields that I had to alter during my project. This was due to me wanting to make the site more interactive through the use of JavaScript. These selected fields are now 'Char[50]' fields.
 
 ## Upcoming Lessons Data Structure
 
