@@ -21,13 +21,12 @@ class UserProfile(models.Model):
     '''
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     full_name = models.CharField(max_length=100)
-    first_name = models.CharField(max_length=100, null=True)
-    surname = models.CharField(max_length=100, null=True)
     maths = models.CharField(max_length=200, null=True, blank=True)
     english = models.CharField(max_length=200, null=True, blank=True)
     science = models.CharField(max_length=200, null=True, blank=True)
-    year_group = models.CharField(max_length=13, choices=YEAR_GROUPS, default='9')
-    email = models.EmailField(max_length=254, null=True, blank=True)
+    year_group = models.CharField(
+        max_length=13, choices=YEAR_GROUPS, default='9'
+    )
     about_me = models.TextField()
     slug = models.SlugField(max_length=200, unique=True)
 
@@ -36,15 +35,12 @@ class UserProfile(models.Model):
         Override the original save method
         '''
         if not self.slug:
-            self.slug = self.user.username
+            self.slug = self.user
         super().save(*args, **kwargs)
-
-    def __str__(self):
-        return self.user.username
 
 
 @receiver(post_save, sender=User)
-def create_or_update_user_profile(instance, created, **kwargs):
+def create_or_update_user_profile(instance, created):
     '''
     Create or update the user profile
     '''

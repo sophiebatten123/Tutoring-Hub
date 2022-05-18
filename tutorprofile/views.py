@@ -109,8 +109,11 @@ def confirm_booking(request):
         tutor = request_body['tutor']
         subject = request_body['subject']
 
-        if Booking.objects.filter(Q(student=request.user) & Q(tutor=tutor)).exists():
-            messages.warning(request, ('You can only have one lesson booked per tutor each week.'))
+        if Booking.objects.filter(
+            Q(student=request.user) & Q(tutor=tutor)
+        ).exists():
+            messages.warning(request, ('You can only have one lesson booked\
+                 per tutor each week.'))
         else:
             booking.date = date
             booking.time = time
@@ -137,7 +140,8 @@ class ReviewListTutorOne(generic.ListView):
     Allows the student to rate the tutor
     '''
     model = Review
-    queryset = Review.objects.filter(Q(tutor='Barry Hyman')).order_by('-created_on')
+    queryset = Review.objects.filter(
+        Q(tutor='Barry Hyman')).order_by('-created_on')
     template_name = 'tutorprofile/tutor_one_reviews.html'
     paginate_by = 6
 
@@ -147,7 +151,8 @@ class ReviewListTutorTwo(generic.ListView):
     Allows the student to rate the tutor
     '''
     model = Review
-    queryset = Review.objects.filter(Q(tutor='Jennifer Roberts')).order_by('-created_on')
+    queryset = Review.objects.filter(
+        Q(tutor='Jennifer Roberts')).order_by('-created_on')
     template_name = 'tutorprofile/tutor_two_reviews.html'
     paginate_by = 6
 
@@ -157,7 +162,8 @@ class ReviewListTutorThree(generic.ListView):
     Allows the student to rate the tutor
     '''
     model = Review
-    queryset = Review.objects.filter(Q(tutor='Mark Macintosh')).order_by('-created_on')
+    queryset = Review.objects.filter(
+        Q(tutor='Mark Macintosh')).order_by('-created_on')
     template_name = 'tutorprofile/tutor_three_reviews.html'
     paginate_by = 6
 
@@ -179,7 +185,9 @@ def tutor_one_create_review(request):
     else:
         form = ReviewForm()
 
-    return render(request, 'tutorprofile/tutor_one_create_review.html', {'form': form})
+    return render(request, 'tutorprofile/tutor_one_create_review.html', {
+        'form': form
+    })
 
 
 @login_required
@@ -199,7 +207,9 @@ def tutor_two_create_review(request):
     else:
         form = ReviewForm()
 
-    return render(request, 'tutorprofile/tutor_two_create_review.html', {'form': form})
+    return render(request, 'tutorprofile/tutor_two_create_review.html', {
+        'form': form
+    })
 
 
 @login_required
@@ -219,4 +229,6 @@ def tutor_three_create_review(request):
     else:
         form = ReviewForm()
 
-    return render(request, 'tutorprofile/tutor_three_create_review.html', {'form': form})
+    return render(request, 'tutorprofile/tutor_three_create_review.html', {
+        'form': form
+    })
