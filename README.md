@@ -333,13 +333,13 @@ Deployment of my project was scaffolded using the Code Institute's [Django Blog 
 3. Create the settings.py file:
     - In Heroku navigate to the Settings tab, click on Reveal Config Vars and copy the DATABASE_URL.
     - Create a SECRET_KEY value within the Reveal Config Vars.
-    - In your GitPod workspace, create an env.py file within the main directory.
+    - Within the GitPod workspace, create an env.py file within the main directory.
     - Add the DATABASE_URL value and your chosen SECRET_KEY value to the env.py file.
     - Import the env.py file within the settings.py file and add the DATABASE_URL and SECRET_KEY as file paths.
     - Add the CLOUDINARY_URL to the Reveal Config Vars in Heroku and add this to your settings.py file.
     - Add the following sections to your settings.py file:
         - Cloudinary to the INSTALLED_APPS list
-        - STATICFILE_STORAGE
+        - STATICFILES_STORAGE
         - STATICFILES_DIRS
         - STATIC_ROOT
         - MEDIA_URL
