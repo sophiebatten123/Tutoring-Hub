@@ -76,14 +76,15 @@ Below is a screenshot of the finished project generated using [Am I Responsive](
 
 ## MoSCow Method
 
-Throughout my project I frequently used the project board on GitHub ensuring I carefully followed the MoSCow method.
+Throughout my project I frequently used the project board on GitHub ensuring I carefully followed the MoSCow method. The action points within the project were generated using a template user story ensuring that the reason for the action was justified. This process helped me to decide upon the crucial elements for the website.
 
 To ensure that the ideas I had for my project were realistic in the timeframe given it was important to:
-- Ensure the 'Must Have' elements never exceeded 60% of the assigned tasks.
+- Ensure the 'Must Have' elements never exceeded 60% of the assigned tasks, these tasks were 52% of the action points.
 - Regularly update the project board and reflect upon each iteration.
 - Refer to the project board regularly to keep focussed throughout the project.
 
-Using the MoSCow technique was extremely useful and helped me to accomplish more during my project. 
+Using the MoSCow technique was extremely useful and helped me to accomplish more during my project. Although I wasn't able to accomplish all of the action points, this method allowed me to organise the structure of the website and ensure that vital aspects were accomplished.
+
 Below is a screenshot of the Agile Planning environment that I used throughout my project:
 
 ![Agile-Planning](static/images/agile.png)
@@ -113,6 +114,8 @@ Fonts were equally important on the site. The aim was to create a childish feeli
 ![Typography](static/images/text.png)
 
 ## Imagery
+
+Images on the site were chosen at the start of the web design process, they were specifically chosen to capture the ethos of TutorHub using cartoon images and icons. After selecting the images for the site, I used the colour selector tool within Dev Tools to carefully select colours for the site finding complementary colours soon after. 
 
 ![Imagery](static/images/images.png)
 
@@ -239,13 +242,13 @@ A picture of the tutor reviews page can be seen below:
 
 ## Logic Flowchart
 
-The following flowchart help to organise the structure of the site and helped to ensure that there was user based functionality:
+At the beginning of the project I used a logic flowchart to help organise the structure of the site. This also helped me to determine user roles and, the permissions each user had. By doing this I was able to efficiently code my project, ensuring I had a clear vision of the outcome and create an entity relationship diagram.
 
 ![Lucid Flowchart](static/images/lucid.png)
 
 ## Entity Relationship Diagram
 
-The following table helped me to understand and develop the entries within the database, whilst considering the relationship they have with each other:
+An entity relationship diagram was created to help me understand the roles of each site user. Furthermore this helped me develop the entries within the database through the MVC framework and enabled careful consideration of the entries relationships:
 
 ![Database Design](static/images/database-design.png)
 
