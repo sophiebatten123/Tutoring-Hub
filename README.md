@@ -339,18 +339,18 @@ Deployment of my project was scaffolded using the Code Institute's [Django Blog 
 
 1. Create the Heroku App:
     - Before creating the Heroku app make sure your project has the following files:
-        - requirements.txt you can create one by typing **pip3 freeze --local > requirements.txt** in the terminal window.
-        - Procfile you can create one by typing **python run.py > Procfile**
+        - requirements.txt to create this type the following within the terminal: **pip3 freeze --local > requirements.txt**.
+        - Procfile to create this type the following within the terminal: **python run.py > Procfile**.
     - Select "Create new app" within Heroku.
-    - Choose a name for your app and select its location.
 2. Attach the Postgres database:
     - Search "Postgres" within the Resources tab and select the Heroku Postgres option.
 3. Create the settings.py file:
     - In Heroku navigate to the Settings tab, click on Reveal Config Vars and copy the DATABASE_URL.
-    - Create a SECRET_KEY value within the Reveal Config Vars.
     - Within the GitPod workspace, create an env.py file within the main directory.
+    - Import the env.py file within the settings.py file.
+    - Create a SECRET_KEY value within the Reveal Config Vars in Heroku.
     - Add the DATABASE_URL value and your chosen SECRET_KEY value to the env.py file.
-    - Import the env.py file within the settings.py file and add the DATABASE_URL and SECRET_KEY as file paths.
+    - Run the following command in your terminal **python3 manage.py migrate**.
     - Add the CLOUDINARY_URL to the Reveal Config Vars in Heroku and add this to your settings.py file.
     - Add the following sections to your settings.py file:
         - Cloudinary to the INSTALLED_APPS list
@@ -363,7 +363,7 @@ Deployment of my project was scaffolded using the Code Institute's [Django Blog 
         - Update DIRS in TEMPLATES with TEMPLATES_DIR
         - Update ALLOWED_HOSTS with ['app_name.heroku.com','localhost']
 4. Store Static and Media files in Cloudinary and Deploy to Heroku:
-    - Create three directories in the main directory labelled: media, storage and templates.
+    - Create three directories in the top level directory: media, storage and templates.
     - Create a file named "Procfile" in the main directory and ass the following: [web: gunicorn project-name.wsgi].
     - Login to Heroku within the terminal window using **heroku login -i**
     - Run the following command in the terminal window: **heroku git:remote -a your_app_name_here**. By doing this you will link the app to your GidPod terminal.
