@@ -376,6 +376,7 @@ Deployment of my project was scaffolded using the Code Institute's [Django Blog 
 - The images used on my site were taken from [Shutterstock](https://www.shutterstock.com/).
 - Images and video clips were also used from [Pexels](https://www.pexels.com/).
 - The carousel feature on the homepage was shown using the following YouTube tutorial [DCode](https://www.youtube.com/watch?v=XtFlpgaLbZ4)
+- The stars feature on the reviews page was shown using the following YoutTube tutorial [CodingNepal](https://www.youtube.com/watch?v=rw3eZ6XodN8)
 - The icons included throughout the website were taken from [Font-Awesome](https://fontawesome.com/).
 - The colour theme was chosen using [coolors](https://coolors.co/).
 - Help and support was given by the Code Institute Tutors on some of the logic functions within the website. 
