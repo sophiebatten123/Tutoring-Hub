@@ -33,6 +33,9 @@ class Review(models.Model):
     review = models.CharField(max_length=150)
     created_on = models.DateTimeField(auto_now_add=True)
 
+    def __str__(self):
+        return f'{self.student} created a post'
+
     class Meta:
         '''
         Orders the reviews based on when they were created.
