@@ -291,7 +291,14 @@ Attached below is a screenshot of the HTML and CSS Validator showing this:
 
 ## Python Testing
 
-Python code was tested to ensure that it met PEP8 style guidelines. This was done within the terminal console, which displayed errors and warnings throughout the project which were in parallel to the project being produced. Furthermore, using the MVC framework I was able to keep track of the changes made and ensure that they had the desired output. After each change made to the Postgres Database I referred directly to it to track the changes, ensuring that upon ‘trial runs’ information was being successfully displayed and filters were displaying alongside.
+# Manual Python Testing
+
+Python code was tested to ensure that it met PEP8 style guidelines. This was done within the terminal console, which displayed errors and warnings throughout the project which were in parallel to the project being produced. Upon deployment of my project I had no errors displaying within the terminal meaning that my code passed through PEP8 guidelines. Furthermore, using the MVC framework I was able to keep track of the changes made and ensure that they had the desired output. After each change made to the Postgres Database I referred directly to it to track the changes, ensuring that upon ‘trial runs’ information was being successfully displayed and filters were displaying alongside.
+
+# Automatic Python Testing
+
+Alongside the testing mentioned above, I also performed automatic tests within python. These tests checked that the user was able to sucessfully book in a lesson and that that user could leave a review on the tutor profiles within the models file. Furthermore I also tested the URL's to ensure that they directed the user to the correct page on each occassion. Although I would have liked to carry out more testing within python, the tests that I performed were the most vital to the sites performance. 
+
 
 ## JavaScript Testing
 

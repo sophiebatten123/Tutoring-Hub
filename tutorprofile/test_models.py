@@ -1,3 +1,4 @@
+# pylint: disable=locally-disabled, no-member
 '''
 Unit testing for models
 '''

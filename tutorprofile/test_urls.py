@@ -1,5 +1,5 @@
 '''
-Unit testing for models
+Unit testing for urls
 '''
 from django.test import SimpleTestCase
 from django.urls import resolve, reverse
