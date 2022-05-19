@@ -10,12 +10,23 @@ class TestModels(TestCase):
     '''
     Testing the models file
     '''
-    def setUpTestData(self):
-        user = User.objects.create_user(
-            username="testuser", password="password", email="test@test.com"
+    def setUp(self):
+        '''
+        Sets up the variables ready for testing
+        '''
+        self.user1 = User.objects.create(
+            username="test_name",
+            password="password12345367",
+            email="test@test.com",
         )
-        UserProfile.objects.create(full_name='John Joe', user=user)
+        self.userprofile = UserProfile.objects.create(
+            user=self.user1,
+            full_name='test_name',
+        )
 
-    def test_create_profile(self):
-        
-        self.assertEqual(str(name), 'John Joe')
+    def test_user_has_profile(self):
+        '''
+        Test to check that the student can create a profile
+        '''
+        self.assertEqual(UserProfile.objects.all().count(), 1)
+        self.assertEqual(str(self.userprofile), 'test_name')

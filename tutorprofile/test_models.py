@@ -23,7 +23,7 @@ class TestModels(TestCase):
             student=self.user1,
             review='test_review',
         )
-        self.booking = Booking.objects.create(
+        self.booking1 = Booking.objects.create(
             student=self.user1,
             time='test_time',
             date='test_date',
@@ -44,6 +44,6 @@ class TestModels(TestCase):
         '''
         self.assertEqual(Booking.objects.all().count(), 1)
         self.assertEqual(
-            str(self.booking),
+            str(self.booking1),
             'test_name on test_date test_time with test_tutor'
         )
