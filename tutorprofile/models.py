@@ -18,8 +18,7 @@ class Booking(models.Model):
     student = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self):
-        return f"{self.student} booked a lesson on {self.date} at {self.time}\
-             with {self.tutor}"
+        return f"{self.student} on {self.date} {self.time} with {self.tutor}"
 
 
 class Review(models.Model):

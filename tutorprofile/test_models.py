@@ -3,7 +3,7 @@ Unit testing for models
 '''
 from django.test import TestCase
 from django.contrib.auth.models import User
-from .models import Review
+from .models import Review, Booking
 
 
 class TestModels(TestCase):
@@ -23,11 +23,27 @@ class TestModels(TestCase):
             student=self.user1,
             review='test_review',
         )
+        self.booking = Booking.objects.create(
+            student=self.user1,
+            time='test_time',
+            date='test_date',
+            tutor='test_tutor',
+        )
 
     def test_user_has_review(self):
         '''
         Test to check that the student can create a review and that it returns
         the correct string.
         '''
-        self.assertEquals(Review.objects.all().count(), 1)
-        self.assertEquals(str(self.review), 'test_name created a post')
+        self.assertEqual(Review.objects.all().count(), 1)
+        self.assertEqual(str(self.review), 'test_name created a post')
+
+    def test_user_has_booking(self):
+        '''
+        Test to check that the student can book in a lesson with a tutor.
+        '''
+        self.assertEqual(Booking.objects.all().count(), 1)
+        self.assertEqual(
+            str(self.booking),
+            'test_name on test_date test_time with test_tutor'
+        )
